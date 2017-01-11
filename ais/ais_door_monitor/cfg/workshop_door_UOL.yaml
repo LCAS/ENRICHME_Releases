@@ -1,0 +1,16 @@
+# configuration for FDG set up
+
+
+# Monitored door sensor name (same than in OpenHAB or Mongo)
+sensorName: 'Workshop_Multi_Contact'
+
+
+# Report door open after 10 seconds
+t_alarm: 10
+
+# Topic to publish alarms to. It is an string like this:
+# "Alarm:[sensorName]:[seconds opened]
+notifTopicName: '/ais_notifications'
+
+
+        

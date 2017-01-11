@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>openhab</name>
+  <version>0.0.0</version>
+  <description>openhab dummy package</description>
+
+
+  <maintainer email="mfernandezcarmona@lincoln.ac.uk">Manuel</maintainer>
+  <author email="mfernandezcarmona@lincoln.ac.uk">Manuel</author>
+
+  <license>GPL</license>
+
+
+  <export>
+
+  </export>
+</package>
+

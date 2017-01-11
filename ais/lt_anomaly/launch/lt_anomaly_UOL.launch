@@ -1,0 +1,11 @@
+<launch>
+  <!--  -->
+  
+  <rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+  <node pkg="lt_anomaly" type="lt_anomaly_monitor.py" name="lt_anomaly_node" output="screen">    
+      <rosparam command="load" file="$(find lt_anomaly)/cfg/lt_anomaly.yaml_UOL" />
+  </node>
+
+
+</launch>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:macro name="contactPlate" params="name parent *origin ros_topic width update_rate">
+		<joint name="${name}_joint" type="fixed">
+			<xacro:insert_block name="origin" />
+			<parent link="${parent}"/>
+			<child link="${name}_link"/>
+		</joint>
+
+		<link name="${name}_link">
+		<inertial>
+				<mass value="1000.001" />
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<inertia ixx="0.000000017" ixy="0" ixz="0" iyy="0.000000017" iyz="0" izz="0.000000017" />
+			</inertial>
+			<visual>
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<box size="${width} 0.15 0.0001" />           
+				</geometry>
+			</visual>
+			<collision name="${name}_collision">
+				<origin xyz="0 0 0" rpy="0 0 0" />
+				<geometry>
+					<box size="${width} 0.15 0.0001" />
+				</geometry>
+			</collision>
+		</link>
+
+		<gazebo reference="${name}_link">
+			<sensor name="${name}" type="contact">
+				<always_on>true</always_on> 
+				<update_rate>${update_rate}</update_rate>
+				<visualize>false</visualize>
+				<pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+ 				<plugin name="gazebo_ros_${name}_controller" filename="libais_gazebo_ros_binary_contact.so"> 
+					<alwaysOn>true</alwaysOn>
+					<updateRate>${update_rate}</updateRate>
+					<frameName>world</frameName>
+					<bumperTopicName>${ros_topic}</bumperTopicName>
+				</plugin>
+				<contact>
+					<collision>${name}_link_collision</collision>
+					<topic>${ros_topic}_b</topic>
+				</contact>
+			</sensor>
+		</gazebo>
+		
+	</xacro:macro>
+  
+</robot>

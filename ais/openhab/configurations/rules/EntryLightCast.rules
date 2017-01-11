@@ -1,0 +1,13 @@
+
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+
+rule "Cast_LightPercent_Lux"
+when
+    Item Entry_Multi_Lux_Percent changed 
+then
+    var lightPercent = (Entry_Multi_Lux_Percent.state as DecimalType).doubleValue
+    var lightLux = lightPercent  *  5
+    postUpdate(Entry_Multi_Lux, lightLux)
+end

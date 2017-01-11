@@ -1,0 +1,98 @@
+Group    gAll
+Group    ROS                               (gAll)    
+Group    Presence            <present>     (gAll,gSMH)     
+Group    Doors               <lock>        (gAll,gSMH)   
+Group    Power               <socket>      (gAll,gSMH)   
+Group    Lux                 <sun>         (gAll,gSMH)    
+Group    Batts               <energy>      (gAll,gSMH)    
+Group    Temp                <temperature> (gAll,gSMH)
+Group    Air                 <shield>      (gAll,gSMH)
+Group    Robot               <robot>       (gAll,gSMH)
+Group    Humi                <humidity>    (gAll,gSMH)
+
+
+// .....................................................................
+// ZWAVE DEVICES........................................................
+// .....................................................................
+
+// Fibaro door sensor at Entrance      - 3 
+Contact   Entry_Door_Contact           "Entry Door: Status [%s]"                         <lock>          (Doors,ROS)       { zwave="3:command=SENSOR_BINARY,respond_to_basic=TRUE" }
+Number    Entry_Door_Battery           "Entry Door: Battery [%s %%]"                     <energy>        (Batts,ROS)       { zwave="3:command=BATTERY" }
+
+//  Fibaro Wall Plug at Coffee machine - 4 
+Switch    Kitchen_Plug_Switch        "Coffee machine Plug: Status [%s]"                  <socket>        (Power,ROS)       { zwave="4:command=switch_binary,respond_to_basic=TRUE" }
+Number    Kitchen_Plug_Power         "Coffee machine Plug: Current energy [%.1f W]"      <socket>        (Power,ROS)       { zwave="4:command=sensor_multilevel" }
+Number    Kitchen_Plug_Energy        "Coffee machine Plug: Total energy [%.2f KWh]"      <socket>        (Power,ROS)       { zwave="4:command=meter" }
+
+
+//  Fibaro Wall Plug at Toilet         - 5 
+Switch    Toilet_Plug_Switch         "Toilet Plug: Status [%s]"                          <socket>        (Power,ROS)       { zwave="5:command=switch_binary,respond_to_basic=TRUE" }
+Number    Toilet_Plug_Power          "Toilet Plug: Current energy [%.1f W]"              <socket>        (Power,ROS)       { zwave="5:command=sensor_multilevel" }
+Number    Toilet_Plug_Energy         "Toilet Plug: Total energy [%.2f KWh]"              <socket>        (Power,ROS)       { zwave="5:command=meter" }
+
+
+// Fibaro motion sensor at Dining room - 6
+Contact   Dining_Multi_Presence       "Dining Multi sensor: Presence [%d]"               <present>       (Presence,ROS)    { zwave="6:0:command=sensor_binary,respond_to_basic=true" }
+Number    Dining_Multi_Alarm          "Dining Multi sensor: Alarm [%s]"                  <fire>          (Alarm,ROS)       { zwave="6:0:command=alarm" }
+Number    Dining_Multi_Lux            "Dining Multi sensor: Lux [%.2f Lux]"              <sun>           (Lux,ROS)         { zwave="6:0:command=sensor_multilevel,sensor_type=3" }
+Number    Dining_Multi_Battery        "Dining Multi sensor: Battery [%d %%]"             <energy>        (Batts,ROS)       { zwave="6:0:command=battery" }
+Number    Dining_Multi_Temp           "Dining Multi sensor: Temperature [%.1f °C]"       <temperature>   (Temp,ROS)        { zwave="6:0:command=sensor_multilevel,sensor_type=1" }
+
+
+// Fibaro motion sensor at Bedroom     - 7 
+Contact   Bedroom_Multi_Presence      "Bedroom Multi sensor: Presence [%d]"              <present>       (Presence,ROS)    { zwave="7:0:command=sensor_binary,respond_to_basic=true" }
+Number    Bedroom_Multi_Alarm         "Bedroom Multi sensor: Alarm [%s]"                 <fire>          (Alarm,ROS)       { zwave="7:0:command=sensor_alarm" }
+Number    Bedroom_Multi_Lux           "Bedroom Multi sensor: Lux [%.2f Lux]"             <sun>           (Lux,ROS)         { zwave="7:0:command=sensor_multilevel,sensor_type=3" }
+Number    Bedroom_Multi_Battery       "Bedroom Multi sensor: Battery [%d %%]"            <energy>        (Batts,ROS)       { zwave="7:0:command=battery" }
+Number    Bedroom_Multi_Temp          "Bedroom Multi sensor: Temperature [%.1f °C]"      <temperature>   (Temp,ROS)        { zwave="7:0:command=sensor_multilevel,sensor_type=1" }
+
+
+// Fibaro motion sensor at Livingroom  - 8 
+Contact   Livingroom_Multi_Presence   "Livingroom Multi sensor: Presence [%d]"           <present>       (Presence,ROS)    { zwave="8:0:command=sensor_binary,respond_to_basic=true" }
+Number    Livingroom_Multi_Alarm      "Livingroom Multi sensor: Alarm [%s]"              <fire>          (Alarm,ROS)       { zwave="8:0:command=sensor_alarm" }
+Number    Livingroom_Multi_Lux        "Livingroom Multi sensor: Lux [%.2f Lux]"          <sun>           (Lux,ROS)         { zwave="8:0:command=sensor_multilevel,sensor_type=3" }
+Number    Livingroom_Multi_Battery    "Livingroom Multi sensor: Battery [%d %%]"         <energy>        (Batts,ROS)       { zwave="8:0:command=battery" }
+Number    Livingroom_Multi_Temp       "Livingroom Multi sensor: Temperature [%.1f °C]"   <temperature>   (Temp,ROS)        { zwave="8:0:command=sensor_multilevel,sensor_type=1" }
+
+
+// Fibaro motion sensor at Bathroom    - 9
+Contact   Bathroom_Multi_Presence     "Bathroom Multi sensor: Presence [%d]"             <present>       (Presence,ROS)    { zwave="9:0:command=sensor_binary,respond_to_basic=true" }
+Number    Bathroom_Multi_Alarm        "Bathroom Multi sensor: Alarm [%s]"                <fire>          (Alarm,ROS)       { zwave="9:0:command=sensor_alarm" }
+Number    Bathroom_Multi_Lux          "Bathroom Multi sensor: Lux [%.2f Lux]"            <sun>           (Lux,ROS)         { zwave="9:0:command=sensor_multilevel,sensor_type=3" }
+Number    Bathroom_Multi_Battery      "Bathroom Multi sensor: Battery [%d %%]"           <energy>        (Batts,ROS)       { zwave="9:0:command=battery" }
+Number    Bathroom_Multi_Temp         "Bathroom Multi sensor: Temperature [%.1f °C]"     <temperature>   (Temp,ROS)        { zwave="9:0:command=sensor_multilevel,sensor_type=1" }
+
+// Fibaro door sensor at Fridge        - 10 
+Contact   Fridge_Door_Contact          "Fridge Door: Status [%s]"                        <lock>          (Doors,ROS)       { zwave="10:command=SENSOR_BINARY,respond_to_basic=TRUE" }
+Number    Fridge_Door_Battery          "Fridge Door: Battery [%s %%]"                    <energy>        (Batts,ROS)       { zwave="10:command=BATTERY" }
+
+// .....................................................................
+// ROBOT Sensors, accessed through ROS
+// .....................................................................
+
+Number    Env_cO                      "Robot UEMV sensor: CO [%s ppm]"                   <shield>        (Air,Robot,ROS)    
+Number    Env_particleCount           "Robot UEMV sensor: particles [%s p/0.01CF]"       <shield>        (Air,Robot,ROS)    
+Number    Env_vOCResistance           "Robot UEMV sensor: VOC [%s KOhms]"                <shield>        (Air,Robot,ROS)    
+Number    Env_temp                    "Robot UEMV sensor: Temperature [%s °C]"           <temperature>   (Temp,Robot,ROS)    
+Number    Env_humidity                "Robot UEMV sensor: Humidity [%s %%]"              <humidity>      (Humi,Robot,ROS)    
+Number    Env_light                   "Robot UEMV sensor: Lux [%s Lux]"                  <sun>           (Lux,Robot,ROS)    
+Number    Env_timestamp               "Robot UEMV sensor: timestamp [%s sec]"            <robot>         (Robot,ROS)  
+
+// .....................................................................
+// ROS Bridge Item
+// .....................................................................
+
+String    ROS_Status    "ROS [%s]"
+
+// .....................................................................
+// Log viewer
+// .....................................................................
+
+String st_copyLogs {exec="<[/home/ami/catkin_ws/src/ENRICHME/codes/ais/openhab/scripts/openhablogs.sh:10000:REGEX((.*?))]"}
+
+// .....................................................................
+// Check module status
+// .....................................................................
+
+String    service_ros_status         "ROS Status [%s]"                                                                 { exec="<[/home/ami/catkin_ws/src/ENRICHME/codes/ais/openhab/scripts/ros_status.sh:60000:REGEX((.*?))]" }
+String    service_mongo_status       "Mongo Status [%s]"                                                               { exec="<[/home/ami/catkin_ws/src/ENRICHME/codes/ais/openhab/scripts/mongodb_status.sh:60000:REGEX((.*?))]" }

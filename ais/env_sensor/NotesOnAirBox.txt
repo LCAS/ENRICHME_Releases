@@ -1,0 +1,42 @@
+connected as a serial terminal using gtkterm 9600-8-N-1
+Also supports higher speeds.
+If using cutecom, we need to set '\r' as line terminator
+
+
+Toggle modes....................................................
+Unknown = -1;
+Idle = 0;
+Run = 1;
+
+Mode 1
+
+GetInstantaneous values.........................................
+
+Temp
+GetRunSensor 1
+
+Light
+GetRunSensor 7
+
+Humidity
+GetRunSensor 4
+
+GetAverage values.........................................
+CO 
+GetAverage 1
+
+Particles 
+GetAverage 4
+
+VOC
+GetAverage 7  / GetAverage 8
+
+
+We can also get all average at once:
+
+r=[GetAverage 0 -4.696620e+00 -2.725044e-02 1.732528e+00 2.263356e+02 5.544109e-02 7.119424e+00 5.023762e+00 5.567791e-05 19/05/2016 17:11:31 3d6fc65d]
+       0      1        2            3             4          5            6             7           8            9            10        11         12       
+                      CO                                    Particle                               vocV         vocI
+GetAverage    0        1            2             3             4         5             6            7           8
+
+

@@ -1,0 +1,11 @@
+<launch>
+  <!--  -->
+  
+  <rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+  <node pkg="env_monitor" type="env_monitor_node.py" name="env_monitor_node" output="screen">    
+      <rosparam command="load" file="$(find env_monitor)/cfg/sensorConfigFDG.yaml" />
+  </node>
+
+
+</launch>

@@ -1,0 +1,14 @@
+#AIS location
+ais_hostname: '192.168.1.182'
+robot_hostname: '192.168.1.151'
+#mongo params
+mongoPort: 27017
+domoticDBName: 'openhab'
+domoticCollName: 'openhab'
+
+#NCP params
+NCPuserName: 'manuel.carmona'
+NCPPass: 'Prova!2016'
+NCPbaseURL: 'https://secure.tesanonline.it/pac/api'
+targetCD: '123456'
+

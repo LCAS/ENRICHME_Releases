@@ -1,0 +1,7 @@
+sensorConfig: [
+    {magnitude: CO,            updateTime: 10,  mongoNames: [Env_cO] },
+    {magnitude: particleCount, updateTime: 10,  mongoNames: [Env_particleCount] },
+    {magnitude: VOC,           updateTime: 10,  mongoNames: [Env_vOCResistance] },
+    {magnitude: temp,          updateTime: 30,  mongoNames: [Env_temp,Kitchen_Multi_Temp,Livingroom_Multi_Temp,Bedroom_Multi_Temp,Bathroom_Multi_Temp] },
+    {magnitude: humidity,      updateTime: 30,  mongoNames: [Env_humidity] },
+    {magnitude: light,         updateTime: 300, mongoNames: [Env_light,Kitchen_Multi_Lux,Livingroom_Multi_Lux,Bedroom_Multi_Lux,Bathroom_Multi_Lux] }]

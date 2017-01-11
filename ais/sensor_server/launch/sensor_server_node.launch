@@ -1,0 +1,24 @@
+<launch>
+	<!-- 
+	   This launcher sets sensor_server_node.py parameters 
+		Dependencies:
+		- env_sensor running in robot
+		- amb2openhab to forward data to openhab
+		- multimaster to reach AIS pc
+		- openhab to receive robot data
+
+		If these nodes are not running, this server won't work
+	-->    
+
+	<!-- Contains NCP params, mongo params and other global settings -->
+	<rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+	<!-- Environmental sensor-->
+	<node pkg="env_sensor" type="env_sensor_node.py" name="env_sensor_node">    
+		<rosparam param="houseTopic">"/house_sensors"</rosparam>
+		<rosparam param="robotTopic">"/robot_sensors"</rosparam>
+		<rosparam param="publishPeriod">"60"</rosparam>
+	</node>
+
+
+</launch>

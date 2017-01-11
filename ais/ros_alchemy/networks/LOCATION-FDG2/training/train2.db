@@ -1,0 +1,26 @@
+//common part, sensor deployment
+sensorAt(Entry_Door_Contact,Entry)
+
+sensorAt(Fridge_Door_Contact,Kitchen)
+sensorAt(Kitchen_Plug_Power,Kitchen)
+sensorAt(Kitchen_Multi_Presence,Kitchen)
+
+sensorAt(Bathroom_Multi_Presence,Bathroom)
+sensorAt(Bedroom_Multi_Presence,Bedroom)
+
+sensorAt(Livingroom_Multi_Presence,Livingroom)
+//train example
+currPlace(Kitchen)
+
+// status
+!isActive(Entry_Door_Contact)
+
+isActive(Fridge_Door_Contact)
+!isActive(Kitchen_Plug_Power)
+!isActive(Kitchen_Multi_Presence)
+
+!isActive(Bathroom_Multi_Presence)
+
+!isActive(Bedroom_Multi_Presence)
+
+!isActive(Livingroom_Multi_Presence)

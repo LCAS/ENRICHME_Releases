@@ -1,0 +1,11 @@
+<launch>
+  <!--  -->
+  
+  <rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+  <node pkg="act_rec_mln" type="act_rec_mln_node.py" name="location_mln_node" output="screen">    
+      <rosparam command="load" file="$(find act_rec_mln)/cfg/location_mln.yaml_UOL" />
+  </node>
+
+
+</launch>

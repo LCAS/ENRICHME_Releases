@@ -1,0 +1,26 @@
+// train
+// /opt/alchemy/learnwts -i LCAS-activity.mln -g true  -multipleDatabases true -t ./training/train2.db,./training/train3.db,./training/train4.db,./training/train5.db,./training/train6.db,./training/train7.db,./training/train8.db,./training/train9.db -o temp.mln
+//
+// query
+// /opt/alchemy/infer  -i temp.mln -e LCAS-activity-evidence.db -q currActivity -r inference.out
+
+
+
+// network and domains definition 
+
+// Domain functions
+sensorLevel={Low,Mid,Hig}
+
+//predicates
+// inferred 
+currActivity(activity)
+
+// sensor inputs
+// evidences !
+level(sensorLevel,sensor) 
+
+//activity formulas
+// General relationship between a sensor and an activity
+// !level(Low,+s) <=> currActivity(+a)
+level(+l,+s)  v currActivity(+a)
+!level(+l,+s) v !currActivity(+a)

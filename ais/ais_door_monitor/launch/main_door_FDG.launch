@@ -1,0 +1,11 @@
+<launch>
+  <!--  -->
+  
+  <rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+  <node pkg="ais_door_monitor" type="notify_event.py" name="main_door_FDG_node" output="screen">    
+      <rosparam command="load" file="$(find ais_door_monitor)/cfg/main_door_FDG.yaml" />
+  </node>
+
+
+</launch>

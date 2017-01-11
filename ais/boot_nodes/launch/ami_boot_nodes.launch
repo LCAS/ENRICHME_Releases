@@ -1,0 +1,13 @@
+<launch>
+  <!-- Theoretically roscore is automatically started with launch files-->
+
+  <!-- IoT Bridge for OpenHAB + amb2openhab -->
+  <include file="$(find amb2openhab)/launch/amb2openhab.launch" />
+  
+  <!-- Multi master nodes -->
+  <include file="$(find multimaster)/launch/multimaster.launch" />
+
+  <!-- mongo recorder -->
+  <include file="$(find mongodb_recorder)/launch/mdb_recorder.launch" />
+        
+</launch>

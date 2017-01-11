@@ -1,0 +1,5 @@
+sensors :
+#    - Kitchen_Multi_Presence
+    - Bathroom_Multi_Presence
+    - Bedroom_Multi_Presence
+    - Livingroom_Multi_Presence

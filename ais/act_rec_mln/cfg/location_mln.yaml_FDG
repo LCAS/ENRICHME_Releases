@@ -1,0 +1,26 @@
+# configuration for FDG set up
+
+
+# List of sensors used in location mln network 
+sensors: [ 'Entry_Door_Contact', 'Fridge_Door_Contact', 'Kitchen_Plug_Power', 'Kitchen_Multi_Presence', 'Bathroom_Multi_Presence', 'Bedroom_Multi_Presence', 'Livingroom_Multi_Presence']
+
+# Part of evidence that does not change 
+staticEvidence: [ 'sensorAt(Entry_Door_Contact, Entry)', 'sensorAt(Fridge_Door_Contact, Kitchen)', 'sensorAt(Kitchen_Plug_Power, Kitchen)', 'sensorAt(Kitchen_Multi_Presence, Kitchen)', 'sensorAt(Bathroom_Multi_Presence, Bathroom)', 'sensorAt(Bedroom_Multi_Presence, Bedroom)', 'sensorAt(Livingroom_Multi_Presence, Livingroom)']
+
+# sensor time interval in secs to build evidences
+tevidence: 120.0
+
+# sample time: time between inferences in secs (and publication of results)
+tsample: 10.0
+
+# Topic name where inferences are published
+inferTopicName: 'mln_location'
+
+# Query for MLN 
+queries: ['currPlace']
+
+# MLN model used (it is a subfolder in ros_alchemy package)
+mlnModelName: 'LOCATION-FDG2'
+
+
+
