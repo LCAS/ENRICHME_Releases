@@ -1,0 +1,10 @@
+reidentifier:
+   name: Serhan
+   meanVector_rows: 1
+   meanVector_cols: 6
+   meanVector_dt: f
+   meanVector_data: [ 1.70691, 0.539982, 0.273105, 0, 0, 0 ]
+   icovMatrix_rows: 6
+   icovMatrix_cols: 6
+   icovMatrix_dt: f
+   icovMatrix_data: [ 781.454, -266.817, 15.1272, 0, 0, 0, -266.816, 315.993, 23.4265, 0, 0, 0, 15.1272, 23.4265, 6.07614, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]

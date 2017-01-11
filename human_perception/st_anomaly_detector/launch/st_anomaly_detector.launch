@@ -1,0 +1,10 @@
+<launch>
+    <arg name="machine" default="localhost" />
+    <arg name="user" default="" />
+
+    <machine name="$(arg machine)" address="$(arg machine)" env-loader="$(optenv ROS_ENV_LOADER )" user="$(arg user)" default="true"/>
+    
+    <node pkg="st_anomaly_detector" type="stanomaly_detector.py" name="st_anomaly_detector" output="screen" respawn="true">
+    </node>
+
+</launch> 

@@ -1,0 +1,1 @@
+string[] data 	# string array
