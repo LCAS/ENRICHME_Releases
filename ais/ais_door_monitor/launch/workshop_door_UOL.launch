@@ -1,0 +1,11 @@
+<launch>
+  <!--  -->
+  
+  <rosparam command="load" file="$(find ais_rosparams)/global.yaml" />
+
+  <node pkg="ais_door_monitor" type="notify_event.py" name="workshop_door_UOL_node" output="screen">    
+      <rosparam command="load" file="$(find ais_door_monitor)/cfg/workshop_door_UOL.yaml" />
+  </node>
+
+
+</launch>

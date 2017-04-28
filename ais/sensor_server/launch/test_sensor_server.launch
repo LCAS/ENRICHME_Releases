@@ -1,0 +1,43 @@
+<launch>
+	<!-- 
+		This launcher allows to test env server without any other component (robot,ais) 
+		Dependencies:
+			- a rosbag with env_sensor data
+			- amb2openhab to forward data to openhab
+			- openhab instance to receive robot data
+
+		They are launched here, but if these nodes are not running, this server won't work
+	-->    
+
+	<!-- Contains NCP params, mongo params and other global settings -->
+	<rosparam command="load" file="$(find sensor_server)/test/global.yaml" />
+
+	<!-- Launches openhab to process sensor queries   
+	Better to be launched manually forehand. Rest of nodes start trying to reach openhab and  generate lots of errors
+
+	<node pkg="openhab" type="start.sh" name="openhab_exec"/>
+	--> 
+
+	<!-- IoT Bridge for OpenHAB  -->
+	<node pkg="iot_bridge" type="iot_bridge" name="iot_bridge_node"/>		
+
+	<!-- Produces random ROS values for house sensors  -->
+	<node pkg="sensor_server" type="randomHouseData.py" name="openhabHouseData" output="screen"/>
+
+	<!-- Launch bag file for Environmental sensor  -->
+	<param name="use_sim_time" value="true" />  
+	<node pkg="rosbag" type="play" name="player" output="screen" args=" --clock $(find sensor_server)/test/env_sensor_capture_2.bag"/>
+
+	<!-- ROS to OpenHAB Robot Environmental data forwarder -->
+	<node pkg="amb2openhab" type="py_amb2openhab.py" name="amb2openhab_node">
+		<rosparam param="tsample">"10"</rosparam>
+	</node> 
+
+	<!-- Environmental sensor server -->
+	<node pkg="sensor_server" type="sensor_server_node.py" name="sensor_server_node">    
+		<rosparam param="houseTopic">"/house_sensors"</rosparam>
+		<rosparam param="robotTopic">"/robot_sensors"</rosparam>
+		<rosparam param="publishPeriod">"60"</rosparam>
+	</node> 
+
+</launch>

@@ -1,0 +1,32 @@
+sitemap default label="ENRICHME Sensors"
+{
+	Frame {
+				Webview url="http://192.168.1.182:8080/weblogs/time.html" height=1
+	}
+
+	Frame {
+	    Group item=gAll label="Sensors"		 icon="house"		
+	}	
+
+	Frame label="Service Status" {		
+		Text item=service_ros_status valuecolor=[service_ros_status=="ON"="green",service_ros_status=="OFF"="red"]
+		Text item=service_mongo_status valuecolor=[service_mongo_status=="ON"="green",service_mongo_status=="OFF"="red"]			
+	}
+	
+	Frame {
+		Text label="Log Files" icon="info"	 {		
+			Text item=st_copyLogs label="openhab.log [Last update: %s]" icon="settings" {
+				Webview url="http://192.168.1.182:8080/weblogs/openhab.log" height=20
+			}
+			Text item=st_copyLogs label="events.log [Last update: %s]" icon="settings" {
+				Webview url="http://192.168.1.182:8080/weblogs/events.log" height=20
+			}
+			Text item=st_copyLogs label="mongodb.log [Last update: %s]" icon="settings" {
+				Webview url="http://192.168.1.182:8080/weblogs/mongodb.log" height=20
+			}
+			Text item=st_copyLogs label="rosout.log [Last update: %s]" icon="settings" {
+				Webview url="http://192.168.1.182:8080/weblogs/rosout.log" height=20
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//predicate declarations
+sensorAt(sensor,place!)
+level(sensorLevel!,sensor)
+isActive(sensor)
+currPlace(place)
+
+//function declarations
+
+// 11.5921  currPlace(Entry) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+11.5921  currPlace(Entry) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Entry)
+
+// 11.5921  currPlace(Kitchen) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+11.5921  currPlace(Kitchen) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Kitchen)
+
+// 11.5921  currPlace(Kitchen) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+11.5921  currPlace(Kitchen) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Kitchen)
+
+// 11.5921  currPlace(Kitchen) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+11.5921  currPlace(Kitchen) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Kitchen)
+
+// 11.5921  currPlace(Bathroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+11.5921  currPlace(Bathroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Bathroom)
+
+// 11.5921  currPlace(Livingroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+11.5921  currPlace(Livingroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Livingroom)
+
+// 2.0001  isActive(s) => !level(Low,s) v level(Mid,s) v level(Hig,s).
+2.0001  !isActive(a1) v level(Mid,a1) v level(Hig,a1) v !level(Low,a1)
+
+// -6.44769  currPlace(a1)
+-6.44769  currPlace(a1)

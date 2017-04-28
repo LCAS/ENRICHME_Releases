@@ -1,0 +1,36 @@
+// train
+// /opt/alchemy/learnwts -i location.mln -g true -ne currPlace -multipleDatabases true -t ./training/train10.db,./training/train11.db,./training/train12.db,./training/train1.db,./training/train2.db,./training/train3.db,./training/train4.db,./training/train5.db,./training/train6.db,./training/train7.db,./training/train8.db,./training/train9.db -o temp.mln
+//
+// query
+// /opt/alchemy/infer -i network-trained.mln -e location-evidence.db -numChains 50 -q currPlace -p true -r inference.out; echo "................."; cat inference.out
+
+// Domains definitions -------------------------------------------------
+
+// Domain functions
+sensorLevel={Low,Mid,Hig}
+
+sensor={Entry_Door_Contact,Fridge_Door_Contact,Kitchen_Plug_Power,Bathroom_Multi_Presence,Bathroom_Multi_Lux,Bathroom_Multi_Temp,Kitchen_Multi_Presence,Kitchen_Multi_Lux,Kitchen_Multi_Temp,Bedroom_Multi_Presence,Bedroom_Multi_Lux,Bedroom_Multi_Temp,Livingroom_Multi_Presence,Livingroom_Multi_Lux,Livingroom_Multi_Temp}
+
+place={Entry,Kitchen,Bathroom,Bedroom,Livingroom}
+
+// predicates ----------------------------------------------------------
+// inferred 
+currPlace(place)
+
+// sensor inputs: evidences 
+isActive(sensor) 
+level(sensorLevel!,sensor) 
+
+
+// sensor location: many sensors, but one location
+sensorAt(sensor,place!)
+
+// formulas -----------------------------------------------------------
+// Relationship between a sensor and a place
+// Each sensor/place will have its own formula for (de)activations
+// If there is someone at location, then sensor will be active
+
+//  isActive(+s) ^ sensorAt(+s,+p) =>  currPlace(+p)
+currPlace(+p) v !isActive(+s) v !sensorAt(+s,+p)
+
+isActive(s) => !level(Low,s) v level(Mid,s) v level(Hig,s).

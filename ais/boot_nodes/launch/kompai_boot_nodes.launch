@@ -1,0 +1,13 @@
+<launch>
+  <!-- Theoretically roscore is automatically started with launch files-->
+
+  <!-- ROS PURE BRIDGE -->
+  <include file="$(find ros_pure)/launch/ros_pure.launch" />
+  
+  <!-- Multi master nodes -->
+  <include file="$(find multimaster)/launch/multimaster.launch" />
+  
+  <!-- Environmental sensors -->
+  <node pkg="env_sensor" type="env_sensor_node.py" name="env_sensor_node"/>
+  
+</launch>

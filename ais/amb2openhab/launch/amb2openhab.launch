@@ -1,0 +1,9 @@
+<!--Robot environmental sensor sync node 
+
+This node runs on AIS server. Gets data from env_sensor 
+(through multimaster if possible) and sends it to OpenHAB-->
+
+<launch>
+	<node pkg="amb2openhab" type="py_amb2openhab.py" name="amb2openhab_node"/>
+    <node pkg="iot_bridge" type="iot_bridge" name="iot_bridge_node"/>		
+</launch>

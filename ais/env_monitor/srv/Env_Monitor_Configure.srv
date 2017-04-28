@@ -1,0 +1,26 @@
+# Home-to-cloud interface (H2C Web Services)
+# Rest interface operations
+# 
+# REQUEST
+# verb		operation to be performed: 'getParamsList', 'setParamRange',
+#								       'getParamRange'
+# payload	depends on operation:
+#					'getParamsList' == ignored
+#					'setParamRange' == param name,min value, max value
+#					'getParamRange' == param name
+#
+# RESPONSE
+# answer    depends on requested operation:
+#					'getParamsList' == comma separated list of parameters
+#					'setParamRange' == ignored
+#					'getParamRange' == min value, max value. comma separated	
+# wasOk     boolean indicating successful operation
+# feedback  extra information on error string
+
+
+string    verb
+string    payload
+---
+string    response
+bool      wasOk
+string    feedback

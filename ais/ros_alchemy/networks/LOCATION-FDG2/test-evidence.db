@@ -1,0 +1,16 @@
+level(Mid,Entry_Door_Contact)
+level(Mid,Fridge_Door_Contact)
+level(Low,Kitchen_Plug_Power)
+level(Mid,Kitchen_Multi_Presence)
+level(Low,Bathroom_Multi_Presence)
+level(Low,Bedroom_Multi_Presence)
+level(Low,Livingroom_Multi_Presence)
+
+
+sensorAt(Entry_Door_Contact, Entry)
+sensorAt(Fridge_Door_Contact, Kitchen)
+sensorAt(Kitchen_Plug_Power, Kitchen)
+sensorAt(Kitchen_Multi_Presence, Kitchen)
+sensorAt(Bathroom_Multi_Presence, Bathroom)
+sensorAt(Bedroom_Multi_Presence, Bedroom)
+sensorAt(Livingroom_Multi_Presence, Livingroom)

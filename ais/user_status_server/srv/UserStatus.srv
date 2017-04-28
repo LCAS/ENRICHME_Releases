@@ -1,0 +1,7 @@
+# An empty request on this service triguers an user status update on the robot.
+# Updated user location and status description is returned.
+
+---
+Header header
+string userLocation   #Most probable user location
+string userStatus     #User status description

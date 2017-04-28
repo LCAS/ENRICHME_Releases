@@ -1,0 +1,1740 @@
+//predicate declarations
+currActivity(activity)
+level(sensorLevel,sensor)
+
+//function declarations
+
+// 5.48166  level(Low,Fridge_Door_Contact) v currActivity(Cooking)
+5.48166  currActivity(Cooking) v level(Low,Fridge_Door_Contact)
+
+// 0.449393  level(Low,Kitchen_Plug_Power) v currActivity(Cooking)
+0.449393  currActivity(Cooking) v level(Low,Kitchen_Plug_Power)
+
+// 4.48326  level(Low,Kitchen_Multi_Presence) v currActivity(Cooking)
+4.48326  currActivity(Cooking) v level(Low,Kitchen_Multi_Presence)
+
+// 0.589991  level(Low,Toilet_Door_Contact) v currActivity(Cooking)
+0.589991  currActivity(Cooking) v level(Low,Toilet_Door_Contact)
+
+// 1.24407  level(Low,Entry_Multi_Presence) v currActivity(Cooking)
+1.24407  currActivity(Cooking) v level(Low,Entry_Multi_Presence)
+
+// -0.352597  level(Low,External_Door_Contact) v currActivity(Cooking)
+-0.352597  currActivity(Cooking) v level(Low,External_Door_Contact)
+
+// -0.352597  level(Low,Entry_Multi_Contact) v currActivity(Cooking)
+-0.352597  currActivity(Cooking) v level(Low,Entry_Multi_Contact)
+
+// 0.589991  level(Low,Lounge_Multi_Presence) v currActivity(Cooking)
+0.589991  currActivity(Cooking) v level(Low,Lounge_Multi_Presence)
+
+// 0.543748  level(Low,Office1_Multi_Presence) v currActivity(Cooking)
+0.543748  currActivity(Cooking) v level(Low,Office1_Multi_Presence)
+
+// 0.543748  level(Low,Office2_Multi_Presence) v currActivity(Cooking)
+0.543748  currActivity(Cooking) v level(Low,Office2_Multi_Presence)
+
+// -0.333146  level(Low,Workshop_Multi_Presence) v currActivity(Cooking)
+-0.333146  currActivity(Cooking) v level(Low,Workshop_Multi_Presence)
+
+// 0.513518  level(Low,Printer_Plug_Power) v currActivity(Cooking)
+0.513518  currActivity(Cooking) v level(Low,Printer_Plug_Power)
+
+// -0.659253  level(Mid,Fridge_Door_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Fridge_Door_Contact)
+
+// -0.659253  level(Mid,Kitchen_Plug_Power) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Kitchen_Plug_Power)
+
+// -0.659253  level(Mid,Kitchen_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.659253  level(Mid,Toilet_Door_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Toilet_Door_Contact)
+
+// -0.659253  level(Mid,Entry_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Entry_Multi_Presence)
+
+// -0.659253  level(Mid,External_Door_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,External_Door_Contact)
+
+// -0.659253  level(Mid,Entry_Multi_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Entry_Multi_Contact)
+
+// -0.659253  level(Mid,Lounge_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Lounge_Multi_Presence)
+
+// -0.659253  level(Mid,Office1_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Office1_Multi_Presence)
+
+// -0.659253  level(Mid,Office2_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Office2_Multi_Presence)
+
+// -0.659253  level(Mid,Workshop_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Workshop_Multi_Presence)
+
+// -0.659253  level(Mid,Printer_Plug_Power) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Mid,Printer_Plug_Power)
+
+// -4.67653  level(Hig,Fridge_Door_Contact) v currActivity(Cooking)
+-4.67653  currActivity(Cooking) v level(Hig,Fridge_Door_Contact)
+
+// 0.414159  level(Hig,Kitchen_Plug_Power) v currActivity(Cooking)
+0.414159  currActivity(Cooking) v level(Hig,Kitchen_Plug_Power)
+
+// -0.659253  level(Hig,Kitchen_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.659253  level(Hig,Toilet_Door_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Toilet_Door_Contact)
+
+// -0.659253  level(Hig,Entry_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Entry_Multi_Presence)
+
+// -0.659253  level(Hig,External_Door_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,External_Door_Contact)
+
+// -0.659253  level(Hig,Entry_Multi_Contact) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Entry_Multi_Contact)
+
+// -0.659253  level(Hig,Lounge_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Lounge_Multi_Presence)
+
+// -0.659253  level(Hig,Office1_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Office1_Multi_Presence)
+
+// -0.659253  level(Hig,Office2_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Office2_Multi_Presence)
+
+// -0.659253  level(Hig,Workshop_Multi_Presence) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Workshop_Multi_Presence)
+
+// -0.659253  level(Hig,Printer_Plug_Power) v currActivity(Cooking)
+-0.659253  currActivity(Cooking) v level(Hig,Printer_Plug_Power)
+
+// 0.449393  level(Low,Fridge_Door_Contact) v currActivity(HavingCoffee)
+0.449393  currActivity(HavingCoffee) v level(Low,Fridge_Door_Contact)
+
+// 5.48166  level(Low,Kitchen_Plug_Power) v currActivity(HavingCoffee)
+5.48166  currActivity(HavingCoffee) v level(Low,Kitchen_Plug_Power)
+
+// 4.48326  level(Low,Kitchen_Multi_Presence) v currActivity(HavingCoffee)
+4.48326  currActivity(HavingCoffee) v level(Low,Kitchen_Multi_Presence)
+
+// 0.589991  level(Low,Toilet_Door_Contact) v currActivity(HavingCoffee)
+0.589991  currActivity(HavingCoffee) v level(Low,Toilet_Door_Contact)
+
+// 1.24407  level(Low,Entry_Multi_Presence) v currActivity(HavingCoffee)
+1.24407  currActivity(HavingCoffee) v level(Low,Entry_Multi_Presence)
+
+// -0.352597  level(Low,External_Door_Contact) v currActivity(HavingCoffee)
+-0.352597  currActivity(HavingCoffee) v level(Low,External_Door_Contact)
+
+// -0.352597  level(Low,Entry_Multi_Contact) v currActivity(HavingCoffee)
+-0.352597  currActivity(HavingCoffee) v level(Low,Entry_Multi_Contact)
+
+// 0.589991  level(Low,Lounge_Multi_Presence) v currActivity(HavingCoffee)
+0.589991  currActivity(HavingCoffee) v level(Low,Lounge_Multi_Presence)
+
+// 0.543748  level(Low,Office1_Multi_Presence) v currActivity(HavingCoffee)
+0.543748  currActivity(HavingCoffee) v level(Low,Office1_Multi_Presence)
+
+// 0.543748  level(Low,Office2_Multi_Presence) v currActivity(HavingCoffee)
+0.543748  currActivity(HavingCoffee) v level(Low,Office2_Multi_Presence)
+
+// -0.333146  level(Low,Workshop_Multi_Presence) v currActivity(HavingCoffee)
+-0.333146  currActivity(HavingCoffee) v level(Low,Workshop_Multi_Presence)
+
+// 0.513518  level(Low,Printer_Plug_Power) v currActivity(HavingCoffee)
+0.513518  currActivity(HavingCoffee) v level(Low,Printer_Plug_Power)
+
+// -0.659253  level(Mid,Fridge_Door_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Fridge_Door_Contact)
+
+// -0.659253  level(Mid,Kitchen_Plug_Power) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Kitchen_Plug_Power)
+
+// -0.659253  level(Mid,Kitchen_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.659253  level(Mid,Toilet_Door_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Toilet_Door_Contact)
+
+// -0.659253  level(Mid,Entry_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Entry_Multi_Presence)
+
+// -0.659253  level(Mid,External_Door_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,External_Door_Contact)
+
+// -0.659253  level(Mid,Entry_Multi_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Entry_Multi_Contact)
+
+// -0.659253  level(Mid,Lounge_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Lounge_Multi_Presence)
+
+// -0.659253  level(Mid,Office1_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Office1_Multi_Presence)
+
+// -0.659253  level(Mid,Office2_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Office2_Multi_Presence)
+
+// -0.659253  level(Mid,Workshop_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Workshop_Multi_Presence)
+
+// -0.659253  level(Mid,Printer_Plug_Power) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Mid,Printer_Plug_Power)
+
+// 0.414159  level(Hig,Fridge_Door_Contact) v currActivity(HavingCoffee)
+0.414159  currActivity(HavingCoffee) v level(Hig,Fridge_Door_Contact)
+
+// -4.67653  level(Hig,Kitchen_Plug_Power) v currActivity(HavingCoffee)
+-4.67653  currActivity(HavingCoffee) v level(Hig,Kitchen_Plug_Power)
+
+// -0.659253  level(Hig,Kitchen_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.659253  level(Hig,Toilet_Door_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Toilet_Door_Contact)
+
+// -0.659253  level(Hig,Entry_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Entry_Multi_Presence)
+
+// -0.659253  level(Hig,External_Door_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,External_Door_Contact)
+
+// -0.659253  level(Hig,Entry_Multi_Contact) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Entry_Multi_Contact)
+
+// -0.659253  level(Hig,Lounge_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Lounge_Multi_Presence)
+
+// -0.659253  level(Hig,Office1_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Office1_Multi_Presence)
+
+// -0.659253  level(Hig,Office2_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Office2_Multi_Presence)
+
+// -0.659253  level(Hig,Workshop_Multi_Presence) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Workshop_Multi_Presence)
+
+// -0.659253  level(Hig,Printer_Plug_Power) v currActivity(HavingCoffee)
+-0.659253  currActivity(HavingCoffee) v level(Hig,Printer_Plug_Power)
+
+// 0.389176  level(Low,Fridge_Door_Contact) v currActivity(Toileting)
+0.389176  currActivity(Toileting) v level(Low,Fridge_Door_Contact)
+
+// 0.389176  level(Low,Kitchen_Plug_Power) v currActivity(Toileting)
+0.389176  currActivity(Toileting) v level(Low,Kitchen_Plug_Power)
+
+// -0.462785  level(Low,Kitchen_Multi_Presence) v currActivity(Toileting)
+-0.462785  currActivity(Toileting) v level(Low,Kitchen_Multi_Presence)
+
+// 6.14463  level(Low,Toilet_Door_Contact) v currActivity(Toileting)
+6.14463  currActivity(Toileting) v level(Low,Toilet_Door_Contact)
+
+// 1.14295  level(Low,Entry_Multi_Presence) v currActivity(Toileting)
+1.14295  currActivity(Toileting) v level(Low,Entry_Multi_Presence)
+
+// -0.452531  level(Low,External_Door_Contact) v currActivity(Toileting)
+-0.452531  currActivity(Toileting) v level(Low,External_Door_Contact)
+
+// -0.452531  level(Low,Entry_Multi_Contact) v currActivity(Toileting)
+-0.452531  currActivity(Toileting) v level(Low,Entry_Multi_Contact)
+
+// -0.30995  level(Low,Lounge_Multi_Presence) v currActivity(Toileting)
+-0.30995  currActivity(Toileting) v level(Low,Lounge_Multi_Presence)
+
+// 0.438817  level(Low,Office1_Multi_Presence) v currActivity(Toileting)
+0.438817  currActivity(Toileting) v level(Low,Office1_Multi_Presence)
+
+// 0.438817  level(Low,Office2_Multi_Presence) v currActivity(Toileting)
+0.438817  currActivity(Toileting) v level(Low,Office2_Multi_Presence)
+
+// -0.549257  level(Low,Workshop_Multi_Presence) v currActivity(Toileting)
+-0.549257  currActivity(Toileting) v level(Low,Workshop_Multi_Presence)
+
+// 0.296256  level(Low,Printer_Plug_Power) v currActivity(Toileting)
+0.296256  currActivity(Toileting) v level(Low,Printer_Plug_Power)
+
+// -0.650571  level(Mid,Fridge_Door_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Fridge_Door_Contact)
+
+// -0.650571  level(Mid,Kitchen_Plug_Power) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Kitchen_Plug_Power)
+
+// -0.650571  level(Mid,Kitchen_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.650571  level(Mid,Toilet_Door_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Toilet_Door_Contact)
+
+// -0.650571  level(Mid,Entry_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Entry_Multi_Presence)
+
+// -0.650571  level(Mid,External_Door_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,External_Door_Contact)
+
+// -0.650571  level(Mid,Entry_Multi_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Entry_Multi_Contact)
+
+// -0.650571  level(Mid,Lounge_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Lounge_Multi_Presence)
+
+// -0.650571  level(Mid,Office1_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Office1_Multi_Presence)
+
+// -0.650571  level(Mid,Office2_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Office2_Multi_Presence)
+
+// -0.650571  level(Mid,Workshop_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Workshop_Multi_Presence)
+
+// -0.650571  level(Mid,Printer_Plug_Power) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Mid,Printer_Plug_Power)
+
+// 0.485525  level(Hig,Fridge_Door_Contact) v currActivity(Toileting)
+0.485525  currActivity(Toileting) v level(Hig,Fridge_Door_Contact)
+
+// 0.485525  level(Hig,Kitchen_Plug_Power) v currActivity(Toileting)
+0.485525  currActivity(Toileting) v level(Hig,Kitchen_Plug_Power)
+
+// -0.650571  level(Hig,Kitchen_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.650571  level(Hig,Toilet_Door_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Toilet_Door_Contact)
+
+// -0.650571  level(Hig,Entry_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Entry_Multi_Presence)
+
+// -0.650571  level(Hig,External_Door_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,External_Door_Contact)
+
+// -0.650571  level(Hig,Entry_Multi_Contact) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Entry_Multi_Contact)
+
+// -0.650571  level(Hig,Lounge_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Lounge_Multi_Presence)
+
+// -0.650571  level(Hig,Office1_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Office1_Multi_Presence)
+
+// -0.650571  level(Hig,Office2_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Office2_Multi_Presence)
+
+// -0.650571  level(Hig,Workshop_Multi_Presence) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Workshop_Multi_Presence)
+
+// -0.650571  level(Hig,Printer_Plug_Power) v currActivity(Toileting)
+-0.650571  currActivity(Toileting) v level(Hig,Printer_Plug_Power)
+
+// 0.41898  level(Low,Fridge_Door_Contact) v currActivity(Entering)
+0.41898  currActivity(Entering) v level(Low,Fridge_Door_Contact)
+
+// 0.41898  level(Low,Kitchen_Plug_Power) v currActivity(Entering)
+0.41898  currActivity(Entering) v level(Low,Kitchen_Plug_Power)
+
+// -0.409211  level(Low,Kitchen_Multi_Presence) v currActivity(Entering)
+-0.409211  currActivity(Entering) v level(Low,Kitchen_Multi_Presence)
+
+// 0.531287  level(Low,Toilet_Door_Contact) v currActivity(Entering)
+0.531287  currActivity(Entering) v level(Low,Toilet_Door_Contact)
+
+// -4.41151  level(Low,Entry_Multi_Presence) v currActivity(Entering)
+-4.41151  currActivity(Entering) v level(Low,Entry_Multi_Presence)
+
+// 4.40648  level(Low,External_Door_Contact) v currActivity(Entering)
+4.40648  currActivity(Entering) v level(Low,External_Door_Contact)
+
+// 4.40648  level(Low,Entry_Multi_Contact) v currActivity(Entering)
+4.40648  currActivity(Entering) v level(Low,Entry_Multi_Contact)
+
+// 0.531287  level(Low,Lounge_Multi_Presence) v currActivity(Entering)
+0.531287  currActivity(Entering) v level(Low,Lounge_Multi_Presence)
+
+// 0.492628  level(Low,Office1_Multi_Presence) v currActivity(Entering)
+0.492628  currActivity(Entering) v level(Low,Office1_Multi_Presence)
+
+// 0.492628  level(Low,Office2_Multi_Presence) v currActivity(Entering)
+0.492628  currActivity(Entering) v level(Low,Office2_Multi_Presence)
+
+// -0.389786  level(Low,Workshop_Multi_Presence) v currActivity(Entering)
+-0.389786  currActivity(Entering) v level(Low,Workshop_Multi_Presence)
+
+// 0.465164  level(Low,Printer_Plug_Power) v currActivity(Entering)
+0.465164  currActivity(Entering) v level(Low,Printer_Plug_Power)
+
+// -0.797596  level(Mid,Fridge_Door_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Fridge_Door_Contact)
+
+// -0.797596  level(Mid,Kitchen_Plug_Power) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Kitchen_Plug_Power)
+
+// -0.797596  level(Mid,Kitchen_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.797596  level(Mid,Toilet_Door_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Toilet_Door_Contact)
+
+// -0.797596  level(Mid,Entry_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Entry_Multi_Presence)
+
+// -0.797596  level(Mid,External_Door_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,External_Door_Contact)
+
+// -0.797596  level(Mid,Entry_Multi_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Entry_Multi_Contact)
+
+// -0.797596  level(Mid,Lounge_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Lounge_Multi_Presence)
+
+// -0.797596  level(Mid,Office1_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Office1_Multi_Presence)
+
+// -0.797596  level(Mid,Office2_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Office2_Multi_Presence)
+
+// -0.797596  level(Mid,Workshop_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Workshop_Multi_Presence)
+
+// -0.797596  level(Mid,Printer_Plug_Power) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Mid,Printer_Plug_Power)
+
+// 0.290114  level(Hig,Fridge_Door_Contact) v currActivity(Entering)
+0.290114  currActivity(Entering) v level(Hig,Fridge_Door_Contact)
+
+// 0.290114  level(Hig,Kitchen_Plug_Power) v currActivity(Entering)
+0.290114  currActivity(Entering) v level(Hig,Kitchen_Plug_Power)
+
+// -0.797596  level(Hig,Kitchen_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.797596  level(Hig,Toilet_Door_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Toilet_Door_Contact)
+
+// -0.797596  level(Hig,Entry_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Entry_Multi_Presence)
+
+// -0.797596  level(Hig,External_Door_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,External_Door_Contact)
+
+// -0.797596  level(Hig,Entry_Multi_Contact) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Entry_Multi_Contact)
+
+// -0.797596  level(Hig,Lounge_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Lounge_Multi_Presence)
+
+// -0.797596  level(Hig,Office1_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Office1_Multi_Presence)
+
+// -0.797596  level(Hig,Office2_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Office2_Multi_Presence)
+
+// -0.797596  level(Hig,Workshop_Multi_Presence) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Workshop_Multi_Presence)
+
+// -0.797596  level(Hig,Printer_Plug_Power) v currActivity(Entering)
+-0.797596  currActivity(Entering) v level(Hig,Printer_Plug_Power)
+
+// 0.389176  level(Low,Fridge_Door_Contact) v currActivity(Resting)
+0.389176  currActivity(Resting) v level(Low,Fridge_Door_Contact)
+
+// 0.389176  level(Low,Kitchen_Plug_Power) v currActivity(Resting)
+0.389176  currActivity(Resting) v level(Low,Kitchen_Plug_Power)
+
+// -0.462785  level(Low,Kitchen_Multi_Presence) v currActivity(Resting)
+-0.462785  currActivity(Resting) v level(Low,Kitchen_Multi_Presence)
+
+// -0.30995  level(Low,Toilet_Door_Contact) v currActivity(Resting)
+-0.30995  currActivity(Resting) v level(Low,Toilet_Door_Contact)
+
+// 1.14295  level(Low,Entry_Multi_Presence) v currActivity(Resting)
+1.14295  currActivity(Resting) v level(Low,Entry_Multi_Presence)
+
+// -0.452531  level(Low,External_Door_Contact) v currActivity(Resting)
+-0.452531  currActivity(Resting) v level(Low,External_Door_Contact)
+
+// -0.452531  level(Low,Entry_Multi_Contact) v currActivity(Resting)
+-0.452531  currActivity(Resting) v level(Low,Entry_Multi_Contact)
+
+// 6.14463  level(Low,Lounge_Multi_Presence) v currActivity(Resting)
+6.14463  currActivity(Resting) v level(Low,Lounge_Multi_Presence)
+
+// 0.438817  level(Low,Office1_Multi_Presence) v currActivity(Resting)
+0.438817  currActivity(Resting) v level(Low,Office1_Multi_Presence)
+
+// 0.438817  level(Low,Office2_Multi_Presence) v currActivity(Resting)
+0.438817  currActivity(Resting) v level(Low,Office2_Multi_Presence)
+
+// -0.549257  level(Low,Workshop_Multi_Presence) v currActivity(Resting)
+-0.549257  currActivity(Resting) v level(Low,Workshop_Multi_Presence)
+
+// 0.296256  level(Low,Printer_Plug_Power) v currActivity(Resting)
+0.296256  currActivity(Resting) v level(Low,Printer_Plug_Power)
+
+// -0.650571  level(Mid,Fridge_Door_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Fridge_Door_Contact)
+
+// -0.650571  level(Mid,Kitchen_Plug_Power) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Kitchen_Plug_Power)
+
+// -0.650571  level(Mid,Kitchen_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.650571  level(Mid,Toilet_Door_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Toilet_Door_Contact)
+
+// -0.650571  level(Mid,Entry_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Entry_Multi_Presence)
+
+// -0.650571  level(Mid,External_Door_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,External_Door_Contact)
+
+// -0.650571  level(Mid,Entry_Multi_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Entry_Multi_Contact)
+
+// -0.650571  level(Mid,Lounge_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Lounge_Multi_Presence)
+
+// -0.650571  level(Mid,Office1_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Office1_Multi_Presence)
+
+// -0.650571  level(Mid,Office2_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Office2_Multi_Presence)
+
+// -0.650571  level(Mid,Workshop_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Workshop_Multi_Presence)
+
+// -0.650571  level(Mid,Printer_Plug_Power) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Mid,Printer_Plug_Power)
+
+// 0.485525  level(Hig,Fridge_Door_Contact) v currActivity(Resting)
+0.485525  currActivity(Resting) v level(Hig,Fridge_Door_Contact)
+
+// 0.485525  level(Hig,Kitchen_Plug_Power) v currActivity(Resting)
+0.485525  currActivity(Resting) v level(Hig,Kitchen_Plug_Power)
+
+// -0.650571  level(Hig,Kitchen_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.650571  level(Hig,Toilet_Door_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Toilet_Door_Contact)
+
+// -0.650571  level(Hig,Entry_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Entry_Multi_Presence)
+
+// -0.650571  level(Hig,External_Door_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,External_Door_Contact)
+
+// -0.650571  level(Hig,Entry_Multi_Contact) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Entry_Multi_Contact)
+
+// -0.650571  level(Hig,Lounge_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Lounge_Multi_Presence)
+
+// -0.650571  level(Hig,Office1_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Office1_Multi_Presence)
+
+// -0.650571  level(Hig,Office2_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Office2_Multi_Presence)
+
+// -0.650571  level(Hig,Workshop_Multi_Presence) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Workshop_Multi_Presence)
+
+// -0.650571  level(Hig,Printer_Plug_Power) v currActivity(Resting)
+-0.650571  currActivity(Resting) v level(Hig,Printer_Plug_Power)
+
+// 0.420967  level(Low,Fridge_Door_Contact) v currActivity(Exiting)
+0.420967  currActivity(Exiting) v level(Low,Fridge_Door_Contact)
+
+// 0.420967  level(Low,Kitchen_Plug_Power) v currActivity(Exiting)
+0.420967  currActivity(Exiting) v level(Low,Kitchen_Plug_Power)
+
+// -0.406936  level(Low,Kitchen_Multi_Presence) v currActivity(Exiting)
+-0.406936  currActivity(Exiting) v level(Low,Kitchen_Multi_Presence)
+
+// 0.551776  level(Low,Toilet_Door_Contact) v currActivity(Exiting)
+0.551776  currActivity(Exiting) v level(Low,Toilet_Door_Contact)
+
+// 6.80967  level(Low,Entry_Multi_Presence) v currActivity(Exiting)
+6.80967  currActivity(Exiting) v level(Low,Entry_Multi_Presence)
+
+// 4.40112  level(Low,External_Door_Contact) v currActivity(Exiting)
+4.40112  currActivity(Exiting) v level(Low,External_Door_Contact)
+
+// 4.40112  level(Low,Entry_Multi_Contact) v currActivity(Exiting)
+4.40112  currActivity(Exiting) v level(Low,Entry_Multi_Contact)
+
+// 0.551776  level(Low,Lounge_Multi_Presence) v currActivity(Exiting)
+0.551776  currActivity(Exiting) v level(Low,Lounge_Multi_Presence)
+
+// 0.494966  level(Low,Office1_Multi_Presence) v currActivity(Exiting)
+0.494966  currActivity(Exiting) v level(Low,Office1_Multi_Presence)
+
+// 0.494966  level(Low,Office2_Multi_Presence) v currActivity(Exiting)
+0.494966  currActivity(Exiting) v level(Low,Office2_Multi_Presence)
+
+// -0.386733  level(Low,Workshop_Multi_Presence) v currActivity(Exiting)
+-0.386733  currActivity(Exiting) v level(Low,Workshop_Multi_Presence)
+
+// 0.468884  level(Low,Printer_Plug_Power) v currActivity(Exiting)
+0.468884  currActivity(Exiting) v level(Low,Printer_Plug_Power)
+
+// -0.795102  level(Mid,Fridge_Door_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Fridge_Door_Contact)
+
+// -0.795102  level(Mid,Kitchen_Plug_Power) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Kitchen_Plug_Power)
+
+// -0.795102  level(Mid,Kitchen_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.795102  level(Mid,Toilet_Door_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Toilet_Door_Contact)
+
+// -0.795102  level(Mid,Entry_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Entry_Multi_Presence)
+
+// -0.795102  level(Mid,External_Door_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,External_Door_Contact)
+
+// -0.795102  level(Mid,Entry_Multi_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Entry_Multi_Contact)
+
+// -0.795102  level(Mid,Lounge_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Lounge_Multi_Presence)
+
+// -0.795102  level(Mid,Office1_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Office1_Multi_Presence)
+
+// -0.795102  level(Mid,Office2_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Office2_Multi_Presence)
+
+// -0.795102  level(Mid,Workshop_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Workshop_Multi_Presence)
+
+// -0.795102  level(Mid,Printer_Plug_Power) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Mid,Printer_Plug_Power)
+
+// 0.29079  level(Hig,Fridge_Door_Contact) v currActivity(Exiting)
+0.29079  currActivity(Exiting) v level(Hig,Fridge_Door_Contact)
+
+// 0.29079  level(Hig,Kitchen_Plug_Power) v currActivity(Exiting)
+0.29079  currActivity(Exiting) v level(Hig,Kitchen_Plug_Power)
+
+// -0.795102  level(Hig,Kitchen_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.795102  level(Hig,Toilet_Door_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Toilet_Door_Contact)
+
+// -0.795102  level(Hig,Entry_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Entry_Multi_Presence)
+
+// -0.795102  level(Hig,External_Door_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,External_Door_Contact)
+
+// -0.795102  level(Hig,Entry_Multi_Contact) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Entry_Multi_Contact)
+
+// -0.795102  level(Hig,Lounge_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Lounge_Multi_Presence)
+
+// -0.795102  level(Hig,Office1_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Office1_Multi_Presence)
+
+// -0.795102  level(Hig,Office2_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Office2_Multi_Presence)
+
+// -0.795102  level(Hig,Workshop_Multi_Presence) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Workshop_Multi_Presence)
+
+// -0.795102  level(Hig,Printer_Plug_Power) v currActivity(Exiting)
+-0.795102  currActivity(Exiting) v level(Hig,Printer_Plug_Power)
+
+// 0.459398  level(Low,Fridge_Door_Contact) v currActivity(Working)
+0.459398  currActivity(Working) v level(Low,Fridge_Door_Contact)
+
+// 0.459398  level(Low,Kitchen_Plug_Power) v currActivity(Working)
+0.459398  currActivity(Working) v level(Low,Kitchen_Plug_Power)
+
+// -0.362374  level(Low,Kitchen_Multi_Presence) v currActivity(Working)
+-0.362374  currActivity(Working) v level(Low,Kitchen_Multi_Presence)
+
+// 0.582795  level(Low,Toilet_Door_Contact) v currActivity(Working)
+0.582795  currActivity(Working) v level(Low,Toilet_Door_Contact)
+
+// 1.23594  level(Low,Entry_Multi_Presence) v currActivity(Working)
+1.23594  currActivity(Working) v level(Low,Entry_Multi_Presence)
+
+// -0.361119  level(Low,External_Door_Contact) v currActivity(Working)
+-0.361119  currActivity(Working) v level(Low,External_Door_Contact)
+
+// -0.361119  level(Low,Entry_Multi_Contact) v currActivity(Working)
+-0.361119  currActivity(Working) v level(Low,Entry_Multi_Contact)
+
+// 0.582795  level(Low,Lounge_Multi_Presence) v currActivity(Working)
+0.582795  currActivity(Working) v level(Low,Lounge_Multi_Presence)
+
+// 5.50587  level(Low,Office1_Multi_Presence) v currActivity(Working)
+5.50587  currActivity(Working) v level(Low,Office1_Multi_Presence)
+
+// 5.50587  level(Low,Office2_Multi_Presence) v currActivity(Working)
+5.50587  currActivity(Working) v level(Low,Office2_Multi_Presence)
+
+// 4.48244  level(Low,Workshop_Multi_Presence) v currActivity(Working)
+4.48244  currActivity(Working) v level(Low,Workshop_Multi_Presence)
+
+// 0.468196  level(Low,Printer_Plug_Power) v currActivity(Working)
+0.468196  currActivity(Working) v level(Low,Printer_Plug_Power)
+
+// -0.679689  level(Mid,Fridge_Door_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Fridge_Door_Contact)
+
+// -0.679689  level(Mid,Kitchen_Plug_Power) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Kitchen_Plug_Power)
+
+// -0.679689  level(Mid,Kitchen_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.679689  level(Mid,Toilet_Door_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Toilet_Door_Contact)
+
+// -0.679689  level(Mid,Entry_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Entry_Multi_Presence)
+
+// -0.679689  level(Mid,External_Door_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,External_Door_Contact)
+
+// -0.679689  level(Mid,Entry_Multi_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Entry_Multi_Contact)
+
+// -0.679689  level(Mid,Lounge_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Lounge_Multi_Presence)
+
+// -0.679689  level(Mid,Office1_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Office1_Multi_Presence)
+
+// -0.679689  level(Mid,Office2_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Office2_Multi_Presence)
+
+// -0.679689  level(Mid,Workshop_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Workshop_Multi_Presence)
+
+// -0.679689  level(Mid,Printer_Plug_Power) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Mid,Printer_Plug_Power)
+
+// 0.376984  level(Hig,Fridge_Door_Contact) v currActivity(Working)
+0.376984  currActivity(Working) v level(Hig,Fridge_Door_Contact)
+
+// 0.376984  level(Hig,Kitchen_Plug_Power) v currActivity(Working)
+0.376984  currActivity(Working) v level(Hig,Kitchen_Plug_Power)
+
+// -0.679689  level(Hig,Kitchen_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.679689  level(Hig,Toilet_Door_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Toilet_Door_Contact)
+
+// -0.679689  level(Hig,Entry_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Entry_Multi_Presence)
+
+// -0.679689  level(Hig,External_Door_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,External_Door_Contact)
+
+// -0.679689  level(Hig,Entry_Multi_Contact) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Entry_Multi_Contact)
+
+// -0.679689  level(Hig,Lounge_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Lounge_Multi_Presence)
+
+// -0.679689  level(Hig,Office1_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Office1_Multi_Presence)
+
+// -0.679689  level(Hig,Office2_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Office2_Multi_Presence)
+
+// -0.679689  level(Hig,Workshop_Multi_Presence) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Workshop_Multi_Presence)
+
+// -0.679689  level(Hig,Printer_Plug_Power) v currActivity(Working)
+-0.679689  currActivity(Working) v level(Hig,Printer_Plug_Power)
+
+// 0.457798  level(Low,Fridge_Door_Contact) v currActivity(Printing)
+0.457798  currActivity(Printing) v level(Low,Fridge_Door_Contact)
+
+// 0.457798  level(Low,Kitchen_Plug_Power) v currActivity(Printing)
+0.457798  currActivity(Printing) v level(Low,Kitchen_Plug_Power)
+
+// -0.362884  level(Low,Kitchen_Multi_Presence) v currActivity(Printing)
+-0.362884  currActivity(Printing) v level(Low,Kitchen_Multi_Presence)
+
+// 0.5717  level(Low,Toilet_Door_Contact) v currActivity(Printing)
+0.5717  currActivity(Printing) v level(Low,Toilet_Door_Contact)
+
+// 1.23307  level(Low,Entry_Multi_Presence) v currActivity(Printing)
+1.23307  currActivity(Printing) v level(Low,Entry_Multi_Presence)
+
+// -0.361605  level(Low,External_Door_Contact) v currActivity(Printing)
+-0.361605  currActivity(Printing) v level(Low,External_Door_Contact)
+
+// -0.361605  level(Low,Entry_Multi_Contact) v currActivity(Printing)
+-0.361605  currActivity(Printing) v level(Low,Entry_Multi_Contact)
+
+// 0.5717  level(Low,Lounge_Multi_Presence) v currActivity(Printing)
+0.5717  currActivity(Printing) v level(Low,Lounge_Multi_Presence)
+
+// -0.130804  level(Low,Office1_Multi_Presence) v currActivity(Printing)
+-0.130804  currActivity(Printing) v level(Low,Office1_Multi_Presence)
+
+// -0.130804  level(Low,Office2_Multi_Presence) v currActivity(Printing)
+-0.130804  currActivity(Printing) v level(Low,Office2_Multi_Presence)
+
+// 4.48198  level(Low,Workshop_Multi_Presence) v currActivity(Printing)
+4.48198  currActivity(Printing) v level(Low,Workshop_Multi_Presence)
+
+// 5.73245  level(Low,Printer_Plug_Power) v currActivity(Printing)
+5.73245  currActivity(Printing) v level(Low,Printer_Plug_Power)
+
+// -0.677052  level(Mid,Fridge_Door_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Fridge_Door_Contact)
+
+// -0.677052  level(Mid,Kitchen_Plug_Power) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Kitchen_Plug_Power)
+
+// -0.677052  level(Mid,Kitchen_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Kitchen_Multi_Presence)
+
+// -0.677052  level(Mid,Toilet_Door_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Toilet_Door_Contact)
+
+// -0.677052  level(Mid,Entry_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Entry_Multi_Presence)
+
+// -0.677052  level(Mid,External_Door_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,External_Door_Contact)
+
+// -0.677052  level(Mid,Entry_Multi_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Entry_Multi_Contact)
+
+// -0.677052  level(Mid,Lounge_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Lounge_Multi_Presence)
+
+// -0.677052  level(Mid,Office1_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Office1_Multi_Presence)
+
+// -0.677052  level(Mid,Office2_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Office2_Multi_Presence)
+
+// -0.677052  level(Mid,Workshop_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Workshop_Multi_Presence)
+
+// -0.677052  level(Mid,Printer_Plug_Power) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Mid,Printer_Plug_Power)
+
+// 0.381411  level(Hig,Fridge_Door_Contact) v currActivity(Printing)
+0.381411  currActivity(Printing) v level(Hig,Fridge_Door_Contact)
+
+// 0.381411  level(Hig,Kitchen_Plug_Power) v currActivity(Printing)
+0.381411  currActivity(Printing) v level(Hig,Kitchen_Plug_Power)
+
+// -0.677052  level(Hig,Kitchen_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Kitchen_Multi_Presence)
+
+// -0.677052  level(Hig,Toilet_Door_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Toilet_Door_Contact)
+
+// -0.677052  level(Hig,Entry_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Entry_Multi_Presence)
+
+// -0.677052  level(Hig,External_Door_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,External_Door_Contact)
+
+// -0.677052  level(Hig,Entry_Multi_Contact) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Entry_Multi_Contact)
+
+// -0.677052  level(Hig,Lounge_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Lounge_Multi_Presence)
+
+// -0.677052  level(Hig,Office1_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Office1_Multi_Presence)
+
+// -0.677052  level(Hig,Office2_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Office2_Multi_Presence)
+
+// -0.677052  level(Hig,Workshop_Multi_Presence) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Workshop_Multi_Presence)
+
+// -0.677052  level(Hig,Printer_Plug_Power) v currActivity(Printing)
+-0.677052  currActivity(Printing) v level(Hig,Printer_Plug_Power)
+
+// 4.19411  !level(Low,Fridge_Door_Contact) v !currActivity(Cooking)
+4.19411  !currActivity(Cooking) v !level(Low,Fridge_Door_Contact)
+
+// -0.838163  !level(Low,Kitchen_Plug_Power) v !currActivity(Cooking)
+-0.838163  !currActivity(Cooking) v !level(Low,Kitchen_Plug_Power)
+
+// 3.42894  !level(Low,Kitchen_Multi_Presence) v !currActivity(Cooking)
+3.42894  !currActivity(Cooking) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.573699  !level(Low,Toilet_Door_Contact) v !currActivity(Cooking)
+-0.573699  !currActivity(Cooking) v !level(Low,Toilet_Door_Contact)
+
+// -0.694005  !level(Low,Entry_Multi_Presence) v !currActivity(Cooking)
+-0.694005  !currActivity(Cooking) v !level(Low,Entry_Multi_Presence)
+
+// -1.4203  !level(Low,External_Door_Contact) v !currActivity(Cooking)
+-1.4203  !currActivity(Cooking) v !level(Low,External_Door_Contact)
+
+// -1.4203  !level(Low,Entry_Multi_Contact) v !currActivity(Cooking)
+-1.4203  !currActivity(Cooking) v !level(Low,Entry_Multi_Contact)
+
+// -0.573699  !level(Low,Lounge_Multi_Presence) v !currActivity(Cooking)
+-0.573699  !currActivity(Cooking) v !level(Low,Lounge_Multi_Presence)
+
+// -0.907688  !level(Low,Office1_Multi_Presence) v !currActivity(Cooking)
+-0.907688  !currActivity(Cooking) v !level(Low,Office1_Multi_Presence)
+
+// -0.907688  !level(Low,Office2_Multi_Presence) v !currActivity(Cooking)
+-0.907688  !currActivity(Cooking) v !level(Low,Office2_Multi_Presence)
+
+// -1.46049  !level(Low,Workshop_Multi_Presence) v !currActivity(Cooking)
+-1.46049  !currActivity(Cooking) v !level(Low,Workshop_Multi_Presence)
+
+// -0.715383  !level(Low,Printer_Plug_Power) v !currActivity(Cooking)
+-0.715383  !currActivity(Cooking) v !level(Low,Printer_Plug_Power)
+
+// 0.0952629  !level(Mid,Fridge_Door_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Fridge_Door_Contact)
+
+// 0.0952629  !level(Mid,Kitchen_Plug_Power) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.0952629  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.0952629  !level(Mid,Toilet_Door_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Toilet_Door_Contact)
+
+// 0.0952629  !level(Mid,Entry_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Entry_Multi_Presence)
+
+// 0.0952629  !level(Mid,External_Door_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,External_Door_Contact)
+
+// 0.0952629  !level(Mid,Entry_Multi_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Entry_Multi_Contact)
+
+// 0.0952629  !level(Mid,Lounge_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.0952629  !level(Mid,Office1_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Office1_Multi_Presence)
+
+// 0.0952629  !level(Mid,Office2_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Office2_Multi_Presence)
+
+// 0.0952629  !level(Mid,Workshop_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.0952629  !level(Mid,Printer_Plug_Power) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Mid,Printer_Plug_Power)
+
+// -4.39098  !level(Hig,Fridge_Door_Contact) v !currActivity(Cooking)
+-4.39098  !currActivity(Cooking) v !level(Hig,Fridge_Door_Contact)
+
+// 0.699713  !level(Hig,Kitchen_Plug_Power) v !currActivity(Cooking)
+0.699713  !currActivity(Cooking) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.0952629  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.0952629  !level(Hig,Toilet_Door_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Toilet_Door_Contact)
+
+// 0.0952629  !level(Hig,Entry_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Entry_Multi_Presence)
+
+// 0.0952629  !level(Hig,External_Door_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,External_Door_Contact)
+
+// 0.0952629  !level(Hig,Entry_Multi_Contact) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Entry_Multi_Contact)
+
+// 0.0952629  !level(Hig,Lounge_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.0952629  !level(Hig,Office1_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Office1_Multi_Presence)
+
+// 0.0952629  !level(Hig,Office2_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Office2_Multi_Presence)
+
+// 0.0952629  !level(Hig,Workshop_Multi_Presence) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.0952629  !level(Hig,Printer_Plug_Power) v !currActivity(Cooking)
+0.0952629  !currActivity(Cooking) v !level(Hig,Printer_Plug_Power)
+
+// -0.838163  !level(Low,Fridge_Door_Contact) v !currActivity(HavingCoffee)
+-0.838163  !currActivity(HavingCoffee) v !level(Low,Fridge_Door_Contact)
+
+// 4.19411  !level(Low,Kitchen_Plug_Power) v !currActivity(HavingCoffee)
+4.19411  !currActivity(HavingCoffee) v !level(Low,Kitchen_Plug_Power)
+
+// 3.42894  !level(Low,Kitchen_Multi_Presence) v !currActivity(HavingCoffee)
+3.42894  !currActivity(HavingCoffee) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.573699  !level(Low,Toilet_Door_Contact) v !currActivity(HavingCoffee)
+-0.573699  !currActivity(HavingCoffee) v !level(Low,Toilet_Door_Contact)
+
+// -0.694005  !level(Low,Entry_Multi_Presence) v !currActivity(HavingCoffee)
+-0.694005  !currActivity(HavingCoffee) v !level(Low,Entry_Multi_Presence)
+
+// -1.4203  !level(Low,External_Door_Contact) v !currActivity(HavingCoffee)
+-1.4203  !currActivity(HavingCoffee) v !level(Low,External_Door_Contact)
+
+// -1.4203  !level(Low,Entry_Multi_Contact) v !currActivity(HavingCoffee)
+-1.4203  !currActivity(HavingCoffee) v !level(Low,Entry_Multi_Contact)
+
+// -0.573699  !level(Low,Lounge_Multi_Presence) v !currActivity(HavingCoffee)
+-0.573699  !currActivity(HavingCoffee) v !level(Low,Lounge_Multi_Presence)
+
+// -0.907688  !level(Low,Office1_Multi_Presence) v !currActivity(HavingCoffee)
+-0.907688  !currActivity(HavingCoffee) v !level(Low,Office1_Multi_Presence)
+
+// -0.907688  !level(Low,Office2_Multi_Presence) v !currActivity(HavingCoffee)
+-0.907688  !currActivity(HavingCoffee) v !level(Low,Office2_Multi_Presence)
+
+// -1.46049  !level(Low,Workshop_Multi_Presence) v !currActivity(HavingCoffee)
+-1.46049  !currActivity(HavingCoffee) v !level(Low,Workshop_Multi_Presence)
+
+// -0.715383  !level(Low,Printer_Plug_Power) v !currActivity(HavingCoffee)
+-0.715383  !currActivity(HavingCoffee) v !level(Low,Printer_Plug_Power)
+
+// 0.0952629  !level(Mid,Fridge_Door_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Fridge_Door_Contact)
+
+// 0.0952629  !level(Mid,Kitchen_Plug_Power) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.0952629  !level(Mid,Kitchen_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.0952629  !level(Mid,Toilet_Door_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Toilet_Door_Contact)
+
+// 0.0952629  !level(Mid,Entry_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Entry_Multi_Presence)
+
+// 0.0952629  !level(Mid,External_Door_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,External_Door_Contact)
+
+// 0.0952629  !level(Mid,Entry_Multi_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Entry_Multi_Contact)
+
+// 0.0952629  !level(Mid,Lounge_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.0952629  !level(Mid,Office1_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Office1_Multi_Presence)
+
+// 0.0952629  !level(Mid,Office2_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Office2_Multi_Presence)
+
+// 0.0952629  !level(Mid,Workshop_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.0952629  !level(Mid,Printer_Plug_Power) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Mid,Printer_Plug_Power)
+
+// 0.699713  !level(Hig,Fridge_Door_Contact) v !currActivity(HavingCoffee)
+0.699713  !currActivity(HavingCoffee) v !level(Hig,Fridge_Door_Contact)
+
+// -4.39098  !level(Hig,Kitchen_Plug_Power) v !currActivity(HavingCoffee)
+-4.39098  !currActivity(HavingCoffee) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.0952629  !level(Hig,Kitchen_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.0952629  !level(Hig,Toilet_Door_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Toilet_Door_Contact)
+
+// 0.0952629  !level(Hig,Entry_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Entry_Multi_Presence)
+
+// 0.0952629  !level(Hig,External_Door_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,External_Door_Contact)
+
+// 0.0952629  !level(Hig,Entry_Multi_Contact) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Entry_Multi_Contact)
+
+// 0.0952629  !level(Hig,Lounge_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.0952629  !level(Hig,Office1_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Office1_Multi_Presence)
+
+// 0.0952629  !level(Hig,Office2_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Office2_Multi_Presence)
+
+// 0.0952629  !level(Hig,Workshop_Multi_Presence) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.0952629  !level(Hig,Printer_Plug_Power) v !currActivity(HavingCoffee)
+0.0952629  !currActivity(HavingCoffee) v !level(Hig,Printer_Plug_Power)
+
+// -0.90659  !level(Low,Fridge_Door_Contact) v !currActivity(Toileting)
+-0.90659  !currActivity(Toileting) v !level(Low,Fridge_Door_Contact)
+
+// -0.90659  !level(Low,Kitchen_Plug_Power) v !currActivity(Toileting)
+-0.90659  !currActivity(Toileting) v !level(Low,Kitchen_Plug_Power)
+
+// -1.52531  !level(Low,Kitchen_Multi_Presence) v !currActivity(Toileting)
+-1.52531  !currActivity(Toileting) v !level(Low,Kitchen_Multi_Presence)
+
+// 4.97273  !level(Low,Toilet_Door_Contact) v !currActivity(Toileting)
+4.97273  !currActivity(Toileting) v !level(Low,Toilet_Door_Contact)
+
+// -0.803331  !level(Low,Entry_Multi_Presence) v !currActivity(Toileting)
+-0.803331  !currActivity(Toileting) v !level(Low,Entry_Multi_Presence)
+
+// -1.52845  !level(Low,External_Door_Contact) v !currActivity(Toileting)
+-1.52845  !currActivity(Toileting) v !level(Low,External_Door_Contact)
+
+// -1.52845  !level(Low,Entry_Multi_Contact) v !currActivity(Toileting)
+-1.52845  !currActivity(Toileting) v !level(Low,Entry_Multi_Contact)
+
+// -1.48185  !level(Low,Lounge_Multi_Presence) v !currActivity(Toileting)
+-1.48185  !currActivity(Toileting) v !level(Low,Lounge_Multi_Presence)
+
+// -1.02083  !level(Low,Office1_Multi_Presence) v !currActivity(Toileting)
+-1.02083  !currActivity(Toileting) v !level(Low,Office1_Multi_Presence)
+
+// -1.02083  !level(Low,Office2_Multi_Presence) v !currActivity(Toileting)
+-1.02083  !currActivity(Toileting) v !level(Low,Office2_Multi_Presence)
+
+// -1.68481  !level(Low,Workshop_Multi_Presence) v !currActivity(Toileting)
+-1.68481  !currActivity(Toileting) v !level(Low,Workshop_Multi_Presence)
+
+// -0.940855  !level(Low,Printer_Plug_Power) v !currActivity(Toileting)
+-0.940855  !currActivity(Toileting) v !level(Low,Printer_Plug_Power)
+
+// 0.0957358  !level(Mid,Fridge_Door_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Fridge_Door_Contact)
+
+// 0.0957358  !level(Mid,Kitchen_Plug_Power) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.0957358  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.0957358  !level(Mid,Toilet_Door_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Toilet_Door_Contact)
+
+// 0.0957358  !level(Mid,Entry_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Entry_Multi_Presence)
+
+// 0.0957358  !level(Mid,External_Door_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,External_Door_Contact)
+
+// 0.0957358  !level(Mid,Entry_Multi_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Entry_Multi_Contact)
+
+// 0.0957358  !level(Mid,Lounge_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.0957358  !level(Mid,Office1_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Office1_Multi_Presence)
+
+// 0.0957358  !level(Mid,Office2_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Office2_Multi_Presence)
+
+// 0.0957358  !level(Mid,Workshop_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.0957358  !level(Mid,Printer_Plug_Power) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Mid,Printer_Plug_Power)
+
+// 0.762869  !level(Hig,Fridge_Door_Contact) v !currActivity(Toileting)
+0.762869  !currActivity(Toileting) v !level(Hig,Fridge_Door_Contact)
+
+// 0.762869  !level(Hig,Kitchen_Plug_Power) v !currActivity(Toileting)
+0.762869  !currActivity(Toileting) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.0957358  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.0957358  !level(Hig,Toilet_Door_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Toilet_Door_Contact)
+
+// 0.0957358  !level(Hig,Entry_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Entry_Multi_Presence)
+
+// 0.0957358  !level(Hig,External_Door_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,External_Door_Contact)
+
+// 0.0957358  !level(Hig,Entry_Multi_Contact) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Entry_Multi_Contact)
+
+// 0.0957358  !level(Hig,Lounge_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.0957358  !level(Hig,Office1_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Office1_Multi_Presence)
+
+// 0.0957358  !level(Hig,Office2_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Office2_Multi_Presence)
+
+// 0.0957358  !level(Hig,Workshop_Multi_Presence) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.0957358  !level(Hig,Printer_Plug_Power) v !currActivity(Toileting)
+0.0957358  !currActivity(Toileting) v !level(Hig,Printer_Plug_Power)
+
+// -0.721057  !level(Low,Fridge_Door_Contact) v !currActivity(Entering)
+-0.721057  !currActivity(Entering) v !level(Low,Fridge_Door_Contact)
+
+// -0.721057  !level(Low,Kitchen_Plug_Power) v !currActivity(Entering)
+-0.721057  !currActivity(Entering) v !level(Low,Kitchen_Plug_Power)
+
+// -1.31601  !level(Low,Kitchen_Multi_Presence) v !currActivity(Entering)
+-1.31601  !currActivity(Entering) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.484882  !level(Low,Toilet_Door_Contact) v !currActivity(Entering)
+-0.484882  !currActivity(Entering) v !level(Low,Toilet_Door_Contact)
+
+// -6.20207  !level(Low,Entry_Multi_Presence) v !currActivity(Entering)
+-6.20207  !currActivity(Entering) v !level(Low,Entry_Multi_Presence)
+
+// 3.48629  !level(Low,External_Door_Contact) v !currActivity(Entering)
+3.48629  !currActivity(Entering) v !level(Low,External_Door_Contact)
+
+// 3.48629  !level(Low,Entry_Multi_Contact) v !currActivity(Entering)
+3.48629  !currActivity(Entering) v !level(Low,Entry_Multi_Contact)
+
+// -0.484882  !level(Low,Lounge_Multi_Presence) v !currActivity(Entering)
+-0.484882  !currActivity(Entering) v !level(Low,Lounge_Multi_Presence)
+
+// -0.811289  !level(Low,Office1_Multi_Presence) v !currActivity(Entering)
+-0.811289  !currActivity(Entering) v !level(Low,Office1_Multi_Presence)
+
+// -0.811289  !level(Low,Office2_Multi_Presence) v !currActivity(Entering)
+-0.811289  !currActivity(Entering) v !level(Low,Office2_Multi_Presence)
+
+// -1.36961  !level(Low,Workshop_Multi_Presence) v !currActivity(Entering)
+-1.36961  !currActivity(Entering) v !level(Low,Workshop_Multi_Presence)
+
+// -0.616217  !level(Low,Printer_Plug_Power) v !currActivity(Entering)
+-0.616217  !currActivity(Entering) v !level(Low,Printer_Plug_Power)
+
+// 0.10444  !level(Mid,Fridge_Door_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Fridge_Door_Contact)
+
+// 0.10444  !level(Mid,Kitchen_Plug_Power) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.10444  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.10444  !level(Mid,Toilet_Door_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Toilet_Door_Contact)
+
+// 0.10444  !level(Mid,Entry_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Entry_Multi_Presence)
+
+// 0.10444  !level(Mid,External_Door_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,External_Door_Contact)
+
+// 0.10444  !level(Mid,Entry_Multi_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Entry_Multi_Contact)
+
+// 0.10444  !level(Mid,Lounge_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.10444  !level(Mid,Office1_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Office1_Multi_Presence)
+
+// 0.10444  !level(Mid,Office2_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Office2_Multi_Presence)
+
+// 0.10444  !level(Mid,Workshop_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.10444  !level(Mid,Printer_Plug_Power) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Mid,Printer_Plug_Power)
+
+// 0.723188  !level(Hig,Fridge_Door_Contact) v !currActivity(Entering)
+0.723188  !currActivity(Entering) v !level(Hig,Fridge_Door_Contact)
+
+// 0.723188  !level(Hig,Kitchen_Plug_Power) v !currActivity(Entering)
+0.723188  !currActivity(Entering) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.10444  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.10444  !level(Hig,Toilet_Door_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Toilet_Door_Contact)
+
+// 0.10444  !level(Hig,Entry_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Entry_Multi_Presence)
+
+// 0.10444  !level(Hig,External_Door_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,External_Door_Contact)
+
+// 0.10444  !level(Hig,Entry_Multi_Contact) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Entry_Multi_Contact)
+
+// 0.10444  !level(Hig,Lounge_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.10444  !level(Hig,Office1_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Office1_Multi_Presence)
+
+// 0.10444  !level(Hig,Office2_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Office2_Multi_Presence)
+
+// 0.10444  !level(Hig,Workshop_Multi_Presence) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.10444  !level(Hig,Printer_Plug_Power) v !currActivity(Entering)
+0.10444  !currActivity(Entering) v !level(Hig,Printer_Plug_Power)
+
+// -0.90659  !level(Low,Fridge_Door_Contact) v !currActivity(Resting)
+-0.90659  !currActivity(Resting) v !level(Low,Fridge_Door_Contact)
+
+// -0.90659  !level(Low,Kitchen_Plug_Power) v !currActivity(Resting)
+-0.90659  !currActivity(Resting) v !level(Low,Kitchen_Plug_Power)
+
+// -1.52531  !level(Low,Kitchen_Multi_Presence) v !currActivity(Resting)
+-1.52531  !currActivity(Resting) v !level(Low,Kitchen_Multi_Presence)
+
+// -1.48185  !level(Low,Toilet_Door_Contact) v !currActivity(Resting)
+-1.48185  !currActivity(Resting) v !level(Low,Toilet_Door_Contact)
+
+// -0.803331  !level(Low,Entry_Multi_Presence) v !currActivity(Resting)
+-0.803331  !currActivity(Resting) v !level(Low,Entry_Multi_Presence)
+
+// -1.52845  !level(Low,External_Door_Contact) v !currActivity(Resting)
+-1.52845  !currActivity(Resting) v !level(Low,External_Door_Contact)
+
+// -1.52845  !level(Low,Entry_Multi_Contact) v !currActivity(Resting)
+-1.52845  !currActivity(Resting) v !level(Low,Entry_Multi_Contact)
+
+// 4.97273  !level(Low,Lounge_Multi_Presence) v !currActivity(Resting)
+4.97273  !currActivity(Resting) v !level(Low,Lounge_Multi_Presence)
+
+// -1.02083  !level(Low,Office1_Multi_Presence) v !currActivity(Resting)
+-1.02083  !currActivity(Resting) v !level(Low,Office1_Multi_Presence)
+
+// -1.02083  !level(Low,Office2_Multi_Presence) v !currActivity(Resting)
+-1.02083  !currActivity(Resting) v !level(Low,Office2_Multi_Presence)
+
+// -1.68481  !level(Low,Workshop_Multi_Presence) v !currActivity(Resting)
+-1.68481  !currActivity(Resting) v !level(Low,Workshop_Multi_Presence)
+
+// -0.940855  !level(Low,Printer_Plug_Power) v !currActivity(Resting)
+-0.940855  !currActivity(Resting) v !level(Low,Printer_Plug_Power)
+
+// 0.0957358  !level(Mid,Fridge_Door_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Fridge_Door_Contact)
+
+// 0.0957358  !level(Mid,Kitchen_Plug_Power) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.0957358  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.0957358  !level(Mid,Toilet_Door_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Toilet_Door_Contact)
+
+// 0.0957358  !level(Mid,Entry_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Entry_Multi_Presence)
+
+// 0.0957358  !level(Mid,External_Door_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,External_Door_Contact)
+
+// 0.0957358  !level(Mid,Entry_Multi_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Entry_Multi_Contact)
+
+// 0.0957358  !level(Mid,Lounge_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.0957358  !level(Mid,Office1_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Office1_Multi_Presence)
+
+// 0.0957358  !level(Mid,Office2_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Office2_Multi_Presence)
+
+// 0.0957358  !level(Mid,Workshop_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.0957358  !level(Mid,Printer_Plug_Power) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Mid,Printer_Plug_Power)
+
+// 0.762869  !level(Hig,Fridge_Door_Contact) v !currActivity(Resting)
+0.762869  !currActivity(Resting) v !level(Hig,Fridge_Door_Contact)
+
+// 0.762869  !level(Hig,Kitchen_Plug_Power) v !currActivity(Resting)
+0.762869  !currActivity(Resting) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.0957358  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.0957358  !level(Hig,Toilet_Door_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Toilet_Door_Contact)
+
+// 0.0957358  !level(Hig,Entry_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Entry_Multi_Presence)
+
+// 0.0957358  !level(Hig,External_Door_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,External_Door_Contact)
+
+// 0.0957358  !level(Hig,Entry_Multi_Contact) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Entry_Multi_Contact)
+
+// 0.0957358  !level(Hig,Lounge_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.0957358  !level(Hig,Office1_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Office1_Multi_Presence)
+
+// 0.0957358  !level(Hig,Office2_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Office2_Multi_Presence)
+
+// 0.0957358  !level(Hig,Workshop_Multi_Presence) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.0957358  !level(Hig,Printer_Plug_Power) v !currActivity(Resting)
+0.0957358  !currActivity(Resting) v !level(Hig,Printer_Plug_Power)
+
+// -0.721897  !level(Low,Fridge_Door_Contact) v !currActivity(Exiting)
+-0.721897  !currActivity(Exiting) v !level(Low,Fridge_Door_Contact)
+
+// -0.721897  !level(Low,Kitchen_Plug_Power) v !currActivity(Exiting)
+-0.721897  !currActivity(Exiting) v !level(Low,Kitchen_Plug_Power)
+
+// -1.31656  !level(Low,Kitchen_Multi_Presence) v !currActivity(Exiting)
+-1.31656  !currActivity(Exiting) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.467221  !level(Low,Toilet_Door_Contact) v !currActivity(Exiting)
+-0.467221  !currActivity(Exiting) v !level(Low,Toilet_Door_Contact)
+
+// 5.01629  !level(Low,Entry_Multi_Presence) v !currActivity(Exiting)
+5.01629  !currActivity(Exiting) v !level(Low,Entry_Multi_Presence)
+
+// 3.47811  !level(Low,External_Door_Contact) v !currActivity(Exiting)
+3.47811  !currActivity(Exiting) v !level(Low,External_Door_Contact)
+
+// 3.47811  !level(Low,Entry_Multi_Contact) v !currActivity(Exiting)
+3.47811  !currActivity(Exiting) v !level(Low,Entry_Multi_Contact)
+
+// -0.467221  !level(Low,Lounge_Multi_Presence) v !currActivity(Exiting)
+-0.467221  !currActivity(Exiting) v !level(Low,Lounge_Multi_Presence)
+
+// -0.811778  !level(Low,Office1_Multi_Presence) v !currActivity(Exiting)
+-0.811778  !currActivity(Exiting) v !level(Low,Office1_Multi_Presence)
+
+// -0.811778  !level(Low,Office2_Multi_Presence) v !currActivity(Exiting)
+-0.811778  !currActivity(Exiting) v !level(Low,Office2_Multi_Presence)
+
+// -1.36938  !level(Low,Workshop_Multi_Presence) v !currActivity(Exiting)
+-1.36938  !currActivity(Exiting) v !level(Low,Workshop_Multi_Presence)
+
+// -0.615325  !level(Low,Printer_Plug_Power) v !currActivity(Exiting)
+-0.615325  !currActivity(Exiting) v !level(Low,Printer_Plug_Power)
+
+// 0.104106  !level(Mid,Fridge_Door_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Fridge_Door_Contact)
+
+// 0.104106  !level(Mid,Kitchen_Plug_Power) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.104106  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.104106  !level(Mid,Toilet_Door_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Toilet_Door_Contact)
+
+// 0.104106  !level(Mid,Entry_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Entry_Multi_Presence)
+
+// 0.104106  !level(Mid,External_Door_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,External_Door_Contact)
+
+// 0.104106  !level(Mid,Entry_Multi_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Entry_Multi_Contact)
+
+// 0.104106  !level(Mid,Lounge_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.104106  !level(Mid,Office1_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Office1_Multi_Presence)
+
+// 0.104106  !level(Mid,Office2_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Office2_Multi_Presence)
+
+// 0.104106  !level(Mid,Workshop_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.104106  !level(Mid,Printer_Plug_Power) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Mid,Printer_Plug_Power)
+
+// 0.721037  !level(Hig,Fridge_Door_Contact) v !currActivity(Exiting)
+0.721037  !currActivity(Exiting) v !level(Hig,Fridge_Door_Contact)
+
+// 0.721037  !level(Hig,Kitchen_Plug_Power) v !currActivity(Exiting)
+0.721037  !currActivity(Exiting) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.104106  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.104106  !level(Hig,Toilet_Door_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Toilet_Door_Contact)
+
+// 0.104106  !level(Hig,Entry_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Entry_Multi_Presence)
+
+// 0.104106  !level(Hig,External_Door_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,External_Door_Contact)
+
+// 0.104106  !level(Hig,Entry_Multi_Contact) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Entry_Multi_Contact)
+
+// 0.104106  !level(Hig,Lounge_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.104106  !level(Hig,Office1_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Office1_Multi_Presence)
+
+// 0.104106  !level(Hig,Office2_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Office2_Multi_Presence)
+
+// 0.104106  !level(Hig,Workshop_Multi_Presence) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.104106  !level(Hig,Printer_Plug_Power) v !currActivity(Exiting)
+0.104106  !currActivity(Exiting) v !level(Hig,Printer_Plug_Power)
+
+// -0.806042  !level(Low,Fridge_Door_Contact) v !currActivity(Working)
+-0.806042  !currActivity(Working) v !level(Low,Fridge_Door_Contact)
+
+// -0.806042  !level(Low,Kitchen_Plug_Power) v !currActivity(Working)
+-0.806042  !currActivity(Working) v !level(Low,Kitchen_Plug_Power)
+
+// -1.39457  !level(Low,Kitchen_Multi_Presence) v !currActivity(Working)
+-1.39457  !currActivity(Working) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.558778  !level(Low,Toilet_Door_Contact) v !currActivity(Working)
+-0.558778  !currActivity(Working) v !level(Low,Toilet_Door_Contact)
+
+// -0.680019  !level(Low,Entry_Multi_Presence) v !currActivity(Working)
+-0.680019  !currActivity(Working) v !level(Low,Entry_Multi_Presence)
+
+// -1.40671  !level(Low,External_Door_Contact) v !currActivity(Working)
+-1.40671  !currActivity(Working) v !level(Low,External_Door_Contact)
+
+// -1.40671  !level(Low,Entry_Multi_Contact) v !currActivity(Working)
+-1.40671  !currActivity(Working) v !level(Low,Entry_Multi_Contact)
+
+// -0.558778  !level(Low,Lounge_Multi_Presence) v !currActivity(Working)
+-0.558778  !currActivity(Working) v !level(Low,Lounge_Multi_Presence)
+
+// 4.07655  !level(Low,Office1_Multi_Presence) v !currActivity(Working)
+4.07655  !currActivity(Working) v !level(Low,Office1_Multi_Presence)
+
+// 4.07655  !level(Low,Office2_Multi_Presence) v !currActivity(Working)
+4.07655  !currActivity(Working) v !level(Low,Office2_Multi_Presence)
+
+// 3.37721  !level(Low,Workshop_Multi_Presence) v !currActivity(Working)
+3.37721  !currActivity(Working) v !level(Low,Workshop_Multi_Presence)
+
+// -0.738589  !level(Low,Printer_Plug_Power) v !currActivity(Working)
+-0.738589  !currActivity(Working) v !level(Low,Printer_Plug_Power)
+
+// 0.096943  !level(Mid,Fridge_Door_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Fridge_Door_Contact)
+
+// 0.096943  !level(Mid,Kitchen_Plug_Power) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.096943  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.096943  !level(Mid,Toilet_Door_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Toilet_Door_Contact)
+
+// 0.096943  !level(Mid,Entry_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Entry_Multi_Presence)
+
+// 0.096943  !level(Mid,External_Door_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,External_Door_Contact)
+
+// 0.096943  !level(Mid,Entry_Multi_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Entry_Multi_Contact)
+
+// 0.096943  !level(Mid,Lounge_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.096943  !level(Mid,Office1_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Office1_Multi_Presence)
+
+// 0.096943  !level(Mid,Office2_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Office2_Multi_Presence)
+
+// 0.096943  !level(Mid,Workshop_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.096943  !level(Mid,Printer_Plug_Power) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Mid,Printer_Plug_Power)
+
+// 0.684654  !level(Hig,Fridge_Door_Contact) v !currActivity(Working)
+0.684654  !currActivity(Working) v !level(Hig,Fridge_Door_Contact)
+
+// 0.684654  !level(Hig,Kitchen_Plug_Power) v !currActivity(Working)
+0.684654  !currActivity(Working) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.096943  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.096943  !level(Hig,Toilet_Door_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Toilet_Door_Contact)
+
+// 0.096943  !level(Hig,Entry_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Entry_Multi_Presence)
+
+// 0.096943  !level(Hig,External_Door_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,External_Door_Contact)
+
+// 0.096943  !level(Hig,Entry_Multi_Contact) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Entry_Multi_Contact)
+
+// 0.096943  !level(Hig,Lounge_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.096943  !level(Hig,Office1_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Office1_Multi_Presence)
+
+// 0.096943  !level(Hig,Office2_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Office2_Multi_Presence)
+
+// 0.096943  !level(Hig,Workshop_Multi_Presence) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.096943  !level(Hig,Printer_Plug_Power) v !currActivity(Working)
+0.096943  !currActivity(Working) v !level(Hig,Printer_Plug_Power)
+
+// -0.809905  !level(Low,Fridge_Door_Contact) v !currActivity(Printing)
+-0.809905  !currActivity(Printing) v !level(Low,Fridge_Door_Contact)
+
+// -0.809905  !level(Low,Kitchen_Plug_Power) v !currActivity(Printing)
+-0.809905  !currActivity(Printing) v !level(Low,Kitchen_Plug_Power)
+
+// -1.39735  !level(Low,Kitchen_Multi_Presence) v !currActivity(Printing)
+-1.39735  !currActivity(Printing) v !level(Low,Kitchen_Multi_Presence)
+
+// -0.572137  !level(Low,Toilet_Door_Contact) v !currActivity(Printing)
+-0.572137  !currActivity(Printing) v !level(Low,Toilet_Door_Contact)
+
+// -0.685148  !level(Low,Entry_Multi_Presence) v !currActivity(Printing)
+-0.685148  !currActivity(Printing) v !level(Low,Entry_Multi_Presence)
+
+// -1.40946  !level(Low,External_Door_Contact) v !currActivity(Printing)
+-1.40946  !currActivity(Printing) v !level(Low,External_Door_Contact)
+
+// -1.40946  !level(Low,Entry_Multi_Contact) v !currActivity(Printing)
+-1.40946  !currActivity(Printing) v !level(Low,Entry_Multi_Contact)
+
+// -0.572137  !level(Low,Lounge_Multi_Presence) v !currActivity(Printing)
+-0.572137  !currActivity(Printing) v !level(Low,Lounge_Multi_Presence)
+
+// -1.56239  !level(Low,Office1_Multi_Presence) v !currActivity(Printing)
+-1.56239  !currActivity(Printing) v !level(Low,Office1_Multi_Presence)
+
+// -1.56239  !level(Low,Office2_Multi_Presence) v !currActivity(Printing)
+-1.56239  !currActivity(Printing) v !level(Low,Office2_Multi_Presence)
+
+// 3.37448  !level(Low,Workshop_Multi_Presence) v !currActivity(Printing)
+3.37448  !currActivity(Printing) v !level(Low,Workshop_Multi_Presence)
+
+// 4.5234  !level(Low,Printer_Plug_Power) v !currActivity(Printing)
+4.5234  !currActivity(Printing) v !level(Low,Printer_Plug_Power)
+
+// 0.0973173  !level(Mid,Fridge_Door_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Fridge_Door_Contact)
+
+// 0.0973173  !level(Mid,Kitchen_Plug_Power) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Kitchen_Plug_Power)
+
+// 0.0973173  !level(Mid,Kitchen_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Kitchen_Multi_Presence)
+
+// 0.0973173  !level(Mid,Toilet_Door_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Toilet_Door_Contact)
+
+// 0.0973173  !level(Mid,Entry_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Entry_Multi_Presence)
+
+// 0.0973173  !level(Mid,External_Door_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,External_Door_Contact)
+
+// 0.0973173  !level(Mid,Entry_Multi_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Entry_Multi_Contact)
+
+// 0.0973173  !level(Mid,Lounge_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Lounge_Multi_Presence)
+
+// 0.0973173  !level(Mid,Office1_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Office1_Multi_Presence)
+
+// 0.0973173  !level(Mid,Office2_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Office2_Multi_Presence)
+
+// 0.0973173  !level(Mid,Workshop_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Workshop_Multi_Presence)
+
+// 0.0973173  !level(Mid,Printer_Plug_Power) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Mid,Printer_Plug_Power)
+
+// 0.686818  !level(Hig,Fridge_Door_Contact) v !currActivity(Printing)
+0.686818  !currActivity(Printing) v !level(Hig,Fridge_Door_Contact)
+
+// 0.686818  !level(Hig,Kitchen_Plug_Power) v !currActivity(Printing)
+0.686818  !currActivity(Printing) v !level(Hig,Kitchen_Plug_Power)
+
+// 0.0973173  !level(Hig,Kitchen_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Kitchen_Multi_Presence)
+
+// 0.0973173  !level(Hig,Toilet_Door_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Toilet_Door_Contact)
+
+// 0.0973173  !level(Hig,Entry_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Entry_Multi_Presence)
+
+// 0.0973173  !level(Hig,External_Door_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,External_Door_Contact)
+
+// 0.0973173  !level(Hig,Entry_Multi_Contact) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Entry_Multi_Contact)
+
+// 0.0973173  !level(Hig,Lounge_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Lounge_Multi_Presence)
+
+// 0.0973173  !level(Hig,Office1_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Office1_Multi_Presence)
+
+// 0.0973173  !level(Hig,Office2_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Office2_Multi_Presence)
+
+// 0.0973173  !level(Hig,Workshop_Multi_Presence) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Workshop_Multi_Presence)
+
+// 0.0973173  !level(Hig,Printer_Plug_Power) v !currActivity(Printing)
+0.0973173  !currActivity(Printing) v !level(Hig,Printer_Plug_Power)
+
+// -0.0754602  currActivity(a1)
+-0.0754602  currActivity(a1)
+
+// -2.97141  level(a1,a2)
+-2.97141  level(a1,a2)
+

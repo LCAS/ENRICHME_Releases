@@ -1,0 +1,77 @@
+
+<launch>
+	
+  <!-- this makes world mesh available to gazebo -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find kompai_gazebo)/models/"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find kompai_gazebo)/worlds/LCAS/LCAS.world"/>
+    <arg name="paused" value="true"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    <arg name="verbose" value="true"/>
+    <arg name="physics" default="ode"/>
+  </include>
+  
+    <!-- User model - static model - can be moved like a robot  -->
+  <group ns="user">
+     <include file="./user/user.xml">
+     </include>
+  </group> 
+  
+  
+    <!-- Presence Sensors  -->  
+    
+  <group ns="kitchenP">
+     <include file="./presence/kitchenPresenceDetector.xml">
+     </include>
+  </group>
+  
+  <group ns="loungeP">
+     <include file="./presence/loungePresenceDetector.xml">
+     </include>
+  </group>
+     
+  <group ns="entranceP">
+     <include file="./presence/entrancePresenceDetector.xml">
+     </include>
+  </group>
+  
+    <!-- Contact detectors   -->
+    <group ns="bathroomC">
+     <include file="./contact/bathroomContactDetector.xml">
+     </include>
+     </group>
+     
+    <group ns="kitchenC">
+     <include file="./contact/kitchenContactDetector.xml">
+     </include>
+  </group>
+  
+    <group ns="entranceC">
+     <include file="./contact/entranceContactDetector.xml">
+     </include>
+  </group> 
+  
+    <!-- Robot  -->
+  <include file="$(find kompai_description)/launch/upload_kompai_new.launch"/>
+
+    <node name="robot_state_publisher"
+           pkg="robot_state_publisher"
+          type="robot_state_publisher"/>
+
+    <node   name="kompai_robot_spawner"
+             pkg="gazebo_ros"
+            type="spawn_model"
+          output="screen"
+            args="-x -2.1
+              -y 4.6
+              -z 0.1
+              -R 0
+              -P 0
+              -Y 0 -urdf -param robot_description -model kompai"
+    />
+    
+</launch>

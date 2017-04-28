@@ -1,0 +1,39 @@
+MLN used to locate user on house using basic domotic set at FDG.
+
+Evidence:
+Discretized sensor levels from domotic dataset.
+
+Query:
+Place where activity is being performed:
+Entry,Kitchen,Bathroom,Bedroom,Livingroom
+
+Sensors used:
+
+// Fibaro door sensor at Entrance  
+Entry_Door_Contact
+
+// Fibaro door sensor at Fridge    
+Fridge_Door_Contact
+
+//  Fibaro Wall Plug at Microwave 
+Kitchen_Plug_Power
+
+// Fibaro motion sensor at Bathroom
+Bathroom_Multi_Presence
+Bathroom_Multi_Lux
+Bathroom_Multi_Temp
+
+// Fibaro motion sensor at Kitchen room
+Kitchen_Multi_Presence
+Kitchen_Multi_Lux
+Kitchen_Multi_Temp
+
+// Fibaro motion sensor at Bedroom     
+Bedroom_Multi_Presence
+Bedroom_Multi_Lux
+Bedroom_Multi_Temp
+
+// Fibaro motion sensor at Livingroom  
+Livingroom_Multi_Presence
+Livingroom_Multi_Lux
+Livingroom_Multi_Temp

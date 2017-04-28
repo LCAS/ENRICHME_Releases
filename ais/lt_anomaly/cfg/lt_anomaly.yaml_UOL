@@ -1,0 +1,16 @@
+# List of sensors used in restlessness / inactivity inference
+sensors: ['Kitchen_Multi_Presence', 'Entry_Multi_Presence', 'Lounge_Multi_Presence', 'Office1_Multi_Presence', 'Office2_Multi_Presence', 'Workshop_Multi_Presence']
+
+# sensor time interval in secs to measure entropy
+tevidence: 300.0
+
+# sample time: time between inferences in secs
+tsample: 10.0
+
+# Entropy warning ranges
+# TODO find a better thresholding like average entropies on system or so
+warningEntropyHighPercent: 75.0
+warningEntropyLowPercent: 5.0
+
+# anomaly topic name
+anomTopicName: '/lt_anomaly'

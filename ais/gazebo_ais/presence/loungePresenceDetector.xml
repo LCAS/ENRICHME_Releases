@@ -1,0 +1,29 @@
+<launch>
+
+    <!-- Here we define element location in gazebo world  -->
+  <arg name="name" default="loungeP"/>
+  <arg name="pos_x" default="-4.0"/>
+  <arg name="pos_y" default="9"/>
+  <arg name="pos_z" default="2.4"/> 
+  <arg name="pos_R" default="0"/>
+  <arg name="pos_P" default="1.57"/>  
+  <arg name="pos_Y" default="0"/>
+  <arg name="namespace_arg" default=""/>
+
+  <!-- send the robot XML to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py './presence/loungePresence.urdf.xacro'" />
+  <param name="tf_prefix" value="$(arg namespace_arg)" />
+  
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description
+              -urdf
+              -x $(arg pos_x)
+              -y $(arg pos_y)
+              -z $(arg pos_z)
+              -R $(arg pos_R)
+              -P $(arg pos_P)
+              -Y $(arg pos_Y)
+              -model $(arg name)"
+        respawn="false" output="screen">
+  </node>
+</launch>

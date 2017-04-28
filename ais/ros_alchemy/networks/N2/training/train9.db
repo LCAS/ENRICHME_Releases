@@ -1,0 +1,23 @@
+/////////   
+/////////   World 9: Printing
+!currActivity(Cooking)
+!currActivity(HavingCoffee)
+!currActivity(Toileting)
+!currActivity(Entering)
+!currActivity(Resting)
+!currActivity(Exiting)
+!currActivity(Working)
+currActivity(Printing)
+
+level(Low,Fridge_Door_Contact) 
+level(Low,Kitchen_Plug_Power) 
+level(Low,Kitchen_Multi_Presence) 
+level(Low,Toilet_Door_Contact) 
+level(Low,Entry_Multi_Presence) 
+level(Low,External_Door_Contact) 
+level(Low,Entry_Multi_Contact) 
+level(Low,Lounge_Multi_Presence)
+level(Low,Office1_Multi_Presence) 
+level(Low,Office2_Multi_Presence) 
+!level(Low,Workshop_Multi_Presence) 
+!level(Low,Printer_Plug_Power) 

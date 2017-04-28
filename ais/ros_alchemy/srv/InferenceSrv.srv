@@ -1,0 +1,6 @@
+string model
+string[] evidence
+string[] queries
+---
+Inference[] results
+#InferenceList results

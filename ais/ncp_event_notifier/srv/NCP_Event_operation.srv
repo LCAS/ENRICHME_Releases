@@ -1,0 +1,20 @@
+# Home-to-cloud interface (H2C Web Services)
+# Rest interface operations
+# 
+# REQUEST
+# verb		operation to be performed: 'POST','GET','PUT'
+# payload	event to be posted,get or put. For GET operation, 
+#           only event ID needs to be filled, rest of fields are ignored
+#
+# RESPONSE
+# response  created/modified/accessed event
+# wasOk     boolean indicating successful operation
+# feedback  extra information on error
+
+
+string    verb
+NCP_Event payload
+---
+NCP_Event response # before was
+bool      wasOk
+string    feedback

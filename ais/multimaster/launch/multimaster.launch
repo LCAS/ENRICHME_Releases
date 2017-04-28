@@ -1,0 +1,22 @@
+  <!-- 
+  Prerrequisites:
+		Both ROS_MASTERS ip and machine names should be specified at each one's /etc/hosts
+		Both ROS_MASTERS env var ROS_MASTER_URI= should be set to its own ip (not loopback)
+		Multicast should be enabled on used interface (check addres with netstat -g)
+	Notes:
+		Control GUI: rosrun node_manager_fkie node_manager
+	ToDo:
+		Select sync topics: should be something like this:
+			<param name="sync_topics" type="str" value="[/robotAmbientData,/robotPosition]" />
+
+   -->
+
+
+<launch>
+ <node pkg="master_discovery_fkie" type="master_discovery" name="mmaster_disc_node" respawn="true" args="_mcast_group:=224.0.0.251" />
+
+ <node pkg="master_sync_fkie" type="master_sync" name="mmaster_sync_node"  respawn="true">
+      <!-- <rosparam param="sync_topics">['/openhab_updates','/openhab_command','/openhab_set']</rosparam> -->
+  </node>
+
+</launch>

@@ -1,0 +1,59 @@
+# Sensor information service 
+# Service operations
+#
+# REQUEST
+# action    operation to be performed: 'list','get'
+# payload   options for the requested action:
+#                - 'list':           'sensors'
+#                - 'get':             '[sensor]'
+#
+# RESPONSE
+# response  String, coma separated on success or empty on fail
+# wasOk     boolean indicating successful action
+# feedback  extra information on error (if possible)
+#
+#
+# EXAMPLES
+#            action =  'list'                     ->   response = 'entrance-door,fridge-door,kitchen-power,livingroom-multi,bedroom-multi,kitchen-multi,bathroom-multi'  
+#            payload = 'sensors'                       wasOk = true   
+#                                                      feedback = ''
+#
+#            action =  'get'                      ->   response = '1,25.3,230'      
+#            payload = 'kitchen-multi'                 wasOk = true   
+#                                                      feedback = ''
+#          
+#                                                      - multi response format is 3 numbers, comma separated: a boolean, a double with 1 decimal (may be negative) and an integer. 
+#
+#            action =  'get'                      ->   response = '1'      
+#            payload = 'kitchen-door'                  wasOk = true   
+#                                                      feedback = ''
+#
+#                                                      - door response format is 0 or 1 (closed or open)
+#
+#            action =  'get'                      ->   response = '23.5'      
+#            payload = 'kitchen-power'                 wasOk = true   
+#                                                      feedback = ''
+#
+#                                                     - power response format is a positive double with 1 decimal
+# 
+#            action =  'get'                      ->   response = ''       
+#            payload = 'bedroom-door'                  wasOk = false   
+#                                                      feedback = 'sensor does not exist at location'
+#
+# STREAMING TOPICS
+#          - A 'get' or 'list' triggers an update on the streaming topics (even a malformed get), where all sensors are published.
+#          - Default house environmental topic is "/house_sensors"
+#          - Content looks like: 
+#                "entrance-door,1,fridge-door,0,kitchen-power,0.6,livingroom-multi,1,24.5,200,bedroom-multi,0,21.5,20,kitchen-multi,0,20.5,100,bathroom-multi,0,21.5,120"
+#          - Default house environmental topic is "/robot_sensors"
+#          - Content looks like: 
+#                "air,comfort,temp,23.2,humidity,40.1,light,67"
+# 
+# ..........................................................................................................................
+
+string    action
+string    payload
+---
+string    response
+bool      wasOk
+string    feedback

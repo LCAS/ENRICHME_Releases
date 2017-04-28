@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var myVar = setInterval(myTimer, 1000);
+function myTimer() {
+    var d = new Date();
+    document.getElementById("demo").innerHTML =" System Date: " + d.toLocaleDateString()+" - "+d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>

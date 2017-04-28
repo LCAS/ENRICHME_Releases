@@ -1,0 +1,36 @@
+
+//..................  KNX DEVICES ...............................
+
+/*Lights*/
+Switch        Dining_Lamp_Switch          "Main Lamp"                          <light>          (GrLight,GrDining)      {knx="1/1/41+<1/4/41"} 
+Dimmer        Dining_Spots_Dimmer         "Curtain spots[%d %%]"               <light>          (GrLight,GrDining)      {knx="1/1/3+<1/4/5, 1/2/3, 1/3/3+<1/5/3"}
+Switch        Dining_Daylight_Switch      "Daylight"                           <light>          (GrLight,GrDining)      {knx="1/1/36+<1/4/36"} 
+Dimmer        Kitchen_Coffee_Dimmer       "Kitchen oven[%d %%]"                <light>          (GrLight,GrKitchen)     {knx="1/1/5+<1/4/5, 1/2/5, 1/3/5+<1/5/5"}
+Dimmer        Kitchen_Mid_Dimmer          "Kitchen middle[%d %%]"              <light>          (GrLight,GrKitchen)     {knx="1/1/6+<1/4/6, 1/2/6, 1/3/6+<1/5/6"}
+Dimmer        Kitchen_Sink_Dimmer         "Kitchen shelf[%d %%]"               <light>          (GrLight,GrKitchen)     {knx="1/1/7+<1/4/7, 1/2/7, 1/3/7+<1/5/7"}
+
+/*Rollershutter*/
+Rollershutter Dining_Left_Shade           "Rollershutter Left"                 <screen>         (GrScreen,GrDining)     {knx="3/1/8, 3/2/8"}
+Rollershutter Dining_Mid_Shade            "Rollershutter Middle"               <screen>         (GrScreen,GrDining)     {knx="3/1/9, 3/2/9"}
+Rollershutter Dining_Right_Shade          "Rollershutter Right"                <screen>         (GrScreen,GrDining)     {knx="3/1/10, 3/2/10"}
+
+/*Curtain*/
+Rollershutter Dining_Window_Curtain       "Curtain"                            <screen>         (GrCurtain,GrDining)    {knx="5/1/8, 5/2/8"}
+Number        Dining_Window_Pos_Curtain   "Curtain [%.1f]"                     <screen>         (GrCurtain,GrDining)    {knx="<5/3/8"}
+Number        Dining_Window_Per_Curtain   "Curtain [%.1f %%]"                  <screen>         (GrCurtain,GrDining)    {knx="<5/4/8"}
+Rollershutter Living_Window_Curtain       "Curtain"                            <screen>         (GrCurtain,GrLiving)    {knx="5/1/0, 5/2/0"}
+
+/*Temperature*/    
+Number        MstBath_Temp                "Big bathroom [%.1f °C]"             <temperature>    (GrTemp,GrMstBath)      {knx="<2/0/1"}    
+Number        Master_Temp                 "Master Bedroom [%.1f °C]"           <temperature>    (GrTemp,GrMaster)       {knx="<2/1/1"}
+Number        Living_Temp                 "livingroom [%.1f °C]"               <temperature>    (GrTemp,GrLiving)       {knx="<2/3/1"}
+Number        Child_Temp                  "baby boom  [%.1f °C]"               <temperature>    (GrTemp,GrChild)        {knx="<2/4/1"}
+Number        StBath_Temp                 "Small bathroom [%.1f °C]"           <temperature>    (GrTemp,GrStBath)       {knx="<2/5/1"}
+Number        Student_Temp                "Student room [%.1f °C]"             <temperature>    (GrTemp,GrStudent)      {knx="<2/6/1"}
+Number        Ext_humidity                "External Humidity [%.1f %%]"        <temperature>    (GrTemp,GrTerrace)      {knx="<2/7/1"}
+Number        Ext_Temp                    "External temperature [%.1f °C]"     <temperature>    (GrTemp,GrTerrace)      {knx="<0/1/5"}
+
+/*Power*/    
+Number        Consumption603_Power        "Power consumption 6/0/3 [%.1f W]"   <energy>         (GrPower)               {knx="<6/0/3"} 
+Number        Consumption611_Power        "Power consumption 6/1/1 [%.1f W]"   <energy>         (GrPower)               {knx="<6/1/1"}
+Number        Consumption613_Power        "Power consumption 6/1/3 [%.1f W]"   <energy>         (GrPower)               {knx="<6/1/3"}

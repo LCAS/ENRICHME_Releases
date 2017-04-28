@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- based on sonar sensor at http://wiki.ros.org/hector_sensors_description -->
+<!-- we must match ros_topic in sonar_sensor macro with .items in openhab -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="sonar_sensor.urdf.xacro" /> 		
+	<xacro:property name="pi" value="3.1415926535897931" />		
+	<xacro:macro name="presence_sensor_macro">
+			<link name="world"/>
+			<joint name="fixed" type="fixed">
+				<parent link="world"/>
+				<child link="presence/case_link"/>
+			</joint>							
+			<link name="presence/case_link">		
+				<visual name="presence/case_visual">
+					<origin xyz="0 0 0" rpy="0 0 0" />
+					<geometry>
+						<box size="0.01 0.01 0.01"/>
+					</geometry>
+				</visual>				
+				<collision name="presence/case_collision">
+					<origin xyz="0 0 0" rpy="0 0 0" />
+					<geometry>
+						<box size="0.01 0.01 0.01"/>
+					</geometry>
+				</collision>
+			</link>
+			<xacro:sonar_sensor name="presence/sonar" parent="presence/case_link" ros_topic="Presence_Kitchen" update_rate="10" min_range="0.03" max_range="3.0" field_of_view="${60*pi/180}" ray_count="3">
+				<origin xyz="0 0.0 0" rpy="0 0 0"/>
+			</xacro:sonar_sensor>
+	</xacro:macro>		
+	<xacro:presence_sensor_macro/>
+</robot>

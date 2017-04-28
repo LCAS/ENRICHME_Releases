@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+    <!-- ros_topic should match with .items in openhab to update... -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="contactPlate.urdf.xacro" /> 		
+
+	<xacro:macro name="presence_sensor_macro">
+		<link name="world"/>						
+		<xacro:contactPlate name="contact" parent="world" ros_topic="Door_Kitchen" update_rate="10" width="0.5">
+			<origin xyz="0 0.0 0" rpy="0 0 0"/>
+		</xacro:contactPlate>
+	</xacro:macro>		
+	
+	<xacro:presence_sensor_macro/>
+</robot>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>act_rec_mln</name>
+  <version>0.0.0</version>
+  <description>Activity Recognition with Markov Logic Networks </description>
+
+
+  <maintainer email="mfernandezcarmona@lincoln.ac.uk">Manuel</maintainer>
+  <author email="mfernandezcarmona@lincoln.ac.uk">Manuel</author>
+
+  <license>GPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>  
+  <run_depend>rospy</run_depend>
+  
+
+  <export>
+
+  </export>
+</package>
+

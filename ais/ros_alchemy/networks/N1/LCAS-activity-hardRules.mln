@@ -1,0 +1,59 @@
+/////////   Closed
+
+
+/////////   Cooking
+isRelated(Fridge_Door_Contact,Cooking).
+isRelated(Kitchen_Multi_Presence,Cooking).
+
+/////////   HavingCoffee
+isRelated(Kitchen_Plug_Power,HavingCoffee).
+isRelated(Kitchen_Multi_Presence,HavingCoffee).
+
+/////////   Toileting
+isRelated(Toilet_Door_Contact,Toileting).
+
+/////////   Entering
+isRelated(Entry_Multi_Presence,Entering).
+isRelated(Entry_Multi_Contact,Entering).
+isRelated(External_Door_Contact,Entering).
+
+/////////   Exiting
+isRelated(External_Door_Contact,Exiting).
+isRelated(Entry_Multi_Contact,Exiting).
+
+/////////   Resting
+isRelated(Lounge_Multi_Presence,Resting).
+
+/////////   Working
+isRelated(Office1_Multi_Presence,Working).
+isRelated(Office2_Multi_Presence,Working).
+isRelated(Workshop_Multi_Presence,Working).
+
+/////////   Printing
+isRelated(Printer_Plug_Power,Printing).
+
+
+
+/////////   Kitchen
+isPerformed(Kitchen,Cooking).
+isPerformed(Kitchen,HavingCoffee).
+
+/////////   Toilet
+isPerformed(Toilet,Toileting).
+
+/////////   Lounge
+isPerformed(Lounge,Resting).
+
+/////////   Entrance
+isPerformed(Entrance,Entering).
+isPerformed(Entrance,Exiting).
+
+/////////   Office1
+isPerformed(Office1,Working).
+
+/////////   Office2
+isPerformed(Office2,Working).
+
+/////////   Workshop
+isPerformed(Workshop,Working).
+isPerformed(Workshop,Printing).

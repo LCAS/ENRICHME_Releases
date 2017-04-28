@@ -1,0 +1,963 @@
+//predicate declarations
+isRelated(sensor,activity)
+currActivity(activity)
+isPerformed(location,activity)
+level(sensorLevel,sensor)
+currLocation(location)
+
+//function declarations
+
+// 0.0726459  !level(Low,External_Door_Contact) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0726459  !currActivity(Closed) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Closed)
+
+// 0.0726714  !level(Low,Entry_Multi_Contact) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0726714  !currActivity(Closed) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Closed)
+
+// 0.0343729  !level(Low,Fridge_Door_Contact) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0343729  !currActivity(Closed) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Closed)
+
+// 0.0402634  !level(Low,Toilet_Door_Contact) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0402634  !currActivity(Closed) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Closed)
+
+// 0.345965  !level(Low,Workshop_Multi_Contact) ^ currActivity(Closed) => isRelated(+s,+a)
+0.345965  !currActivity(Closed) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Closed)
+
+// 0.345648  !level(Low,Office1_Multi_Humid) ^ currActivity(Closed) => isRelated(+s,+a)
+0.345648  !currActivity(Closed) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Closed)
+
+// 0.346033  !level(Low,Entry_Multi_Lux) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346033  !currActivity(Closed) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Closed)
+
+// 0.346094  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346094  !currActivity(Closed) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Closed)
+
+// 0.346072  !level(Low,Lounge_Multi_Lux) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346072  !currActivity(Closed) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Closed)
+
+// 0.345996  !level(Low,Office2_Multi_Lux) ^ currActivity(Closed) => isRelated(+s,+a)
+0.345996  !currActivity(Closed) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Closed)
+
+// 0.346008  !level(Low,Workshop_Multi_Lux) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346008  !currActivity(Closed) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Closed)
+
+// 0.0360956  !level(Low,Entry_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0360956  !currActivity(Closed) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Closed)
+
+// 0.0709375  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0709375  !currActivity(Closed) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Closed)
+
+// 0.0364923  !level(Low,Kitchen_Plug_Power) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0364923  !currActivity(Closed) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Closed)
+
+// 0.0419881  !level(Low,Lounge_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0419881  !currActivity(Closed) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Closed)
+
+// 0.0370478  !level(Low,Office1_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0370478  !currActivity(Closed) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Closed)
+
+// 0.040659  !level(Low,Printer_Plug_Power) ^ currActivity(Closed) => isRelated(+s,+a)
+0.040659  !currActivity(Closed) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Closed)
+
+// 0.0371029  !level(Low,Workshop_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.0371029  !currActivity(Closed) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Closed)
+
+// 0.346169  !level(Low,Entry_Multi_Temp) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346169  !currActivity(Closed) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Closed)
+
+// 0.346045  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346045  !currActivity(Closed) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Closed)
+
+// 0.34604  !level(Low,Lounge_Multi_Temp) ^ currActivity(Closed) => isRelated(+s,+a)
+0.34604  !currActivity(Closed) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Closed)
+
+// 0.346047  !level(Low,Office2_Multi_Temp) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346047  !currActivity(Closed) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Closed)
+
+// 0.345966  !level(Low,Workshop_Multi_Temp) ^ currActivity(Closed) => isRelated(+s,+a)
+0.345966  !currActivity(Closed) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Closed)
+
+// 0.346098  !level(Low,Office1_Multi_UV) ^ currActivity(Closed) => isRelated(+s,+a)
+0.346098  !currActivity(Closed) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Closed)
+
+// 0.037115  !level(Low,Office2_Multi_Presence) ^ currActivity(Closed) => isRelated(+s,+a)
+0.037115  !currActivity(Closed) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Closed)
+
+// -0.076448  !level(Low,External_Door_Contact) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.076448  !currActivity(Cooking) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Cooking)
+
+// -0.0775213  !level(Low,Entry_Multi_Contact) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0775213  !currActivity(Cooking) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Cooking)
+
+// -0.0514349  !level(Low,Fridge_Door_Contact) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0514349  !currActivity(Cooking) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Cooking)
+
+// -0.0427874  !level(Low,Toilet_Door_Contact) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0427874  !currActivity(Cooking) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Cooking)
+
+// -0.349354  !level(Low,Workshop_Multi_Contact) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.349354  !currActivity(Cooking) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Cooking)
+
+// -0.3528  !level(Low,Office1_Multi_Humid) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.3528  !currActivity(Cooking) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Cooking)
+
+// -0.349179  !level(Low,Entry_Multi_Lux) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.349179  !currActivity(Cooking) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Cooking)
+
+// -0.352706  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.352706  !currActivity(Cooking) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Cooking)
+
+// -0.347601  !level(Low,Lounge_Multi_Lux) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.347601  !currActivity(Cooking) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Cooking)
+
+// -0.350548  !level(Low,Office2_Multi_Lux) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.350548  !currActivity(Cooking) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Cooking)
+
+// -0.350641  !level(Low,Workshop_Multi_Lux) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.350641  !currActivity(Cooking) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Cooking)
+
+// -0.0378422  !level(Low,Entry_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0378422  !currActivity(Cooking) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Cooking)
+
+// -0.0990089  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0990089  !currActivity(Cooking) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Cooking)
+
+// -0.0382656  !level(Low,Kitchen_Plug_Power) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0382656  !currActivity(Cooking) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Cooking)
+
+// -0.0443459  !level(Low,Lounge_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0443459  !currActivity(Cooking) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Cooking)
+
+// -0.0404326  !level(Low,Office1_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0404326  !currActivity(Cooking) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Cooking)
+
+// -0.0386655  !level(Low,Printer_Plug_Power) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0386655  !currActivity(Cooking) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Cooking)
+
+// -0.0390056  !level(Low,Workshop_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0390056  !currActivity(Cooking) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Cooking)
+
+// -0.351049  !level(Low,Entry_Multi_Temp) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.351049  !currActivity(Cooking) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Cooking)
+
+// -0.352127  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.352127  !currActivity(Cooking) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Cooking)
+
+// -0.351831  !level(Low,Lounge_Multi_Temp) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.351831  !currActivity(Cooking) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Cooking)
+
+// -0.354492  !level(Low,Office2_Multi_Temp) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.354492  !currActivity(Cooking) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Cooking)
+
+// -0.35174  !level(Low,Workshop_Multi_Temp) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.35174  !currActivity(Cooking) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Cooking)
+
+// -0.352724  !level(Low,Office1_Multi_UV) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.352724  !currActivity(Cooking) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Cooking)
+
+// -0.0403152  !level(Low,Office2_Multi_Presence) ^ currActivity(Cooking) => isRelated(+s,+a)
+-0.0403152  !currActivity(Cooking) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Cooking)
+
+// -0.0736458  !level(Low,External_Door_Contact) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0736458  !currActivity(HavingCoffee) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,HavingCoffee)
+
+// -0.0731258  !level(Low,Entry_Multi_Contact) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0731258  !currActivity(HavingCoffee) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,HavingCoffee)
+
+// -0.0404553  !level(Low,Fridge_Door_Contact) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0404553  !currActivity(HavingCoffee) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,HavingCoffee)
+
+// -0.0401412  !level(Low,Toilet_Door_Contact) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0401412  !currActivity(HavingCoffee) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,HavingCoffee)
+
+// -0.353392  !level(Low,Workshop_Multi_Contact) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.353392  !currActivity(HavingCoffee) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,HavingCoffee)
+
+// -0.350992  !level(Low,Office1_Multi_Humid) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350992  !currActivity(HavingCoffee) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,HavingCoffee)
+
+// -0.350356  !level(Low,Entry_Multi_Lux) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350356  !currActivity(HavingCoffee) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,HavingCoffee)
+
+// -0.351536  !level(Low,Kitchen_Multi_Lux) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.351536  !currActivity(HavingCoffee) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,HavingCoffee)
+
+// -0.350698  !level(Low,Lounge_Multi_Lux) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350698  !currActivity(HavingCoffee) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,HavingCoffee)
+
+// -0.350418  !level(Low,Office2_Multi_Lux) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350418  !currActivity(HavingCoffee) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,HavingCoffee)
+
+// -0.352016  !level(Low,Workshop_Multi_Lux) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.352016  !currActivity(HavingCoffee) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,HavingCoffee)
+
+// -0.0343422  !level(Low,Entry_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0343422  !currActivity(HavingCoffee) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,HavingCoffee)
+
+// -0.106942  !level(Low,Kitchen_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.106942  !currActivity(HavingCoffee) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,HavingCoffee)
+
+// -0.0532239  !level(Low,Kitchen_Plug_Power) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0532239  !currActivity(HavingCoffee) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,HavingCoffee)
+
+// -0.0431225  !level(Low,Lounge_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0431225  !currActivity(HavingCoffee) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,HavingCoffee)
+
+// -0.0369302  !level(Low,Office1_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0369302  !currActivity(HavingCoffee) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,HavingCoffee)
+
+// -0.0404357  !level(Low,Printer_Plug_Power) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0404357  !currActivity(HavingCoffee) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,HavingCoffee)
+
+// -0.03865  !level(Low,Workshop_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.03865  !currActivity(HavingCoffee) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,HavingCoffee)
+
+// -0.353223  !level(Low,Entry_Multi_Temp) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.353223  !currActivity(HavingCoffee) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,HavingCoffee)
+
+// -0.350541  !level(Low,Kitchen_Multi_Temp) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350541  !currActivity(HavingCoffee) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,HavingCoffee)
+
+// -0.350555  !level(Low,Lounge_Multi_Temp) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.350555  !currActivity(HavingCoffee) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,HavingCoffee)
+
+// -0.351945  !level(Low,Office2_Multi_Temp) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.351945  !currActivity(HavingCoffee) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,HavingCoffee)
+
+// -0.35418  !level(Low,Workshop_Multi_Temp) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.35418  !currActivity(HavingCoffee) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,HavingCoffee)
+
+// -0.351898  !level(Low,Office1_Multi_UV) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.351898  !currActivity(HavingCoffee) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,HavingCoffee)
+
+// -0.0381055  !level(Low,Office2_Multi_Presence) ^ currActivity(HavingCoffee) => isRelated(+s,+a)
+-0.0381055  !currActivity(HavingCoffee) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,HavingCoffee)
+
+// 0.0732277  !level(Low,External_Door_Contact) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0732277  !currActivity(Toileting) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Toileting)
+
+// 0.0732065  !level(Low,Entry_Multi_Contact) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0732065  !currActivity(Toileting) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Toileting)
+
+// 0.0398081  !level(Low,Fridge_Door_Contact) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0398081  !currActivity(Toileting) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Toileting)
+
+// 0.0395708  !level(Low,Toilet_Door_Contact) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0395708  !currActivity(Toileting) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Toileting)
+
+// 0.348778  !level(Low,Workshop_Multi_Contact) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348778  !currActivity(Toileting) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Toileting)
+
+// 0.348682  !level(Low,Office1_Multi_Humid) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348682  !currActivity(Toileting) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Toileting)
+
+// 0.348663  !level(Low,Entry_Multi_Lux) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348663  !currActivity(Toileting) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Toileting)
+
+// 0.348683  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348683  !currActivity(Toileting) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Toileting)
+
+// 0.348662  !level(Low,Lounge_Multi_Lux) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348662  !currActivity(Toileting) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Toileting)
+
+// 0.348501  !level(Low,Office2_Multi_Lux) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348501  !currActivity(Toileting) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Toileting)
+
+// 0.348643  !level(Low,Workshop_Multi_Lux) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348643  !currActivity(Toileting) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Toileting)
+
+// 0.0353093  !level(Low,Entry_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0353093  !currActivity(Toileting) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Toileting)
+
+// 0.078149  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.078149  !currActivity(Toileting) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Toileting)
+
+// 0.0382944  !level(Low,Kitchen_Plug_Power) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0382944  !currActivity(Toileting) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Toileting)
+
+// 0.0428977  !level(Low,Lounge_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0428977  !currActivity(Toileting) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Toileting)
+
+// 0.0342215  !level(Low,Office1_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0342215  !currActivity(Toileting) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Toileting)
+
+// 0.0405631  !level(Low,Printer_Plug_Power) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0405631  !currActivity(Toileting) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Toileting)
+
+// 0.0342463  !level(Low,Workshop_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0342463  !currActivity(Toileting) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Toileting)
+
+// 0.348631  !level(Low,Entry_Multi_Temp) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348631  !currActivity(Toileting) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Toileting)
+
+// 0.348502  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348502  !currActivity(Toileting) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Toileting)
+
+// 0.34883  !level(Low,Lounge_Multi_Temp) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.34883  !currActivity(Toileting) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Toileting)
+
+// 0.348863  !level(Low,Office2_Multi_Temp) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348863  !currActivity(Toileting) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Toileting)
+
+// 0.348803  !level(Low,Workshop_Multi_Temp) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348803  !currActivity(Toileting) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Toileting)
+
+// 0.348714  !level(Low,Office1_Multi_UV) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.348714  !currActivity(Toileting) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Toileting)
+
+// 0.0342463  !level(Low,Office2_Multi_Presence) ^ currActivity(Toileting) => isRelated(+s,+a)
+0.0342463  !currActivity(Toileting) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Toileting)
+
+// 0.074609  !level(Low,External_Door_Contact) ^ currActivity(Entering) => isRelated(+s,+a)
+0.074609  !currActivity(Entering) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Entering)
+
+// 0.0744849  !level(Low,Entry_Multi_Contact) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0744849  !currActivity(Entering) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Entering)
+
+// 0.0355763  !level(Low,Fridge_Door_Contact) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0355763  !currActivity(Entering) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Entering)
+
+// 0.0400603  !level(Low,Toilet_Door_Contact) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0400603  !currActivity(Entering) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Entering)
+
+// 0.352765  !level(Low,Workshop_Multi_Contact) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352765  !currActivity(Entering) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Entering)
+
+// 0.352773  !level(Low,Office1_Multi_Humid) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352773  !currActivity(Entering) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Entering)
+
+// 0.35299  !level(Low,Entry_Multi_Lux) ^ currActivity(Entering) => isRelated(+s,+a)
+0.35299  !currActivity(Entering) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Entering)
+
+// 0.35275  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Entering) => isRelated(+s,+a)
+0.35275  !currActivity(Entering) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Entering)
+
+// 0.352595  !level(Low,Lounge_Multi_Lux) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352595  !currActivity(Entering) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Entering)
+
+// 0.3528  !level(Low,Office2_Multi_Lux) ^ currActivity(Entering) => isRelated(+s,+a)
+0.3528  !currActivity(Entering) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Entering)
+
+// 0.352693  !level(Low,Workshop_Multi_Lux) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352693  !currActivity(Entering) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Entering)
+
+// 0.0363842  !level(Low,Entry_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0363842  !currActivity(Entering) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Entering)
+
+// 0.074025  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.074025  !currActivity(Entering) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Entering)
+
+// 0.0382542  !level(Low,Kitchen_Plug_Power) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0382542  !currActivity(Entering) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Entering)
+
+// 0.0410023  !level(Low,Lounge_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0410023  !currActivity(Entering) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Entering)
+
+// 0.0409302  !level(Low,Office1_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0409302  !currActivity(Entering) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Entering)
+
+// 0.0407282  !level(Low,Printer_Plug_Power) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0407282  !currActivity(Entering) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Entering)
+
+// 0.0409296  !level(Low,Workshop_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0409296  !currActivity(Entering) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Entering)
+
+// 0.352923  !level(Low,Entry_Multi_Temp) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352923  !currActivity(Entering) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Entering)
+
+// 0.35292  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Entering) => isRelated(+s,+a)
+0.35292  !currActivity(Entering) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Entering)
+
+// 0.35297  !level(Low,Lounge_Multi_Temp) ^ currActivity(Entering) => isRelated(+s,+a)
+0.35297  !currActivity(Entering) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Entering)
+
+// 0.352801  !level(Low,Office2_Multi_Temp) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352801  !currActivity(Entering) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Entering)
+
+// 0.352656  !level(Low,Workshop_Multi_Temp) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352656  !currActivity(Entering) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Entering)
+
+// 0.352853  !level(Low,Office1_Multi_UV) ^ currActivity(Entering) => isRelated(+s,+a)
+0.352853  !currActivity(Entering) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Entering)
+
+// 0.0409231  !level(Low,Office2_Multi_Presence) ^ currActivity(Entering) => isRelated(+s,+a)
+0.0409231  !currActivity(Entering) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Entering)
+
+// -0.0759936  !level(Low,External_Door_Contact) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0759936  !currActivity(Resting) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Resting)
+
+// -0.0753372  !level(Low,Entry_Multi_Contact) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0753372  !currActivity(Resting) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Resting)
+
+// -0.0392552  !level(Low,Fridge_Door_Contact) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0392552  !currActivity(Resting) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Resting)
+
+// -0.0405824  !level(Low,Toilet_Door_Contact) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0405824  !currActivity(Resting) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Resting)
+
+// -0.353134  !level(Low,Workshop_Multi_Contact) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.353134  !currActivity(Resting) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Resting)
+
+// -0.352018  !level(Low,Office1_Multi_Humid) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.352018  !currActivity(Resting) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Resting)
+
+// -0.351043  !level(Low,Entry_Multi_Lux) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.351043  !currActivity(Resting) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Resting)
+
+// -0.353604  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.353604  !currActivity(Resting) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Resting)
+
+// -0.351315  !level(Low,Lounge_Multi_Lux) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.351315  !currActivity(Resting) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Resting)
+
+// -0.355704  !level(Low,Office2_Multi_Lux) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.355704  !currActivity(Resting) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Resting)
+
+// -0.352809  !level(Low,Workshop_Multi_Lux) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.352809  !currActivity(Resting) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Resting)
+
+// -0.0371593  !level(Low,Entry_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0371593  !currActivity(Resting) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Resting)
+
+// -0.0770346  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0770346  !currActivity(Resting) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Resting)
+
+// -0.0386978  !level(Low,Kitchen_Plug_Power) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0386978  !currActivity(Resting) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Resting)
+
+// -0.0549404  !level(Low,Lounge_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0549404  !currActivity(Resting) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Resting)
+
+// -0.0404687  !level(Low,Office1_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0404687  !currActivity(Resting) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Resting)
+
+// -0.0378301  !level(Low,Printer_Plug_Power) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0378301  !currActivity(Resting) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Resting)
+
+// -0.0409511  !level(Low,Workshop_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0409511  !currActivity(Resting) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Resting)
+
+// -0.35274  !level(Low,Entry_Multi_Temp) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.35274  !currActivity(Resting) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Resting)
+
+// -0.352631  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.352631  !currActivity(Resting) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Resting)
+
+// -0.352453  !level(Low,Lounge_Multi_Temp) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.352453  !currActivity(Resting) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Resting)
+
+// -0.350983  !level(Low,Office2_Multi_Temp) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.350983  !currActivity(Resting) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Resting)
+
+// -0.35108  !level(Low,Workshop_Multi_Temp) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.35108  !currActivity(Resting) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Resting)
+
+// -0.353146  !level(Low,Office1_Multi_UV) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.353146  !currActivity(Resting) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Resting)
+
+// -0.0399412  !level(Low,Office2_Multi_Presence) ^ currActivity(Resting) => isRelated(+s,+a)
+-0.0399412  !currActivity(Resting) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Resting)
+
+// -0.0957731  !level(Low,External_Door_Contact) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0957731  !currActivity(Exiting) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Exiting)
+
+// -0.0963368  !level(Low,Entry_Multi_Contact) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0963368  !currActivity(Exiting) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Exiting)
+
+// -0.0416408  !level(Low,Fridge_Door_Contact) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0416408  !currActivity(Exiting) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Exiting)
+
+// -0.0418101  !level(Low,Toilet_Door_Contact) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0418101  !currActivity(Exiting) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Exiting)
+
+// -0.35543  !level(Low,Workshop_Multi_Contact) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.35543  !currActivity(Exiting) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Exiting)
+
+// -0.351965  !level(Low,Office1_Multi_Humid) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351965  !currActivity(Exiting) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Exiting)
+
+// -0.351569  !level(Low,Entry_Multi_Lux) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351569  !currActivity(Exiting) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Exiting)
+
+// -0.353774  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.353774  !currActivity(Exiting) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Exiting)
+
+// -0.354449  !level(Low,Lounge_Multi_Lux) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.354449  !currActivity(Exiting) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Exiting)
+
+// -0.351593  !level(Low,Office2_Multi_Lux) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351593  !currActivity(Exiting) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Exiting)
+
+// -0.351352  !level(Low,Workshop_Multi_Lux) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351352  !currActivity(Exiting) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Exiting)
+
+// -0.0335107  !level(Low,Entry_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0335107  !currActivity(Exiting) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Exiting)
+
+// -0.0798479  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0798479  !currActivity(Exiting) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Exiting)
+
+// -0.038538  !level(Low,Kitchen_Plug_Power) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.038538  !currActivity(Exiting) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Exiting)
+
+// -0.0434609  !level(Low,Lounge_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0434609  !currActivity(Exiting) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Exiting)
+
+// -0.0373976  !level(Low,Office1_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0373976  !currActivity(Exiting) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Exiting)
+
+// -0.0425834  !level(Low,Printer_Plug_Power) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0425834  !currActivity(Exiting) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Exiting)
+
+// -0.0374163  !level(Low,Workshop_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0374163  !currActivity(Exiting) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Exiting)
+
+// -0.354409  !level(Low,Entry_Multi_Temp) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.354409  !currActivity(Exiting) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Exiting)
+
+// -0.351459  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351459  !currActivity(Exiting) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Exiting)
+
+// -0.351889  !level(Low,Lounge_Multi_Temp) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.351889  !currActivity(Exiting) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Exiting)
+
+// -0.352831  !level(Low,Office2_Multi_Temp) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.352831  !currActivity(Exiting) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Exiting)
+
+// -0.349778  !level(Low,Workshop_Multi_Temp) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.349778  !currActivity(Exiting) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Exiting)
+
+// -0.35188  !level(Low,Office1_Multi_UV) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.35188  !currActivity(Exiting) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Exiting)
+
+// -0.0373591  !level(Low,Office2_Multi_Presence) ^ currActivity(Exiting) => isRelated(+s,+a)
+-0.0373591  !currActivity(Exiting) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Exiting)
+
+// 0.0727145  !level(Low,External_Door_Contact) ^ currActivity(Working) => isRelated(+s,+a)
+0.0727145  !currActivity(Working) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Working)
+
+// 0.072737  !level(Low,Entry_Multi_Contact) ^ currActivity(Working) => isRelated(+s,+a)
+0.072737  !currActivity(Working) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Working)
+
+// 0.0382331  !level(Low,Fridge_Door_Contact) ^ currActivity(Working) => isRelated(+s,+a)
+0.0382331  !currActivity(Working) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Working)
+
+// 0.0379396  !level(Low,Toilet_Door_Contact) ^ currActivity(Working) => isRelated(+s,+a)
+0.0379396  !currActivity(Working) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Working)
+
+// 0.348943  !level(Low,Workshop_Multi_Contact) ^ currActivity(Working) => isRelated(+s,+a)
+0.348943  !currActivity(Working) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Working)
+
+// 0.348887  !level(Low,Office1_Multi_Humid) ^ currActivity(Working) => isRelated(+s,+a)
+0.348887  !currActivity(Working) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Working)
+
+// 0.349239  !level(Low,Entry_Multi_Lux) ^ currActivity(Working) => isRelated(+s,+a)
+0.349239  !currActivity(Working) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Working)
+
+// 0.348963  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Working) => isRelated(+s,+a)
+0.348963  !currActivity(Working) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Working)
+
+// 0.34862  !level(Low,Lounge_Multi_Lux) ^ currActivity(Working) => isRelated(+s,+a)
+0.34862  !currActivity(Working) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Working)
+
+// 0.34892  !level(Low,Office2_Multi_Lux) ^ currActivity(Working) => isRelated(+s,+a)
+0.34892  !currActivity(Working) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Working)
+
+// 0.349286  !level(Low,Workshop_Multi_Lux) ^ currActivity(Working) => isRelated(+s,+a)
+0.349286  !currActivity(Working) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Working)
+
+// 0.0367689  !level(Low,Entry_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0367689  !currActivity(Working) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Working)
+
+// 0.0752853  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0752853  !currActivity(Working) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Working)
+
+// 0.0370988  !level(Low,Kitchen_Plug_Power) ^ currActivity(Working) => isRelated(+s,+a)
+0.0370988  !currActivity(Working) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Working)
+
+// 0.0392303  !level(Low,Lounge_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0392303  !currActivity(Working) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Working)
+
+// 0.0397035  !level(Low,Office1_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0397035  !currActivity(Working) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Working)
+
+// 0.041165  !level(Low,Printer_Plug_Power) ^ currActivity(Working) => isRelated(+s,+a)
+0.041165  !currActivity(Working) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Working)
+
+// 0.0394643  !level(Low,Workshop_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0394643  !currActivity(Working) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Working)
+
+// 0.348982  !level(Low,Entry_Multi_Temp) ^ currActivity(Working) => isRelated(+s,+a)
+0.348982  !currActivity(Working) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Working)
+
+// 0.349178  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Working) => isRelated(+s,+a)
+0.349178  !currActivity(Working) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Working)
+
+// 0.349139  !level(Low,Lounge_Multi_Temp) ^ currActivity(Working) => isRelated(+s,+a)
+0.349139  !currActivity(Working) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Working)
+
+// 0.349198  !level(Low,Office2_Multi_Temp) ^ currActivity(Working) => isRelated(+s,+a)
+0.349198  !currActivity(Working) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Working)
+
+// 0.349069  !level(Low,Workshop_Multi_Temp) ^ currActivity(Working) => isRelated(+s,+a)
+0.349069  !currActivity(Working) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Working)
+
+// 0.348933  !level(Low,Office1_Multi_UV) ^ currActivity(Working) => isRelated(+s,+a)
+0.348933  !currActivity(Working) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Working)
+
+// 0.0396392  !level(Low,Office2_Multi_Presence) ^ currActivity(Working) => isRelated(+s,+a)
+0.0396392  !currActivity(Working) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Working)
+
+// 0.0691947  !level(Low,External_Door_Contact) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0691947  !currActivity(Printing) v level(Low,External_Door_Contact) v isRelated(External_Door_Contact,Printing)
+
+// 0.0692771  !level(Low,Entry_Multi_Contact) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0692771  !currActivity(Printing) v level(Low,Entry_Multi_Contact) v isRelated(Entry_Multi_Contact,Printing)
+
+// 0.0362584  !level(Low,Fridge_Door_Contact) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0362584  !currActivity(Printing) v level(Low,Fridge_Door_Contact) v isRelated(Fridge_Door_Contact,Printing)
+
+// 0.0425444  !level(Low,Toilet_Door_Contact) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0425444  !currActivity(Printing) v level(Low,Toilet_Door_Contact) v isRelated(Toilet_Door_Contact,Printing)
+
+// 0.349862  !level(Low,Workshop_Multi_Contact) ^ currActivity(Printing) => isRelated(+s,+a)
+0.349862  !currActivity(Printing) v level(Low,Workshop_Multi_Contact) v isRelated(Workshop_Multi_Contact,Printing)
+
+// 0.349622  !level(Low,Office1_Multi_Humid) ^ currActivity(Printing) => isRelated(+s,+a)
+0.349622  !currActivity(Printing) v level(Low,Office1_Multi_Humid) v isRelated(Office1_Multi_Humid,Printing)
+
+// 0.350092  !level(Low,Entry_Multi_Lux) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350092  !currActivity(Printing) v level(Low,Entry_Multi_Lux) v isRelated(Entry_Multi_Lux,Printing)
+
+// 0.350046  !level(Low,Kitchen_Multi_Lux) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350046  !currActivity(Printing) v level(Low,Kitchen_Multi_Lux) v isRelated(Kitchen_Multi_Lux,Printing)
+
+// 0.350076  !level(Low,Lounge_Multi_Lux) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350076  !currActivity(Printing) v level(Low,Lounge_Multi_Lux) v isRelated(Lounge_Multi_Lux,Printing)
+
+// 0.350011  !level(Low,Office2_Multi_Lux) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350011  !currActivity(Printing) v level(Low,Office2_Multi_Lux) v isRelated(Office2_Multi_Lux,Printing)
+
+// 0.35002  !level(Low,Workshop_Multi_Lux) ^ currActivity(Printing) => isRelated(+s,+a)
+0.35002  !currActivity(Printing) v level(Low,Workshop_Multi_Lux) v isRelated(Workshop_Multi_Lux,Printing)
+
+// 0.0347028  !level(Low,Entry_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0347028  !currActivity(Printing) v level(Low,Entry_Multi_Presence) v isRelated(Entry_Multi_Presence,Printing)
+
+// 0.0729373  !level(Low,Kitchen_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0729373  !currActivity(Printing) v level(Low,Kitchen_Multi_Presence) v isRelated(Kitchen_Multi_Presence,Printing)
+
+// 0.0366737  !level(Low,Kitchen_Plug_Power) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0366737  !currActivity(Printing) v level(Low,Kitchen_Plug_Power) v isRelated(Kitchen_Plug_Power,Printing)
+
+// 0.0390327  !level(Low,Lounge_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0390327  !currActivity(Printing) v level(Low,Lounge_Multi_Presence) v isRelated(Lounge_Multi_Presence,Printing)
+
+// 0.0382982  !level(Low,Office1_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0382982  !currActivity(Printing) v level(Low,Office1_Multi_Presence) v isRelated(Office1_Multi_Presence,Printing)
+
+// 0.0448026  !level(Low,Printer_Plug_Power) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0448026  !currActivity(Printing) v level(Low,Printer_Plug_Power) v isRelated(Printer_Plug_Power,Printing)
+
+// 0.0382383  !level(Low,Workshop_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0382383  !currActivity(Printing) v level(Low,Workshop_Multi_Presence) v isRelated(Workshop_Multi_Presence,Printing)
+
+// 0.350233  !level(Low,Entry_Multi_Temp) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350233  !currActivity(Printing) v level(Low,Entry_Multi_Temp) v isRelated(Entry_Multi_Temp,Printing)
+
+// 0.34965  !level(Low,Kitchen_Multi_Temp) ^ currActivity(Printing) => isRelated(+s,+a)
+0.34965  !currActivity(Printing) v level(Low,Kitchen_Multi_Temp) v isRelated(Kitchen_Multi_Temp,Printing)
+
+// 0.350062  !level(Low,Lounge_Multi_Temp) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350062  !currActivity(Printing) v level(Low,Lounge_Multi_Temp) v isRelated(Lounge_Multi_Temp,Printing)
+
+// 0.350091  !level(Low,Office2_Multi_Temp) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350091  !currActivity(Printing) v level(Low,Office2_Multi_Temp) v isRelated(Office2_Multi_Temp,Printing)
+
+// 0.349964  !level(Low,Workshop_Multi_Temp) ^ currActivity(Printing) => isRelated(+s,+a)
+0.349964  !currActivity(Printing) v level(Low,Workshop_Multi_Temp) v isRelated(Workshop_Multi_Temp,Printing)
+
+// 0.350176  !level(Low,Office1_Multi_UV) ^ currActivity(Printing) => isRelated(+s,+a)
+0.350176  !currActivity(Printing) v level(Low,Office1_Multi_UV) v isRelated(Office1_Multi_UV,Printing)
+
+// 0.0381609  !level(Low,Office2_Multi_Presence) ^ currActivity(Printing) => isRelated(+s,+a)
+0.0381609  !currActivity(Printing) v level(Low,Office2_Multi_Presence) v isRelated(Office2_Multi_Presence,Printing)
+
+// 0.000170917  isPerformed(Kitchen,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000170917  !currActivity(Closed) v currLocation(Kitchen) v !isPerformed(Kitchen,Closed)
+
+// 0.000371202  isPerformed(Toilet,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000371202  !currActivity(Closed) v currLocation(Toilet) v !isPerformed(Toilet,Closed)
+
+// 0.000293419  isPerformed(Lounge,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000293419  !currActivity(Closed) v currLocation(Lounge) v !isPerformed(Lounge,Closed)
+
+// 0.00028858  isPerformed(Entrance,Closed) ^ currActivity(+a) => currLocation(+l)
+0.00028858  !currActivity(Closed) v currLocation(Entrance) v !isPerformed(Entrance,Closed)
+
+// 0.000335826  isPerformed(Office1,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000335826  !currActivity(Closed) v currLocation(Office1) v !isPerformed(Office1,Closed)
+
+// 0.000198497  isPerformed(Office2,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000198497  !currActivity(Closed) v currLocation(Office2) v !isPerformed(Office2,Closed)
+
+// 0.000273458  isPerformed(Workshop,Closed) ^ currActivity(+a) => currLocation(+l)
+0.000273458  !currActivity(Closed) v currLocation(Workshop) v !isPerformed(Workshop,Closed)
+
+// 0.142184  isPerformed(Kitchen,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.142184  !currActivity(Cooking) v currLocation(Kitchen) v !isPerformed(Kitchen,Cooking)
+
+// 0.0293817  isPerformed(Toilet,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0293817  !currActivity(Cooking) v currLocation(Toilet) v !isPerformed(Toilet,Cooking)
+
+// 0.0284743  isPerformed(Lounge,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0284743  !currActivity(Cooking) v currLocation(Lounge) v !isPerformed(Lounge,Cooking)
+
+// 0.0294615  isPerformed(Entrance,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0294615  !currActivity(Cooking) v currLocation(Entrance) v !isPerformed(Entrance,Cooking)
+
+// 0.0310489  isPerformed(Office1,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0310489  !currActivity(Cooking) v currLocation(Office1) v !isPerformed(Office1,Cooking)
+
+// 0.0307272  isPerformed(Office2,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0307272  !currActivity(Cooking) v currLocation(Office2) v !isPerformed(Office2,Cooking)
+
+// 0.0335878  isPerformed(Workshop,Cooking) ^ currActivity(+a) => currLocation(+l)
+0.0335878  !currActivity(Cooking) v currLocation(Workshop) v !isPerformed(Workshop,Cooking)
+
+// 0.143328  isPerformed(Kitchen,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.143328  !currActivity(HavingCoffee) v currLocation(Kitchen) v !isPerformed(Kitchen,HavingCoffee)
+
+// 0.0279552  isPerformed(Toilet,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.0279552  !currActivity(HavingCoffee) v currLocation(Toilet) v !isPerformed(Toilet,HavingCoffee)
+
+// 0.0318046  isPerformed(Lounge,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.0318046  !currActivity(HavingCoffee) v currLocation(Lounge) v !isPerformed(Lounge,HavingCoffee)
+
+// 0.0327927  isPerformed(Entrance,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.0327927  !currActivity(HavingCoffee) v currLocation(Entrance) v !isPerformed(Entrance,HavingCoffee)
+
+// 0.0292845  isPerformed(Office1,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.0292845  !currActivity(HavingCoffee) v currLocation(Office1) v !isPerformed(Office1,HavingCoffee)
+
+// 0.0316052  isPerformed(Office2,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.0316052  !currActivity(HavingCoffee) v currLocation(Office2) v !isPerformed(Office2,HavingCoffee)
+
+// 0.031749  isPerformed(Workshop,HavingCoffee) ^ currActivity(+a) => currLocation(+l)
+0.031749  !currActivity(HavingCoffee) v currLocation(Workshop) v !isPerformed(Workshop,HavingCoffee)
+
+// 8.91229e-05  isPerformed(Kitchen,Toileting) ^ currActivity(+a) => currLocation(+l)
+8.91229e-05  !currActivity(Toileting) v currLocation(Kitchen) v !isPerformed(Kitchen,Toileting)
+
+// 0.00152838  isPerformed(Toilet,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.00152838  !currActivity(Toileting) v currLocation(Toilet) v !isPerformed(Toilet,Toileting)
+
+// 0.000319887  isPerformed(Lounge,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.000319887  !currActivity(Toileting) v currLocation(Lounge) v !isPerformed(Lounge,Toileting)
+
+// 0.000268485  isPerformed(Entrance,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.000268485  !currActivity(Toileting) v currLocation(Entrance) v !isPerformed(Entrance,Toileting)
+
+// 0.000189778  isPerformed(Office1,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.000189778  !currActivity(Toileting) v currLocation(Office1) v !isPerformed(Office1,Toileting)
+
+// 0.00020705  isPerformed(Office2,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.00020705  !currActivity(Toileting) v currLocation(Office2) v !isPerformed(Office2,Toileting)
+
+// 0.000135327  isPerformed(Workshop,Toileting) ^ currActivity(+a) => currLocation(+l)
+0.000135327  !currActivity(Toileting) v currLocation(Workshop) v !isPerformed(Workshop,Toileting)
+
+// 0.000205481  isPerformed(Kitchen,Entering) ^ currActivity(+a) => currLocation(+l)
+0.000205481  !currActivity(Entering) v currLocation(Kitchen) v !isPerformed(Kitchen,Entering)
+
+// 0.000340885  isPerformed(Toilet,Entering) ^ currActivity(+a) => currLocation(+l)
+0.000340885  !currActivity(Entering) v currLocation(Toilet) v !isPerformed(Toilet,Entering)
+
+// 6.02356e-05  isPerformed(Lounge,Entering) ^ currActivity(+a) => currLocation(+l)
+6.02356e-05  !currActivity(Entering) v currLocation(Lounge) v !isPerformed(Lounge,Entering)
+
+// 0.00125694  isPerformed(Entrance,Entering) ^ currActivity(+a) => currLocation(+l)
+0.00125694  !currActivity(Entering) v currLocation(Entrance) v !isPerformed(Entrance,Entering)
+
+// 0.000429959  isPerformed(Office1,Entering) ^ currActivity(+a) => currLocation(+l)
+0.000429959  !currActivity(Entering) v currLocation(Office1) v !isPerformed(Office1,Entering)
+
+// 0.000104957  isPerformed(Office2,Entering) ^ currActivity(+a) => currLocation(+l)
+0.000104957  !currActivity(Entering) v currLocation(Office2) v !isPerformed(Office2,Entering)
+
+// 0.000248585  isPerformed(Workshop,Entering) ^ currActivity(+a) => currLocation(+l)
+0.000248585  !currActivity(Entering) v currLocation(Workshop) v !isPerformed(Workshop,Entering)
+
+// 0.0309148  isPerformed(Kitchen,Resting) ^ currActivity(+a) => currLocation(+l)
+0.0309148  !currActivity(Resting) v currLocation(Kitchen) v !isPerformed(Kitchen,Resting)
+
+// 0.0311054  isPerformed(Toilet,Resting) ^ currActivity(+a) => currLocation(+l)
+0.0311054  !currActivity(Resting) v currLocation(Toilet) v !isPerformed(Toilet,Resting)
+
+// 0.13999  isPerformed(Lounge,Resting) ^ currActivity(+a) => currLocation(+l)
+0.13999  !currActivity(Resting) v currLocation(Lounge) v !isPerformed(Lounge,Resting)
+
+// 0.0298399  isPerformed(Entrance,Resting) ^ currActivity(+a) => currLocation(+l)
+0.0298399  !currActivity(Resting) v currLocation(Entrance) v !isPerformed(Entrance,Resting)
+
+// 0.029638  isPerformed(Office1,Resting) ^ currActivity(+a) => currLocation(+l)
+0.029638  !currActivity(Resting) v currLocation(Office1) v !isPerformed(Office1,Resting)
+
+// 0.0309123  isPerformed(Office2,Resting) ^ currActivity(+a) => currLocation(+l)
+0.0309123  !currActivity(Resting) v currLocation(Office2) v !isPerformed(Office2,Resting)
+
+// 0.0300832  isPerformed(Workshop,Resting) ^ currActivity(+a) => currLocation(+l)
+0.0300832  !currActivity(Resting) v currLocation(Workshop) v !isPerformed(Workshop,Resting)
+
+// 0.0272167  isPerformed(Kitchen,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0272167  !currActivity(Exiting) v currLocation(Kitchen) v !isPerformed(Kitchen,Exiting)
+
+// 0.0299069  isPerformed(Toilet,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0299069  !currActivity(Exiting) v currLocation(Toilet) v !isPerformed(Toilet,Exiting)
+
+// 0.0317833  isPerformed(Lounge,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0317833  !currActivity(Exiting) v currLocation(Lounge) v !isPerformed(Lounge,Exiting)
+
+// 0.144821  isPerformed(Entrance,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.144821  !currActivity(Exiting) v currLocation(Entrance) v !isPerformed(Entrance,Exiting)
+
+// 0.0286586  isPerformed(Office1,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0286586  !currActivity(Exiting) v currLocation(Office1) v !isPerformed(Office1,Exiting)
+
+// 0.0285369  isPerformed(Office2,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0285369  !currActivity(Exiting) v currLocation(Office2) v !isPerformed(Office2,Exiting)
+
+// 0.0291498  isPerformed(Workshop,Exiting) ^ currActivity(+a) => currLocation(+l)
+0.0291498  !currActivity(Exiting) v currLocation(Workshop) v !isPerformed(Workshop,Exiting)
+
+// 0.000284459  isPerformed(Kitchen,Working) ^ currActivity(+a) => currLocation(+l)
+0.000284459  !currActivity(Working) v currLocation(Kitchen) v !isPerformed(Kitchen,Working)
+
+// 0.000120649  isPerformed(Toilet,Working) ^ currActivity(+a) => currLocation(+l)
+0.000120649  !currActivity(Working) v currLocation(Toilet) v !isPerformed(Toilet,Working)
+
+// 0.000266202  isPerformed(Lounge,Working) ^ currActivity(+a) => currLocation(+l)
+0.000266202  !currActivity(Working) v currLocation(Lounge) v !isPerformed(Lounge,Working)
+
+// 0.000153103  isPerformed(Entrance,Working) ^ currActivity(+a) => currLocation(+l)
+0.000153103  !currActivity(Working) v currLocation(Entrance) v !isPerformed(Entrance,Working)
+
+// 0.00141252  isPerformed(Office1,Working) ^ currActivity(+a) => currLocation(+l)
+0.00141252  !currActivity(Working) v currLocation(Office1) v !isPerformed(Office1,Working)
+
+// 0.00132807  isPerformed(Office2,Working) ^ currActivity(+a) => currLocation(+l)
+0.00132807  !currActivity(Working) v currLocation(Office2) v !isPerformed(Office2,Working)
+
+// 0.00132481  isPerformed(Workshop,Working) ^ currActivity(+a) => currLocation(+l)
+0.00132481  !currActivity(Working) v currLocation(Workshop) v !isPerformed(Workshop,Working)
+
+// 0.000112471  isPerformed(Kitchen,Printing) ^ currActivity(+a) => currLocation(+l)
+0.000112471  !currActivity(Printing) v currLocation(Kitchen) v !isPerformed(Kitchen,Printing)
+
+// 0.00024224  isPerformed(Toilet,Printing) ^ currActivity(+a) => currLocation(+l)
+0.00024224  !currActivity(Printing) v currLocation(Toilet) v !isPerformed(Toilet,Printing)
+
+// 0.000306418  isPerformed(Lounge,Printing) ^ currActivity(+a) => currLocation(+l)
+0.000306418  !currActivity(Printing) v currLocation(Lounge) v !isPerformed(Lounge,Printing)
+
+// 0.00034892  isPerformed(Entrance,Printing) ^ currActivity(+a) => currLocation(+l)
+0.00034892  !currActivity(Printing) v currLocation(Entrance) v !isPerformed(Entrance,Printing)
+
+// 0.000250026  isPerformed(Office1,Printing) ^ currActivity(+a) => currLocation(+l)
+0.000250026  !currActivity(Printing) v currLocation(Office1) v !isPerformed(Office1,Printing)
+
+// 9.65208e-05  isPerformed(Office2,Printing) ^ currActivity(+a) => currLocation(+l)
+9.65208e-05  !currActivity(Printing) v currLocation(Office2) v !isPerformed(Office2,Printing)
+
+// 0.00187823  isPerformed(Workshop,Printing) ^ currActivity(+a) => currLocation(+l)
+0.00187823  !currActivity(Printing) v currLocation(Workshop) v !isPerformed(Workshop,Printing)
+
+// 1.83704  isRelated(Fridge_Door_Contact,Cooking).
+1.83704  isRelated(Fridge_Door_Contact,Cooking)
+
+// 1.84733  isRelated(Kitchen_Multi_Presence,Cooking).
+1.84733  isRelated(Kitchen_Multi_Presence,Cooking)
+
+// 1.83465  isRelated(Kitchen_Plug_Power,HavingCoffee).
+1.83465  isRelated(Kitchen_Plug_Power,HavingCoffee)
+
+// 1.83814  isRelated(Kitchen_Multi_Presence,HavingCoffee).
+1.83814  isRelated(Kitchen_Multi_Presence,HavingCoffee)
+
+// 1.84286  isRelated(Toilet_Door_Contact,Toileting).
+1.84286  isRelated(Toilet_Door_Contact,Toileting)
+
+// 1.83345  isRelated(Entry_Multi_Presence,Entering).
+1.83345  isRelated(Entry_Multi_Presence,Entering)
+
+// 1.84141  isRelated(Entry_Multi_Contact,Entering).
+1.84141  isRelated(Entry_Multi_Contact,Entering)
+
+// 1.83496  isRelated(External_Door_Contact,Entering).
+1.83496  isRelated(External_Door_Contact,Entering)
+
+// 1.84019  isRelated(External_Door_Contact,Exiting).
+1.84019  isRelated(External_Door_Contact,Exiting)
+
+// 1.83419  isRelated(Entry_Multi_Contact,Exiting).
+1.83419  isRelated(Entry_Multi_Contact,Exiting)
+
+// 1.82835  isRelated(Lounge_Multi_Presence,Resting).
+1.82835  isRelated(Lounge_Multi_Presence,Resting)
+
+// 1.83366  isRelated(Office1_Multi_Presence,Working).
+1.83366  isRelated(Office1_Multi_Presence,Working)
+
+// 1.83805  isRelated(Office2_Multi_Presence,Working).
+1.83805  isRelated(Office2_Multi_Presence,Working)
+
+// 1.8391  isRelated(Workshop_Multi_Presence,Working).
+1.8391  isRelated(Workshop_Multi_Presence,Working)
+
+// 1.83968  isRelated(Printer_Plug_Power,Printing).
+1.83968  isRelated(Printer_Plug_Power,Printing)
+
+// 1.68126  isPerformed(Kitchen,Cooking).
+1.68126  isPerformed(Kitchen,Cooking)
+
+// 1.68355  isPerformed(Kitchen,HavingCoffee).
+1.68355  isPerformed(Kitchen,HavingCoffee)
+
+// 1.67055  isPerformed(Toilet,Toileting).
+1.67055  isPerformed(Toilet,Toileting)
+
+// 1.69145  isPerformed(Lounge,Resting).
+1.69145  isPerformed(Lounge,Resting)
+
+// 1.66704  isPerformed(Entrance,Entering).
+1.66704  isPerformed(Entrance,Entering)
+
+// 1.67694  isPerformed(Entrance,Exiting).
+1.67694  isPerformed(Entrance,Exiting)
+
+// 1.66236  isPerformed(Office1,Working).
+1.66236  isPerformed(Office1,Working)
+
+// 1.67023  isPerformed(Office2,Working).
+1.67023  isPerformed(Office2,Working)
+
+// 1.66734  isPerformed(Workshop,Working).
+1.66734  isPerformed(Workshop,Working)
+
+// 1.67182  isPerformed(Workshop,Printing).
+1.67182  isPerformed(Workshop,Printing)
+
+// 0       currActivity(a1)
+0       currActivity(a1)
+
+// 0       currLocation(a1)
+0       currLocation(a1)
+
+// 0       level(a1,a2)
+0       level(a1,a2)
+
+// -7.25726  isRelated(a1,a2)
+-7.25726  isRelated(a1,a2)
+
+// -6.37401  isPerformed(a1,a2)
+-6.37401  isPerformed(a1,a2)
+

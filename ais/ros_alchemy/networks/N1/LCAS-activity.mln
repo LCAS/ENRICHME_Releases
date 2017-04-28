@@ -1,0 +1,93 @@
+//
+// /opt/alchemy/learnwts -i LCAS-activity.mln -ne isRelated,isPerformed -t ./training/train1.db,./training/train2.db,./training/train3.db,./training/train4.db,./training/train5.db,./training/train6.db,./training/train7.db,./training/train8.db,./training/train9.db -o temp.mln
+//
+
+// network and domains definition 
+
+// Domain functions
+activity={Closed,Cooking,HavingCoffee,Toileting,Entering,Resting,Exiting,Working,Printing}
+
+location={Kitchen,Toilet,Lounge,Entrance,Office1,Office2,Workshop}
+
+sensorLevel={Low,Mid,Hig}
+
+sensor={External_Door_Contact,Entry_Multi_Contact,Fridge_Door_Contact,Toilet_Door_Contact,Workshop_Multi_Contact,Office1_Multi_Humid,Entry_Multi_Lux,Kitchen_Multi_Lux,Lounge_Multi_Lux,Office2_Multi_Lux,Workshop_Multi_Lux,Entry_Multi_Presence,Kitchen_Multi_Presence,Kitchen_Plug_Power,Lounge_Multi_Presence,Office1_Multi_Presence,Printer_Plug_Power,Workshop_Multi_Presence,Entry_Multi_Temp,Kitchen_Multi_Temp,Lounge_Multi_Temp,Office2_Multi_Temp,Workshop_Multi_Temp,Office1_Multi_UV}
+
+
+//predicates
+// inferred 
+currActivity(activity)
+currLocation(location)
+
+// sensor inputs
+// evidences !
+level(sensorLevel,sensor) 
+
+// given by structure
+// hard rules...
+isRelated(sensor,activity)
+isPerformed(location,activity)
+
+
+//activity formulas
+// General relationship between a sensor and an activity
+!level(Low,+s)  ^  isRelated(+s,+a) <=> currActivity(+a)
+
+// Sensors and activities location
+isPerformed(+l,+a)  ^ currActivity(+a) <=>  currLocation(+l)
+
+//hard rules
+/////////   Cooking
+isRelated(Fridge_Door_Contact,Cooking).
+isRelated(Kitchen_Multi_Presence,Cooking).
+
+/////////   HavingCoffee
+isRelated(Kitchen_Plug_Power,HavingCoffee).
+isRelated(Kitchen_Multi_Presence,HavingCoffee).
+
+/////////   Toileting
+isRelated(Toilet_Door_Contact,Toileting).
+
+/////////   Entering
+isRelated(Entry_Multi_Presence,Entering).
+isRelated(Entry_Multi_Contact,Entering).
+isRelated(External_Door_Contact,Entering).
+
+/////////   Exiting
+isRelated(External_Door_Contact,Exiting).
+isRelated(Entry_Multi_Contact,Exiting).
+
+/////////   Resting
+isRelated(Lounge_Multi_Presence,Resting).
+
+/////////   Working
+isRelated(Office1_Multi_Presence,Working).
+isRelated(Office2_Multi_Presence,Working).
+isRelated(Workshop_Multi_Presence,Working).
+
+/////////   Printing
+isRelated(Printer_Plug_Power,Printing).
+
+/////////   Kitchen
+isPerformed(Kitchen,Cooking).
+isPerformed(Kitchen,HavingCoffee).
+
+/////////   Toilet
+isPerformed(Toilet,Toileting).
+
+/////////   Lounge
+isPerformed(Lounge,Resting).
+
+/////////   Entrance
+isPerformed(Entrance,Entering).
+isPerformed(Entrance,Exiting).
+
+/////////   Office1
+isPerformed(Office1,Working).
+
+/////////   Office2
+isPerformed(Office2,Working).
+
+/////////   Workshop
+isPerformed(Workshop,Working).
+isPerformed(Workshop,Printing).

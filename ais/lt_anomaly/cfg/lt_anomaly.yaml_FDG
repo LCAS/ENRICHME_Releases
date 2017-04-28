@@ -1,0 +1,21 @@
+#    - Entry_Door_Contact
+#    - Fridge_Door_Contact
+#    - Bathroom_Multi_Presence
+#    - Kitchen_Multi_Presence
+#    - Corridor_Multi_Presence
+# List of sensors used in restlessness / inactivity inference
+sensors: ['Bedroom_Multi_Presence', 'Livingroom_Multi_Presence', 'Bathroom_Multi_Presence', 'Kitchen_Multi_Presence', 'Corridor_Multi_Presence' ]
+
+# sensor time interval in secs to measure entropy
+tevidence: 100.0
+
+# sample time: time between inferences in secs
+tsample: 10.0
+
+# Entropy warning ranges
+# TODO find a better thresholding like average entropies on system or so
+warningEntropyHighPercent: 85.0
+warningEntropyLowPercent: 2.0
+
+# anomaly topic name
+anomTopicName: '/lt_anomaly'

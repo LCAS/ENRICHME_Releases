@@ -1,0 +1,248 @@
+//predicate declarations
+sensorAt(sensor,place!)
+level(sensorLevel!,sensor)
+isActive(sensor)
+currPlace(place)
+
+//function declarations
+
+// 11.6285  currPlace(Entry) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+11.6285  currPlace(Entry) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Entry)
+
+// 0       currPlace(Entry) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Entry)
+
+// 0       currPlace(Entry) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bathroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bathroom_Multi_Lux) v !sensorAt(Bathroom_Multi_Lux,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bathroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bathroom_Multi_Temp) v !sensorAt(Bathroom_Multi_Temp,Entry)
+
+// 0       currPlace(Entry) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Entry)
+
+// 0       currPlace(Entry) v !isActive(Kitchen_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Kitchen_Multi_Lux) v !sensorAt(Kitchen_Multi_Lux,Entry)
+
+// 0       currPlace(Entry) v !isActive(Kitchen_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Kitchen_Multi_Temp) v !sensorAt(Kitchen_Multi_Temp,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bedroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bedroom_Multi_Presence) v !sensorAt(Bedroom_Multi_Presence,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bedroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bedroom_Multi_Lux) v !sensorAt(Bedroom_Multi_Lux,Entry)
+
+// 0       currPlace(Entry) v !isActive(Bedroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Bedroom_Multi_Temp) v !sensorAt(Bedroom_Multi_Temp,Entry)
+
+// 0       currPlace(Entry) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Entry)
+
+// 0       currPlace(Entry) v !isActive(Livingroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Livingroom_Multi_Lux) v !sensorAt(Livingroom_Multi_Lux,Entry)
+
+// 0       currPlace(Entry) v !isActive(Livingroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Entry) v !isActive(Livingroom_Multi_Temp) v !sensorAt(Livingroom_Multi_Temp,Entry)
+
+// 0       currPlace(Kitchen) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Kitchen)
+
+// 11.6285  currPlace(Kitchen) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+11.6285  currPlace(Kitchen) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Kitchen)
+
+// 11.6285  currPlace(Kitchen) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+11.6285  currPlace(Kitchen) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Lux) v !sensorAt(Bathroom_Multi_Lux,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bathroom_Multi_Temp) v !sensorAt(Bathroom_Multi_Temp,Kitchen)
+
+// 11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Kitchen)
+
+// 11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Lux) v !sensorAt(+s,+p)
+11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Lux) v !sensorAt(Kitchen_Multi_Lux,Kitchen)
+
+// 11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Temp) v !sensorAt(+s,+p)
+11.6285  currPlace(Kitchen) v !isActive(Kitchen_Multi_Temp) v !sensorAt(Kitchen_Multi_Temp,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Presence) v !sensorAt(Bedroom_Multi_Presence,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Lux) v !sensorAt(Bedroom_Multi_Lux,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Bedroom_Multi_Temp) v !sensorAt(Bedroom_Multi_Temp,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Lux) v !sensorAt(Livingroom_Multi_Lux,Kitchen)
+
+// 0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Kitchen) v !isActive(Livingroom_Multi_Temp) v !sensorAt(Livingroom_Multi_Temp,Kitchen)
+
+// 0       currPlace(Bathroom) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Bathroom)
+
+// 11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Bathroom)
+
+// 11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(+s,+p)
+11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(Bathroom_Multi_Lux,Bathroom)
+
+// 11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(+s,+p)
+11.6285  currPlace(Bathroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(Bathroom_Multi_Temp,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(Kitchen_Multi_Lux,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(Kitchen_Multi_Temp,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(Bedroom_Multi_Presence,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(Bedroom_Multi_Lux,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(Bedroom_Multi_Temp,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(Livingroom_Multi_Lux,Bathroom)
+
+// 0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bathroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(Livingroom_Multi_Temp,Bathroom)
+
+// 0       currPlace(Bedroom) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(Bathroom_Multi_Lux,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(Bathroom_Multi_Temp,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(Kitchen_Multi_Lux,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(Kitchen_Multi_Temp,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(Bedroom_Multi_Presence,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(Bedroom_Multi_Lux,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(Bedroom_Multi_Temp,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(Livingroom_Multi_Lux,Bedroom)
+
+// 0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Bedroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(Livingroom_Multi_Temp,Bedroom)
+
+// 0       currPlace(Livingroom) v !isActive(Entry_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Entry_Door_Contact) v !sensorAt(Entry_Door_Contact,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Fridge_Door_Contact) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Fridge_Door_Contact) v !sensorAt(Fridge_Door_Contact,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Kitchen_Plug_Power) v !sensorAt(Kitchen_Plug_Power,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Presence) v !sensorAt(Bathroom_Multi_Presence,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Lux) v !sensorAt(Bathroom_Multi_Lux,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bathroom_Multi_Temp) v !sensorAt(Bathroom_Multi_Temp,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Presence) v !sensorAt(Kitchen_Multi_Presence,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Lux) v !sensorAt(Kitchen_Multi_Lux,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Kitchen_Multi_Temp) v !sensorAt(Kitchen_Multi_Temp,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Presence) v !sensorAt(Bedroom_Multi_Presence,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Lux) v !sensorAt(Bedroom_Multi_Lux,Livingroom)
+
+// 0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(+s,+p)
+0       currPlace(Livingroom) v !isActive(Bedroom_Multi_Temp) v !sensorAt(Bedroom_Multi_Temp,Livingroom)
+
+// 11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(+s,+p)
+11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Presence) v !sensorAt(Livingroom_Multi_Presence,Livingroom)
+
+// 11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(+s,+p)
+11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Lux) v !sensorAt(Livingroom_Multi_Lux,Livingroom)
+
+// 11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(+s,+p)
+11.6285  currPlace(Livingroom) v !isActive(Livingroom_Multi_Temp) v !sensorAt(Livingroom_Multi_Temp,Livingroom)
+
+// 2.00309  isActive(s) => !level(Low,s) v level(Mid,s) v level(Hig,s).
+2.00309  !isActive(a1) v level(Mid,a1) v level(Hig,a1) v !level(Low,a1)
+
+// -6.48672  currPlace(a1)
+-6.48672  currPlace(a1)
+
+// 0       isActive(a1)
+0       isActive(a1)
+
+// 0       level(a1!,a2)
+0       level(a1,a2)
+
+// 0       sensorAt(a1,a2!)
+0       sensorAt(a1,a2)
+
