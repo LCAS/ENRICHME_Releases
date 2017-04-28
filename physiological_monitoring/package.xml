@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>physiological_monitoring</name>
+  <version>0.0.2</version>
+  <description>Physiological Monitoring</description>
+  <maintainer email="scosar@lincoln.ac.uk">Serhan Cosar</maintainer>
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>libirimager</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>image_transport</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+</package>

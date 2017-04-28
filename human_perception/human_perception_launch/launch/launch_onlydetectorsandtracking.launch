@@ -1,0 +1,58 @@
+<launch>
+    <!-- Fake TF frames for people tracking -->
+    <!-- <node name="static_tf_odom" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 base_link kompai_laser 100"
+    /> -->
+
+    <!-- Fake TF frames for people tracking -->
+<!--    <node name="static_tf_base" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 odom_combined base_link 100"
+    />
+-->
+
+    <!-- ROS Bridge to PURE in Kompai -->
+    <!-- <node pkg="ros_pure" type="ros_pure_bridge.py" name="ros_pure_bridge" output="screen"> />
+    </node> -->
+
+    <!-- Leg tracker -->
+    <include file="$(find leg_detector)/launch/leg_detector.launch"/>
+
+    <!-- Bayes People tracker -->
+    <include file="$(find bayes_people_tracker)/launch/people_tracker.launch">
+       <arg name="target_frame" value="/odom_combined"/>
+    </include>
+
+    <!-- Detector to Pose Array -->
+    <include file="$(find detector_msg_to_pose_array)/launch/to_pose_array.launch"/>
+
+    <!-- OpenNI -->
+    <!-- <include file="$(find freenect_launch)/launch/freenect.launch"/> -->
+
+    <!-- TF between base and RGBD camera -->
+    <!-- <node name="tf_odom_camera" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 1 0 0 0 base_link camera_link 100"
+    /> -->
+
+    <!-- Virtual PTU messages (for ground plane estimation) -->
+    <node name="virtual_ptu" pkg="virtual_ptu" type="virtual_ptu.py"/> 
+
+    <!-- Fixed Ground Plane Estimation (for Upper Body Detector) -->
+    <include file="$(find ground_plane_estimation)/launch/ground_plane_fixed.launch" >
+        <arg name="target_frame" value="/camera_depth_optical_frame" />
+    </include>  
+
+    <!-- Upper Body Detector -->
+    <include file="$(find upper_body_detector)/launch/upper_body_detector.launch"> 
+        <arg name="camera_namespace" value="/camera"/> 
+        <arg name="depth_image" value="/depth/image_rect"/>
+    </include>
+
+
+
+</launch>

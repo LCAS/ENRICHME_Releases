@@ -1,0 +1,13 @@
+<launch>
+    
+
+    <!-- Re-identification -->
+    <include file="$(find reidentifier)/launch/reidentifier.launch" />
+
+    <!-- Short-time Anomaly Detector -->
+    <include file="$(find st_anomaly_detector)/launch/st_anomaly_detector.launch" />
+
+
+
+
+</launch>

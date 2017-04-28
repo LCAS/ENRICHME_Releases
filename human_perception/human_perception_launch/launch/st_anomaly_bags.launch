@@ -1,0 +1,97 @@
+ <!-- 
+ 
+    Plays some Claudio's rosbags to test st_anomaly detector and lt_anomaly detector
+    
+  -->
+
+
+
+<launch>
+    
+    
+    
+  <!-- Launch bag file:
+  TOPICS 
+USED:
+             /head/kinect2/k2_depth/camera_info      : sensor_msgs/CameraInfo     
+             /head/kinect2/k2_depth/image            : sensor_msgs/Image          
+UNUSED:
+             /head/kinect2/k2_audio/audio            : k2_client/Audio            
+DONT KNOW:
+             /head/kinect2/k2_bodies/bodies          : k2_client/BodyArray        
+             /head/kinect2/k2_rgb/image/compressed   : sensor_msgs/CompressedImage
+   -->
+  <param name="use_sim_time" value="true" />  
+  <node pkg="rosbag" type="play" name="player" output="screen" args=" -q -l --clock /media/scosar/My\ Passport/k2_Long_Term_recording/recording_20170202135501.bag">
+  <!-- <remap from="/head/kinect2/k2_depth/camera_info" to="/camera/depth/camera_info"/> -->
+  <!-- <remap from="/head/kinect2/k2_depth/image" to="/camera/depth/image_rect"/> -->
+  </node>
+
+
+
+
+ <!-- Bayes People tracker -->
+    <include file="$(find bayes_people_tracker)/launch/people_tracker.launch">
+       <arg name="target_frame" value="/odom_combined"/>
+       <arg name="param_file" value="$(find bayes_people_tracker)/config/detectors_onlykinect.yaml" />
+    </include>
+
+    <!-- Detector to Pose Array -->
+    <include file="$(find detector_msg_to_pose_array)/launch/to_pose_array.launch"/>
+
+
+    <!-- TF between base and RGBD camera -->
+    <node name="tf_odom_camera" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 odom_combined camera_depth_optical_frame 100"
+    />
+
+    <!-- TF between base and RGBD camera -->
+    <node name="tf_odom_k2" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 odom_combined k2/depth_frame 100"
+    />
+
+    <node name="camera_info_node" 
+           pkg="human_perception_launch"
+          type="cameraPublisher.py"
+    />
+
+    <node name="image_decompressor_node" 
+           pkg="image_transport"
+          type="republish"
+          args="compressed in:=/head/kinect2/k2_rgb/image raw out:=/head/kinect2/k2_rgb/image"
+    />
+
+    <!-- Virtual PTU messages (for ground plane estimation) -->
+    <node name="virtual_ptu" pkg="virtual_ptu" type="virtual_ptu.py"/> 
+
+    <!-- Fixed Ground Plane Estimation (for Upper Body Detector) -->
+    <include file="$(find ground_plane_estimation)/launch/ground_plane_fixed.launch" >
+        <arg name="target_frame" value="/camera_depth_optical_frame" />
+    </include>  
+
+
+    <!-- Upper Body Detector -->
+    <include file="$(find upper_body_detector)/launch/upper_body_detector.launch"> 
+        <arg name="camera_namespace" value="/camera"/> 
+        <arg name="depth_image" value="/depth/image_rect"/>
+        <arg name="rgb_image" value="/rgb/image_rect_color" />
+        <arg name="camera_info_depth" value="/depth/camera_info" />
+        <arg name="config_file" value="$(find upper_body_detector)/config/upper_body_detector_r2.yaml" /> 
+    </include>
+
+    <!-- Re-identification -->
+    <include file="$(find reidentifier)/launch/reidentifier_r2.launch" >
+        <arg name="camera_namespace" value="/camera"/> 
+        <arg name="depth_image" value="/depth/image_rect"/>
+        <arg name="rgb_image" value="/rgb/image_rect_color" />
+        <arg name="camera_info_depth" value="/depth/camera_info" />
+    </include> 
+
+    <!-- Short-time Anomaly Detector -->
+    <include file="$(find st_anomaly_detector)/launch/st_anomaly_detector.launch" />
+    
+</launch>

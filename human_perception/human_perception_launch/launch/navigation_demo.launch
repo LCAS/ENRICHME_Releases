@@ -1,0 +1,27 @@
+<launch>
+    <!-- Fake TF frames for people tracking -->
+    <node name="static_tf_odom" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 base_link kompai_laser 25"
+    />
+
+    <!-- Fake TF frames for people tracking -->
+<!--    <node name="static_tf_base" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 odom_combined base_link 100"
+    />
+-->
+
+    <!-- ROS Bridge to PURE in Kompai -->
+    <node pkg="ros_pure" type="ros_pure_bridge.py" name="ros_pure_bridge" output="screen"> />
+    </node>
+
+    <!-- Kompai Navigation Stack -->
+    <include file="$(find kompai_2dnav)/launch/move_base.launch">
+    </include>
+
+
+
+</launch>

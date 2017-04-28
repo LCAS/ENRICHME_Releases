@@ -1,0 +1,63 @@
+<launch>
+    <!-- Fake TF frames for people tracking -->
+    <node name="static_tf_odom" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 base_link kompai_laser 100"
+    />
+
+    <!-- Fake TF frames for people tracking -->
+    <node name="static_tf_base" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 0 0 0 0 1 odom_combined base_link 100"
+    />
+
+
+    <!-- ROS Bridge to PURE in Kompai -->
+    <node pkg="ros_pure" type="ros_pure_bridge.py" name="ros_pure_bridge" output="screen"> />
+    </node>
+
+    <!-- Leg tracker -->
+    <include file="$(find leg_detector)/launch/leg_detector.launch"/>
+
+    <!-- Bayes People tracker -->
+    <include file="$(find bayes_people_tracker)/launch/people_tracker.launch">
+       <arg name="target_frame" value="/odom_combined"/>
+       <arg name="param_file" value="/home/scosar/Documents/Codes/catkin_ws/src/ENRICHME/codes/human_perception/bayes_people_tracker/config/detectors_withnewparams.yaml"/>
+    </include>
+
+    <!-- Detector to Pose Array -->
+    <include file="$(find detector_msg_to_pose_array)/launch/to_pose_array.launch"/>
+
+    <!-- Freenect2 -->
+    <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch">
+    <!--    <arg name="depth_method" value="cpu" /> -->
+        <arg name="publish_tf" value="true" />
+    </include>
+
+    <!-- TF between base and RGBD camera -->
+    <node name="tf_odom_camera" 
+           pkg="tf"
+          type="static_transform_publisher"
+          args="0 0 1 3.14 0 -1.507 base_link kinect2_link 100"
+    />
+
+    <!-- Virtual PTU messages (for ground plane estimation) -->
+    <node name="virtual_ptu" pkg="virtual_ptu" type="virtual_ptu.py"/> 
+
+    <!-- Fixed Ground Plane Estimation (for Upper Body Detector) -->
+    <include file="$(find ground_plane_estimation)/launch/ground_plane_fixed.launch" >
+        <arg name="target_frame" value="/kinect2_ir_optical_frame" />
+    </include>  
+
+    <!-- Upper Body Detector -->
+    <include file="$(find upper_body_detector)/launch/upper_body_detector.launch"> 
+        <arg name="camera_namespace" value="/kinect2/sd"/> 
+        <arg name="depth_image" value="/image_depth_rect"/>
+        <arg name="rgb_image" value="/image_color_rect"/>
+        <arg name="camera_info_depth" value="/camera_info"/>
+        <arg name="config_file" value="/home/scosar/Documents/Codes/catkin_ws/src/ENRICHME/codes/human_perception/upper_body_detector/config/upper_body_detector_r2.yaml"/>
+    </include>
+
+</launch>
