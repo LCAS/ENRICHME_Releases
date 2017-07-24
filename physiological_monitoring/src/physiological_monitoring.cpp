@@ -16,11 +16,12 @@
 #include <opencv2/imgproc/imgproc.hpp>
 
 #include "physiological_monitoring/PhysiologicalData.h"
+#include "st_anomaly_detector/StringArrayStamped.h"
 
 // Optris
-optris::ImageBuilder image_builder_;
+evo::ImageBuilder image_builder_;
 image_transport::Publisher biometrics_pub_;
-ros::Publisher pub_phy;
+ros::Publisher pub_phy, pub_phy_level;
 unsigned char* thermal_buffer_ = NULL;
 double** temperature_map_;
 
@@ -48,9 +49,17 @@ double heart_rate_max_;
 int heart_buffer_min_;
 int heart_buffer_max_;
 
+int contour_area_min_;
+double temperature_low_thr_;
+double temperature_high_thr_;
+double respiration_low_thr_;
+double respiration_high_thr_;
+double heart_low_thr_;
+double heart_high_thr_;
+
 bool data_visualization_;
 
-std::string pub_topic_phy;
+std::string pub_topic_phy, pub_topic_phylevel;
 
 // Face detection
 cv::Mat binary_image_;
@@ -354,9 +363,11 @@ double* faceDetection(cv::Mat cv_image) {
     int contour_area_max = 30, contour_idx = -1; // @todo ros_param
     for(int i = 0; i < contours.size(); i++) {
       double a = contourArea(contours[i], false);
-      if(a > contour_area_max) {
-	contour_area_max = a;
-	contour_idx = i;
+      if (a > contour_area_min_) {
+        if(a > contour_area_max) {
+  	  contour_area_max = a;
+	  contour_idx = i;
+        }
       }
     }
     if(contour_idx > -1) {
@@ -418,9 +429,58 @@ double* faceDetection(cv::Mat cv_image) {
   return &phyData[0];
 }
 
+std::string getLevels_Hysteresis(double data, double* thresholds, double hysteresis_range, std::string method="normal") {
+
+    std::string data_level="none";
+    double thr_range = abs(thresholds[0]-thresholds[1]);
+    double threshold_hysteresis[4];
+    if (method.compare("normal")) {
+        threshold_hysteresis[0] = thresholds[0]-thr_range*hysteresis_range;
+        threshold_hysteresis[1] = thresholds[0]+thr_range*hysteresis_range;
+        threshold_hysteresis[2] = thresholds[1]-thr_range*hysteresis_range;
+        threshold_hysteresis[3] = thresholds[1]+thr_range*hysteresis_range;
+    } else if (method.compare("upper")) {
+        threshold_hysteresis[0] = thresholds[0]-thr_range*hysteresis_range;
+        threshold_hysteresis[1] = thresholds[0];
+        threshold_hysteresis[2] = thresholds[1];
+        threshold_hysteresis[3] = thresholds[1]+thr_range*hysteresis_range;
+    } else if (method.compare("lower")) {
+        threshold_hysteresis[0] = thresholds[0];
+        threshold_hysteresis[1] = thresholds[0]+thr_range*hysteresis_range;
+        threshold_hysteresis[2] = thresholds[1]-thr_range*hysteresis_range;
+        threshold_hysteresis[3] = thresholds[1];
+    } else {
+        ROS_INFO("Unknown hysteresis thresholding type!");
+    }
+    int low=0;
+    int high=0;
+
+    if (data< threshold_hysteresis[0]) {
+        data_level = "low";
+        low=1;
+    } else if (data> threshold_hysteresis[4]) {
+        data_level = "high";
+        high=1;
+    } else if (low==1 && (data>threshold_hysteresis[1])) {
+        data_level = "normal";
+        low=0;
+    } else if (high==1 && (data<threshold_hysteresis[3])) {
+        data_level = "normal";
+        high=0;
+    } else {
+        /*if (i==1)
+            data_level(i) = 1;
+        else
+            data_level(i) = data_level(i-1);        */
+        data_level = "normal";
+    }
+
+    
+}
+
 void thermalImageCallback(const sensor_msgs::ImageConstPtr& raw_image) {
-  if(biometrics_pub_.getNumSubscribers() == 0)
-    return;
+  //if(biometrics_pub_.getNumSubscribers() == 0)
+  //  return;
   
   sensor_msgs::Image color_image;
   /*** raw (temperature) image -> RGB color image ***/
@@ -453,25 +513,41 @@ void thermalImageCallback(const sensor_msgs::ImageConstPtr& raw_image) {
   physiological_monitoring::PhysiologicalData phydata;
   phydata.header = color_image.header;
   /*** face detection ***/
-  double* phyParam = faceDetection(cv_ptr->image);
+  double* phyParam = faceDetection(cv_ptr->image);  
 
   phydata.data.push_back(phyParam[0]);
   phydata.data.push_back(phyParam[1]);
   phydata.data.push_back(phyParam[2]);
 
   pub_phy.publish(phydata);
+
+  // Parameter Levels
+  st_anomaly_detector::StringArrayStamped phydatalevel;
+  phydatalevel.header = color_image.header;
+  double temp_thr[2] = {temperature_low_thr_,temperature_high_thr_};
+  std::string tempLevel = getLevels_Hysteresis(phyParam[0],&temp_thr[0],1/6,"upper");
+  double resp_thr[2] = {respiration_low_thr_,respiration_high_thr_};
+  std::string respLevel = getLevels_Hysteresis(phyParam[1],&resp_thr[0],1/6,"upper");
+  double heart_thr[2] = {heart_low_thr_,heart_high_thr_};
+  std::string heartLevel = getLevels_Hysteresis(phyParam[2],&heart_thr[0],1/6,"upper");
+
+  phydatalevel.data.push_back(tempLevel);
+  phydatalevel.data.push_back(respLevel);
+  phydatalevel.data.push_back(heartLevel);
+  pub_phy_level.publish(phydatalevel);
   
   biometrics_pub_.publish(cv_ptr->toImageMsg());
 }
 
 int main(int argc, char **argv) {
   ros::init(argc, argv, "physiological_monitoring");
+  ros::NodeHandle nh;
   ros::NodeHandle private_nh("~");
   
   int coloring_palette;
   private_nh.param<int>("coloring_palette", coloring_palette, 6);
-  image_builder_.setPalette((optris::EnumOptrisColoringPalette)coloring_palette);
-  image_builder_.setPaletteScalingMethod(optris::eMinMax); // auto scaling
+  image_builder_.setPalette((evo::EnumOptrisColoringPalette)coloring_palette);
+  image_builder_.setPaletteScalingMethod(evo::eMinMax); // auto scaling
   
   // Default: Optris PI-450 output image size.
   int image_height, image_width;
@@ -480,23 +556,34 @@ int main(int argc, char **argv) {
   temperature_map_ = new double*[image_height];
   for(int i = 0; i < image_height; i++)
     temperature_map_[i] = new double[image_width];
+
+  std::string ns = ros::this_node::getName();
+  ns += "/";
+  nh.param(ns+"temp_thr_min", temperature_min_, double(30.0));
+  nh.param(ns+"temp_thr_max", temperature_max_, double(40.0));
   
-  private_nh.param<double>("temperature_min", temperature_min_, 30.0);
-  private_nh.param<double>("temperature_max", temperature_max_, 40.0);
-  
-  private_nh.param<double>("respiration_rate_min", respiration_rate_min_, 10.0);
-  private_nh.param<double>("respiration_rate_max", respiration_rate_max_, 40.0);
-  private_nh.param<int>("respiration_buffer_min", respiration_buffer_min_, 100);
-  private_nh.param<int>("respiration_buffer_max", respiration_buffer_max_, 1000);
+  nh.param(ns+"respiration_rate_min", respiration_rate_min_, double(10.0));
+  nh.param(ns+"respiration_rate_max", respiration_rate_max_, double(40.0));
+  nh.param(ns+"resp_buffer_min", respiration_buffer_min_, int(100));
+  nh.param(ns+"resp_buffer_max", respiration_buffer_max_, int(1000));
   respiration_buffer_ = new double[respiration_buffer_max_];
   respiration_times_ = new double[respiration_buffer_max_];
-  
-  private_nh.param<double>("heart_rate_min", heart_rate_min_, 50.0);
-  private_nh.param<double>("heart_rate_max", heart_rate_max_, 180.0);
-  private_nh.param<int>("heart_buffer_min", heart_buffer_min_, 10);
-  private_nh.param<int>("heart_buffer_max", heart_buffer_max_, 250);
+
+  nh.param(ns+"heart_rate_min", heart_rate_min_, double(50.0));
+  nh.param(ns+"heart_rate_max", heart_rate_max_, double(180.0));
+  nh.param(ns+"heart_buffer_min", heart_buffer_min_, int(10));
+  nh.param(ns+"heart_buffer_max", heart_buffer_max_, int(250));
   heart_buffer_ = new double[heart_buffer_max_];
   heart_times_ = new double[heart_buffer_max_];
+
+  nh.param(ns+"contour_area_min", contour_area_min_, int(30));
+
+  nh.param(ns+"temp_low_thr", temperature_low_thr_, double(36.5));
+  nh.param(ns+"temp_high_thr", temperature_high_thr_, double(37.3));  
+  nh.param(ns+"resp_low_thr", respiration_low_thr_, double(12.0));
+  nh.param(ns+"resp_high_thr", respiration_high_thr_, double(20.0));
+  nh.param(ns+"heart_low_thr", heart_low_thr_, double(60.0));
+  nh.param(ns+"heart_high_thr", heart_high_thr_, double(100.0));
   
   private_nh.param<bool>("data_visualization", data_visualization_, false);
 
@@ -504,13 +591,15 @@ int main(int argc, char **argv) {
   
   start_time_ = clock();
   
-  ros::NodeHandle nh;
   image_transport::ImageTransport it(nh);
   image_transport::Subscriber thermal_image_sub = it.subscribe("thermal_image", 100, thermalImageCallback); // raw image
   biometrics_pub_ = it.advertise("enrichme_biometrics", 1);
 
   private_nh.param("physiological_data", pub_topic_phy, std::string("/physiologicalData"));
   pub_phy = nh.advertise<physiological_monitoring::PhysiologicalData>((const std::string) pub_topic_phy, 10);
+
+  private_nh.param("physiological_data_level", pub_topic_phylevel, std::string("/physiologicalDataLevel"));
+  pub_phy_level = nh.advertise<st_anomaly_detector::StringArrayStamped>((const std::string) pub_topic_phylevel, 10);
   
   ros::spin();
   

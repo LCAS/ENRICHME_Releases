@@ -1,0 +1,14 @@
+physiological_monitoring:
+    temp_thr_min: 30
+    temp_thr_max: 40
+    contour_area_min: 30
+    resp_buffer_min: 100
+    resp_buffer_max: 1000
+    heart_buffer_min: 10
+    heart_buffer_max: 250
+    temp_low_thr: 36.5
+    temp_high_thr: 37.3
+    resp_low_thr: 12
+    resp_high_thr: 20
+    heart_low_thr: 60
+    heart_high_thr: 100
