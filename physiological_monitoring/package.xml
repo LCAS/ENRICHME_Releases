@@ -5,6 +5,7 @@
   <description>Physiological Monitoring</description>
   <maintainer email="scosar@lincoln.ac.uk">Serhan Cosar</maintainer>
   <license>BSD</license>
+  <author email="zhi.yan@utbm.fr">Zhi Yan</author>
   
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
